@@ -747,7 +747,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh33784
+  m_Name: pb_Mesh18036
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -905,6 +905,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &577519168 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5872919603691514189, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+  m_PrefabInstance: {fileID: 5872919602919825444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &694470048 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
@@ -919,9 +924,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 694470048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b734ce31708e3c48bd0484533625eef, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a36419f4c0d91f4395e8cc90be0ce69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookSensitivity: 30
+  playerBody: {fileID: 694470051}
+  playerCamera: {fileID: 577519168}
+--- !u!4 &694470051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5872919601941089780, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+  m_PrefabInstance: {fileID: 5872919602919825444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &811032832
 GameObject:
   m_ObjectHideFlags: 0
