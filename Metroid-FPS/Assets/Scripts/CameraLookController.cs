@@ -12,12 +12,18 @@ public class CameraLookController : MonoBehaviour
     
     private float inputX;
     private float inputY;
+    private float clampedRotationX;
 
     private void Awake()
     {
         playerInput = new PlayerInput();
         playerInput.Player.Look.performed += context => Look(context.ReadValue<Vector2>());
         playerInput.Player.Look.canceled += context => Look(context.ReadValue<Vector2>());
+    }
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void OnEnable()
@@ -39,9 +45,14 @@ public class CameraLookController : MonoBehaviour
     private void Update()
     {
         //Camera Look
-        //TODO Clamp Camera rotation
-        playerBody.Rotate(Vector3.up * inputX * lookSensitivity * Time.deltaTime);
-        playerCamera.Rotate(Vector3.left * inputY * lookSensitivity * Time.deltaTime);
+        float modifiedInputX = inputX * lookSensitivity * Time.deltaTime;
+        float modifiedInputY = inputY * lookSensitivity * Time.deltaTime;
+
+        clampedRotationX -= modifiedInputY;
+        clampedRotationX = Mathf.Clamp(clampedRotationX, -90f, 90f);
+
+        playerCamera.localRotation = Quaternion.Euler(clampedRotationX, 0f, 0f);
+        playerBody.Rotate(Vector3.up * modifiedInputX);
     }
 
 }
