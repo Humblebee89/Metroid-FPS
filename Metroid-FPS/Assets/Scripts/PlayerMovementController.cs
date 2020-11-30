@@ -9,6 +9,7 @@ public class PlayerMovementController : MonoBehaviour
     public PlayerInput playerInput;
 
     [SerializeField] float moveSpeed = 1f;
+    [SerializeField] float JumpHeight = 1f;
 
     private Vector3 moveDirection;
     private Rigidbody playerRigidbody;
@@ -19,6 +20,7 @@ public class PlayerMovementController : MonoBehaviour
         playerInput = new PlayerInput();
         playerInput.Player.Move.performed += context => GetMoveInput(context.ReadValue<Vector2>());
         playerInput.Player.Move.canceled += context => GetMoveInput(context.ReadValue<Vector2>());
+        playerInput.Player.Jump.performed += context => Jump();
     }
 
     private void OnEnable()
@@ -39,6 +41,12 @@ public class PlayerMovementController : MonoBehaviour
     private void GetMoveInput(Vector2 input)
     {
         inputDirection = input;
+    }
+
+    private void Jump()
+    {
+        //TODO add grounded check so you can't jump infinitely
+        playerRigidbody.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
     }
 
     private void FixedUpdate()
