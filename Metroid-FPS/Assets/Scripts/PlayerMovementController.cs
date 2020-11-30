@@ -44,6 +44,6 @@ public class PlayerMovementController : MonoBehaviour
     private void FixedUpdate()
     {
         moveDirection = transform.right * inputDirection.x + transform.forward * inputDirection.y;
-        playerRigidbody.AddForce(moveDirection * moveSpeed, ForceMode.VelocityChange);
+        playerRigidbody.MovePosition(playerRigidbody.position + moveDirection * moveSpeed * Time.deltaTime);
     }
 }
