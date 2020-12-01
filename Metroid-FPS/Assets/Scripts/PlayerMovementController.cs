@@ -10,10 +10,14 @@ public class PlayerMovementController : MonoBehaviour
 
     [SerializeField] float moveSpeed = 1f;
     [SerializeField] float JumpHeight = 1f;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] float groundDistance = 0.4f;
+    [SerializeField] LayerMask groundMask;
 
     private Vector3 moveDirection;
     private Rigidbody playerRigidbody;
     private Vector2 inputDirection;
+    private bool isGrounded;
 
     private void Awake()
     {
@@ -45,8 +49,13 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Jump()
     {
-        //TODO add grounded check so you can't jump infinitely
+        if(isGrounded)
         playerRigidbody.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
+    }
+
+    private void Update()
+    {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
     }
 
     private void FixedUpdate()
