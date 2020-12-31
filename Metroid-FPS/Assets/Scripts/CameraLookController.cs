@@ -10,6 +10,7 @@ public class CameraLookController : MonoBehaviour
     [SerializeField] private Transform playerBody;
     [SerializeField] private Transform playerCamera;
     [SerializeField] private float lookSensitivity;
+    [SerializeField] private AnimationCurve inputCurve;
     [SerializeField] private float clampAngle = 90f;
   
     private float inputX;
@@ -18,14 +19,14 @@ public class CameraLookController : MonoBehaviour
 
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         playerInput = new PlayerInput();
         playerInput.Player.Look.performed += context => GetLookInput(context.ReadValue<Vector2>());
         playerInput.Player.Look.canceled += context => GetLookInput(context.ReadValue<Vector2>());
-    }
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
+        inputCurve.preWrapMode = WrapMode.PingPong;
     }
 
     private void OnEnable()
@@ -47,8 +48,11 @@ public class CameraLookController : MonoBehaviour
     private void Update()
     {
         //Camera Look
-        float modifiedInputX = inputX * lookSensitivity * Time.deltaTime;
-        float modifiedInputY = inputY * lookSensitivity * Time.deltaTime;
+        float curveEvaluatedX = inputCurve.Evaluate(inputX) * inputX;
+        float curveEvaluatedY = inputCurve.Evaluate(inputY) * inputY;
+
+        float modifiedInputX = curveEvaluatedX * lookSensitivity * Time.deltaTime;
+        float modifiedInputY = curveEvaluatedY * lookSensitivity * Time.deltaTime;
 
         clampedRotationX -= modifiedInputY;
         clampedRotationX = Mathf.Clamp(clampedRotationX, -clampAngle, clampAngle);
