@@ -19,9 +19,6 @@ public class CameraLookController : MonoBehaviour
 
     private void Awake()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
         playerInput = new PlayerInput();
         playerInput.Player.Look.performed += context => GetLookInput(context.ReadValue<Vector2>());
         playerInput.Player.Look.canceled += context => GetLookInput(context.ReadValue<Vector2>());
@@ -32,6 +29,8 @@ public class CameraLookController : MonoBehaviour
     private void OnEnable()
     {
         playerInput.Enable();
+
+        Cursor.visible = false;
     }
 
     private void OnDisable()
