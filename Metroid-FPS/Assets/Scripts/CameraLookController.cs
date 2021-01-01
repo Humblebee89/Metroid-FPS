@@ -40,6 +40,7 @@ public class CameraLookController : MonoBehaviour
 
     private void GetLookInput(Vector2 axis)
     {
+        print("axis " + axis);
         inputX = axis.x;
         inputY = axis.y;
     }
