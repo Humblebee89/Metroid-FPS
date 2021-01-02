@@ -12,9 +12,8 @@ public class CameraLookController : MonoBehaviour
     [SerializeField] private float lookSensitivity;
     [SerializeField] private AnimationCurve inputCurve;
     [SerializeField] private float clampAngle = 90f;
-  
-    private float inputX;
-    private float inputY;
+
+    private Vector2 inputDirection;
     private float clampedRotationX;
 
     private void Awake()
@@ -40,15 +39,23 @@ public class CameraLookController : MonoBehaviour
 
     private void GetLookInput(Vector2 axis)
     {
-        inputX = axis.x;
-        inputY = axis.y;
+        inputDirection.x = axis.x;
+        inputDirection.y = axis.y;
+
+        print("Input Direction " + inputDirection);
     }
 
     private void Update()
     {
         //Camera Look
-        float curveEvaluatedX = inputCurve.Evaluate(inputX) * inputX;
-        float curveEvaluatedY = inputCurve.Evaluate(inputY) * inputY;
+        int xDirection;
+        int yDirection;
+
+        xDirection = inputDirection.x > 0 ?  1 : -1;
+        yDirection = inputDirection.y > 0 ?  1 : -1;
+
+        float curveEvaluatedX = inputCurve.Evaluate(inputDirection.x) * xDirection;
+        float curveEvaluatedY = inputCurve.Evaluate(inputDirection.y) * yDirection;
 
         float modifiedInputX = curveEvaluatedX * lookSensitivity * Time.deltaTime;
         float modifiedInputY = curveEvaluatedY * lookSensitivity * Time.deltaTime;
