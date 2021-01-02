@@ -1,0 +1,56 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/IceCrack
+Original input file: da07d390.AGSC
+File contains 5 sounds
+
+Sound 0
+Info table A offset:  0xf19c
+Info table B offset:  0xf240
+ADPCM audio offset:   0x580
+Sample count:         59850 samples
+Sample rate:          24000 Hz
+Loop start sample:    5987
+Loop end sample:      59675
+Loop length:          53689 samples
+
+Sound 1
+Info table A offset:  0xf1bc
+Info table B offset:  0xf268
+ADPCM audio offset:   0x8b20
+Sample count:         19395 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0xf1dc
+Info table B offset:  0xf290
+ADPCM audio offset:   0xb680
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0xf1fc
+Info table B offset:  0xf2b8
+ADPCM audio offset:   0xbc80
+Sample count:         11661 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0xf21c
+Info table B offset:  0xf2e0
+ADPCM audio offset:   0xd6a0
+Sample count:         12072 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

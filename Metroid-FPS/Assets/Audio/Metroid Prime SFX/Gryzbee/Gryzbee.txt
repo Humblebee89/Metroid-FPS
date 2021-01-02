@@ -1,0 +1,36 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Gryzbee
+Original input file: e68ecfa5.AGSC
+File contains 3 sounds
+
+Sound 0
+Info table A offset:  0x550f
+Info table B offset:  0x5573
+ADPCM audio offset:   0x2c3
+Sample count:         6396 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0x552f
+Info table B offset:  0x559b
+ADPCM audio offset:   0x1123
+Sample count:         27725 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x554f
+Info table B offset:  0x55c3
+ADPCM audio offset:   0x4f23
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

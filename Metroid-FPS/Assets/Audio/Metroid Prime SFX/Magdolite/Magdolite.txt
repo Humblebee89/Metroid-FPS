@@ -1,0 +1,86 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Magdolite
+Original input file: 706d7bcf.AGSC
+File contains 8 sounds
+
+Sound 0
+Info table A offset:  0x20e01
+Info table B offset:  0x20f05
+ADPCM audio offset:   0x515
+Sample count:         42522 samples
+Sample rate:          24000 Hz
+Loop start sample:    11959
+Loop end sample:      42255
+Loop length:          30297 samples
+
+Sound 1
+Info table A offset:  0x20e21
+Info table B offset:  0x20f2d
+ADPCM audio offset:   0x6415
+Sample count:         33366 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x20e41
+Info table B offset:  0x20f55
+ADPCM audio offset:   0xae95
+Sample count:         45781 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x20e61
+Info table B offset:  0x20f7d
+ADPCM audio offset:   0x114d5
+Sample count:         31739 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0x20e81
+Info table B offset:  0x20fa5
+ADPCM audio offset:   0x15bb5
+Sample count:         21343 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 5
+Info table A offset:  0x20ea1
+Info table B offset:  0x20fcd
+ADPCM audio offset:   0x18b75
+Sample count:         25318 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 6
+Info table A offset:  0x20ec1
+Info table B offset:  0x20ff5
+ADPCM audio offset:   0x1c415
+Sample count:         30415 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 7
+Info table A offset:  0x20ee1
+Info table B offset:  0x2101d
+ADPCM audio offset:   0x20815
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

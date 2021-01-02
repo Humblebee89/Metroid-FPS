@@ -1,0 +1,46 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/lumigek
+Original input file: 77c54e1a.AGSC
+File contains 4 sounds
+
+Sound 0
+Info table A offset:  0xbc2f
+Info table B offset:  0xbcb3
+ADPCM audio offset:   0x1c3
+Sample count:         34718 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0xbc4f
+Info table B offset:  0xbcdb
+ADPCM audio offset:   0x4f43
+Sample count:         31009 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0xbc6f
+Info table B offset:  0xbd03
+ADPCM audio offset:   0x9483
+Sample count:         15104 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0xbc8f
+Info table B offset:  0xbd2b
+ADPCM audio offset:   0xb643
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

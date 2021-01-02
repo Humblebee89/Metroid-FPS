@@ -1,0 +1,76 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/ReactorDoor
+Original input file: f5fe70fb.AGSC
+File contains 7 sounds
+
+Sound 0
+Info table A offset:  0x14fff
+Info table B offset:  0x150e3
+ADPCM audio offset:   0x3b3
+Sample count:         29536 samples
+Sample rate:          16000 Hz
+Loop start sample:    10830
+Loop end sample:      28978
+Loop length:          18149 samples
+
+Sound 1
+Info table A offset:  0x1501f
+Info table B offset:  0x1510b
+ADPCM audio offset:   0x45b3
+Sample count:         36310 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x1503f
+Info table B offset:  0x15133
+ADPCM audio offset:   0x96d3
+Sample count:         35670 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x1505f
+Info table B offset:  0x1515b
+ADPCM audio offset:   0xe673
+Sample count:         20560 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0x1507f
+Info table B offset:  0x15183
+ADPCM audio offset:   0x11473
+Sample count:         15515 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 5
+Info table A offset:  0x1509f
+Info table B offset:  0x151ab
+ADPCM audio offset:   0x13733
+Sample count:         8402 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 6
+Info table A offset:  0x150bf
+Info table B offset:  0x151d3
+ADPCM audio offset:   0x14a13
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

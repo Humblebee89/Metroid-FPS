@@ -1,0 +1,56 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Scarab
+Original input file: 0800b2fa.AGSC
+File contains 5 sounds
+
+Sound 0
+Info table A offset:  0x733e
+Info table B offset:  0x73e2
+ADPCM audio offset:   0x252
+Sample count:         5816 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0x735e
+Info table B offset:  0x740a
+ADPCM audio offset:   0xf52
+Sample count:         12362 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x737e
+Info table B offset:  0x7432
+ADPCM audio offset:   0x2af2
+Sample count:         15704 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x739e
+Info table B offset:  0x745a
+ADPCM audio offset:   0x4e12
+Sample count:         13985 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0x73be
+Info table B offset:  0x7482
+ADPCM audio offset:   0x6d52
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

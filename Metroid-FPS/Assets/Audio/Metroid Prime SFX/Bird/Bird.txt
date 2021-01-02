@@ -1,0 +1,26 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio//Bird
+Original input file: 33358aba.AGSC
+File contains 2 sounds
+
+Sound 0
+Info table A offset:  0x1e81
+Info table B offset:  0x1ec5
+ADPCM audio offset:   0x1f5
+Sample count:         10129 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0x1ea1
+Info table B offset:  0x1eed
+ADPCM audio offset:   0x1895
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

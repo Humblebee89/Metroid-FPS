@@ -1,0 +1,46 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/SnakeWeed
+Original input file: e21c8bc5.AGSC
+File contains 4 sounds
+
+Sound 0
+Info table A offset:  0x9dd9
+Info table B offset:  0x9e5d
+ADPCM audio offset:   0x1f5
+Sample count:         32914 samples
+Sample rate:          24000 Hz
+Loop start sample:    8
+Loop end sample:      32889
+Loop length:          32882 samples
+
+Sound 1
+Info table A offset:  0x9df9
+Info table B offset:  0x9e85
+ADPCM audio offset:   0x4b75
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x9e19
+Info table B offset:  0x9ead
+ADPCM audio offset:   0x5175
+Sample count:         17406 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x9e39
+Info table B offset:  0x9ed5
+ADPCM audio offset:   0x7855
+Sample count:         16800 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

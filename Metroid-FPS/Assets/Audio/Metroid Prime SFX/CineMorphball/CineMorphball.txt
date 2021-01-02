@@ -1,0 +1,26 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/CineMorphball
+Original input file: 7f8153fe.AGSC
+File contains 2 sounds
+
+Sound 0
+Info table A offset:  0x38d5
+Info table B offset:  0x3919
+ADPCM audio offset:   0x249
+Sample count:         21757 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0x38f5
+Info table B offset:  0x3941
+ADPCM audio offset:   0x32e9
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

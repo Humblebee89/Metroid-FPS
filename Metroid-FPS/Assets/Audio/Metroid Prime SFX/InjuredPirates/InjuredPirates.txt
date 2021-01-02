@@ -1,0 +1,86 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/InjuredPirates
+Original input file: 93393a50.AGSC
+File contains 8 sounds
+
+Sound 0
+Info table A offset:  0x231ba
+Info table B offset:  0x232be
+ADPCM audio offset:   0x546
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0x231da
+Info table B offset:  0x232e6
+ADPCM audio offset:   0xb46
+Sample count:         21903 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x231fa
+Info table B offset:  0x2330e
+ADPCM audio offset:   0x3c46
+Sample count:         39739 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x2321a
+Info table B offset:  0x23336
+ADPCM audio offset:   0x9506
+Sample count:         42796 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0x2323a
+Info table B offset:  0x2335e
+ADPCM audio offset:   0xf4a6
+Sample count:         22811 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 5
+Info table A offset:  0x2325a
+Info table B offset:  0x23386
+ADPCM audio offset:   0x127a6
+Sample count:         29389 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 6
+Info table A offset:  0x2327a
+Info table B offset:  0x233ae
+ADPCM audio offset:   0x16946
+Sample count:         36629 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 7
+Info table A offset:  0x2329a
+Info table B offset:  0x233d6
+ADPCM audio offset:   0x1bb26
+Sample count:         53104 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

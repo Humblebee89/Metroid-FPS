@@ -1,0 +1,46 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Metaree
+Original input file: 2ca490bb.AGSC
+File contains 4 sounds
+
+Sound 0
+Info table A offset:  0x6cf7
+Info table B offset:  0x6d7b
+ADPCM audio offset:   0x2cb
+Sample count:         11735 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      11734
+Loop length:          11735 samples
+
+Sound 1
+Info table A offset:  0x6d17
+Info table B offset:  0x6da3
+ADPCM audio offset:   0x1d0b
+Sample count:         17046 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x6d37
+Info table B offset:  0x6dcb
+ADPCM audio offset:   0x432b
+Sample count:         16045 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x6d57
+Info table B offset:  0x6df3
+ADPCM audio offset:   0x670b
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

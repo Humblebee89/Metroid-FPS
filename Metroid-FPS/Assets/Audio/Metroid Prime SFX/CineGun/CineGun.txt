@@ -1,0 +1,36 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/CineGun
+Original input file: 9badc20d.AGSC
+File contains 3 sounds
+
+Sound 0
+Info table A offset:  0x3ef7
+Info table B offset:  0x3f5b
+ADPCM audio offset:   0x34b
+Sample count:         12900 samples
+Sample rate:          16000 Hz
+Loop start sample:    58
+Loop end sample:      12801
+Loop length:          12744 samples
+
+Sound 1
+Info table A offset:  0x3f17
+Info table B offset:  0x3f83
+ADPCM audio offset:   0x202b
+Sample count:         11104 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x3f37
+Info table B offset:  0x3fab
+ADPCM audio offset:   0x390b
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

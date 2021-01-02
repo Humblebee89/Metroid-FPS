@@ -1,0 +1,96 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Burrower
+Original input file: 3118e452.AGSC
+File contains 9 sounds
+
+Sound 0
+Info table A offset:  0x112a8
+Info table B offset:  0x113cc
+ADPCM audio offset:   0x45c
+Sample count:         26711 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      26710
+Loop length:          26711 samples
+
+Sound 1
+Info table A offset:  0x112c8
+Info table B offset:  0x113f4
+ADPCM audio offset:   0x3ffc
+Sample count:         18042 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x112e8
+Info table B offset:  0x1141c
+ADPCM audio offset:   0x685c
+Sample count:         28270 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x11308
+Info table B offset:  0x11444
+ADPCM audio offset:   0xa77c
+Sample count:         18472 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0x11328
+Info table B offset:  0x1146c
+ADPCM audio offset:   0xd0bc
+Sample count:         899 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 5
+Info table A offset:  0x11348
+Info table B offset:  0x11494
+ADPCM audio offset:   0xd2dc
+Sample count:         3012 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 6
+Info table A offset:  0x11368
+Info table B offset:  0x114bc
+ADPCM audio offset:   0xd99c
+Sample count:         2429 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 7
+Info table A offset:  0x11388
+Info table B offset:  0x114e4
+ADPCM audio offset:   0xdf1c
+Sample count:         20423 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 8
+Info table A offset:  0x113a8
+Info table B offset:  0x1150c
+ADPCM audio offset:   0x10cbc
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

@@ -1,0 +1,76 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/JellyZap
+Original input file: 5fbc2f67.AGSC
+File contains 7 sounds
+
+Sound 0
+Info table A offset:  0xe524
+Info table B offset:  0xe608
+ADPCM audio offset:   0x2d8
+Sample count:         21778 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      21777
+Loop length:          21778 samples
+
+Sound 1
+Info table A offset:  0xe544
+Info table B offset:  0xe630
+ADPCM audio offset:   0x3378
+Sample count:         29056 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0xe564
+Info table B offset:  0xe658
+ADPCM audio offset:   0x7458
+Sample count:         11166 samples
+Sample rate:          8000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0xe584
+Info table B offset:  0xe680
+ADPCM audio offset:   0x8d58
+Sample count:         11113 samples
+Sample rate:          8000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0xe5a4
+Info table B offset:  0xe6a8
+ADPCM audio offset:   0xa638
+Sample count:         8768 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 5
+Info table A offset:  0xe5c4
+Info table B offset:  0xe6d0
+ADPCM audio offset:   0xb9d8
+Sample count:         16704 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 6
+Info table A offset:  0xe5e4
+Info table B offset:  0xe6f8
+ADPCM audio offset:   0xdf38
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

@@ -1,0 +1,46 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Ripper
+Original input file: d0ab8a34.AGSC
+File contains 4 sounds
+
+Sound 0
+Info table A offset:  0x4842
+Info table B offset:  0x48c6
+ADPCM audio offset:   0x2d6
+Sample count:         16504 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      16503
+Loop length:          16504 samples
+
+Sound 1
+Info table A offset:  0x4862
+Info table B offset:  0x48ee
+ADPCM audio offset:   0x27b6
+Sample count:         3998 samples
+Sample rate:          8000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x4882
+Info table B offset:  0x4916
+ADPCM audio offset:   0x30b6
+Sample count:         7894 samples
+Sample rate:          8000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x48a2
+Info table B offset:  0x493e
+ADPCM audio offset:   0x4256
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

@@ -1,0 +1,26 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/PhazonGun
+Original input file: c2c1b6fe.AGSC
+File contains 2 sounds
+
+Sound 0
+Info table A offset:  0xb105
+Info table B offset:  0xb149
+ADPCM audio offset:   0x181
+Sample count:         58900 samples
+Sample rate:          24000 Hz
+Loop start sample:    37938
+Loop end sample:      57637
+Loop length:          19700 samples
+
+Sound 1
+Info table A offset:  0xb125
+Info table B offset:  0xb171
+ADPCM audio offset:   0x8501
+Sample count:         19700 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      19699
+Loop length:          19700 samples
+

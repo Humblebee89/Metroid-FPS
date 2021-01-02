@@ -1,0 +1,46 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Torobyte
+Original input file: 2a3ac2ac.AGSC
+File contains 4 sounds
+
+Sound 0
+Info table A offset:  0x6470
+Info table B offset:  0x64f4
+ADPCM audio offset:   0x334
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0x6490
+Info table B offset:  0x651c
+ADPCM audio offset:   0x934
+Sample count:         16152 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x64b0
+Info table B offset:  0x6544
+ADPCM audio offset:   0x2d54
+Sample count:         17291 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x64d0
+Info table B offset:  0x656c
+ADPCM audio offset:   0x53f4
+Sample count:         7377 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

@@ -1,0 +1,46 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Sova
+Original input file: ea6360af.AGSC
+File contains 4 sounds
+
+Sound 0
+Info table A offset:  0x4554
+Info table B offset:  0x45d8
+ADPCM audio offset:   0x470
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0x4574
+Info table B offset:  0x4600
+ADPCM audio offset:   0xa70
+Sample count:         11306 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x4594
+Info table B offset:  0x4628
+ADPCM audio offset:   0x23b0
+Sample count:         7053 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x45b4
+Info table B offset:  0x4650
+ADPCM audio offset:   0x3370
+Sample count:         8002 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

@@ -1,0 +1,26 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Gnats
+Original input file: f6abc1e1.AGSC
+File contains 2 sounds
+
+Sound 0
+Info table A offset:  0x6809
+Info table B offset:  0x684d
+ADPCM audio offset:   0x1fd
+Sample count:         43027 samples
+Sample rate:          16000 Hz
+Loop start sample:    300
+Loop end sample:      42778
+Loop length:          42479 samples
+
+Sound 1
+Info table A offset:  0x6829
+Info table B offset:  0x6875
+ADPCM audio offset:   0x621d
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

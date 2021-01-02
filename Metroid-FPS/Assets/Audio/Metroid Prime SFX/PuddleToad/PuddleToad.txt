@@ -1,0 +1,76 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/PuddleToad
+Original input file: 48a8f172.AGSC
+File contains 7 sounds
+
+Sound 0
+Info table A offset:  0x175b2
+Info table B offset:  0x17696
+ADPCM audio offset:   0x6a6
+Sample count:         29376 samples
+Sample rate:          24000 Hz
+Loop start sample:    776
+Loop end sample:      28984
+Loop length:          28209 samples
+
+Sound 1
+Info table A offset:  0x175d2
+Info table B offset:  0x176be
+ADPCM audio offset:   0x4846
+Sample count:         34740 samples
+Sample rate:          24000 Hz
+Loop start sample:    509
+Loop end sample:      34739
+Loop length:          34231 samples
+
+Sound 2
+Info table A offset:  0x175f2
+Info table B offset:  0x176e6
+ADPCM audio offset:   0x95e6
+Sample count:         29056 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x17612
+Info table B offset:  0x1770e
+ADPCM audio offset:   0xd6c6
+Sample count:         8514 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0x17632
+Info table B offset:  0x17736
+ADPCM audio offset:   0xe9e6
+Sample count:         42189 samples
+Sample rate:          22050 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 5
+Info table A offset:  0x17652
+Info table B offset:  0x1775e
+ADPCM audio offset:   0x14826
+Sample count:         17718 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 6
+Info table A offset:  0x17672
+Info table B offset:  0x17786
+ADPCM audio offset:   0x16fc6
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

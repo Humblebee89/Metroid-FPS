@@ -1,0 +1,126 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/PuddleSpore
+Original input file: 2163d60a.AGSC
+File contains 12 sounds
+
+Sound 0
+Info table A offset:  0x227fb
+Info table B offset:  0x2297f
+ADPCM audio offset:   0x5ef
+Sample count:         49019 samples
+Sample rate:          24000 Hz
+Loop start sample:    256
+Loop end sample:      49018
+Loop length:          48763 samples
+
+Sound 1
+Info table A offset:  0x2281b
+Info table B offset:  0x229a7
+ADPCM audio offset:   0x736f
+Sample count:         37155 samples
+Sample rate:          24000 Hz
+Loop start sample:    170
+Loop end sample:      37113
+Loop length:          36944 samples
+
+Sound 2
+Info table A offset:  0x2283b
+Info table B offset:  0x229cf
+ADPCM audio offset:   0xc66f
+Sample count:         12215 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x2285b
+Info table B offset:  0x229f7
+ADPCM audio offset:   0xe1cf
+Sample count:         20444 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0x2287b
+Info table B offset:  0x22a1f
+ADPCM audio offset:   0x10f8f
+Sample count:         24762 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 5
+Info table A offset:  0x2289b
+Info table B offset:  0x22a47
+ADPCM audio offset:   0x146ef
+Sample count:         16704 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 6
+Info table A offset:  0x228bb
+Info table B offset:  0x22a6f
+ADPCM audio offset:   0x16c4f
+Sample count:         11601 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 7
+Info table A offset:  0x228db
+Info table B offset:  0x22a97
+ADPCM audio offset:   0x1864f
+Sample count:         6971 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 8
+Info table A offset:  0x228fb
+Info table B offset:  0x22abf
+ADPCM audio offset:   0x195ef
+Sample count:         18457 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 9
+Info table A offset:  0x2291b
+Info table B offset:  0x22ae7
+ADPCM audio offset:   0x1bf2f
+Sample count:         24288 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 10
+Info table A offset:  0x2293b
+Info table B offset:  0x22b0f
+ADPCM audio offset:   0x1f56f
+Sample count:         19951 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 11
+Info table A offset:  0x2295b
+Info table B offset:  0x22b37
+ADPCM audio offset:   0x2220f
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

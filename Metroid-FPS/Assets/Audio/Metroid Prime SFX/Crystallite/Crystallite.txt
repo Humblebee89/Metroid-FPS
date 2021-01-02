@@ -1,0 +1,46 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/Crystallite
+Original input file: ee9200f4.AGSC
+File contains 4 sounds
+
+Sound 0
+Info table A offset:  0x4b23
+Info table B offset:  0x4ba7
+ADPCM audio offset:   0x257
+Sample count:         10121 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0x4b43
+Info table B offset:  0x4bcf
+ADPCM audio offset:   0x18f7
+Sample count:         15061 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x4b63
+Info table B offset:  0x4bf7
+ADPCM audio offset:   0x3a97
+Sample count:         4758 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x4b83
+Info table B offset:  0x4c1f
+ADPCM audio offset:   0x4537
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

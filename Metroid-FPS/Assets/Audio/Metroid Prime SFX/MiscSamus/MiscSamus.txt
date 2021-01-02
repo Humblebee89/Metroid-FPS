@@ -1,0 +1,686 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/MiscSamus
+Original input file: 3724095b.AGSC
+File contains 68 sounds
+
+Sound 0
+Info table A offset:  0xa5a4d
+Info table B offset:  0xa62d1
+ADPCM audio offset:   0x4e69
+Sample count:         58646 samples
+Sample rate:          24000 Hz
+Loop start sample:    16215
+Loop end sample:      58639
+Loop length:          42425 samples
+
+Sound 1
+Info table A offset:  0xa5a6d
+Info table B offset:  0xa62f9
+ADPCM audio offset:   0xd169
+Sample count:         21739 samples
+Sample rate:          24000 Hz
+Loop start sample:    33
+Loop end sample:      21628
+Loop length:          21596 samples
+
+Sound 2
+Info table A offset:  0xa5a8d
+Info table B offset:  0xa6321
+ADPCM audio offset:   0x10209
+Sample count:         20711 samples
+Sample rate:          24000 Hz
+Loop start sample:    137
+Loop end sample:      20552
+Loop length:          20416 samples
+
+Sound 3
+Info table A offset:  0xa5aad
+Info table B offset:  0xa6349
+ADPCM audio offset:   0x13049
+Sample count:         14324 samples
+Sample rate:          24000 Hz
+Loop start sample:    80
+Loop end sample:      14232
+Loop length:          14153 samples
+
+Sound 4
+Info table A offset:  0xa5acd
+Info table B offset:  0xa6371
+ADPCM audio offset:   0x15049
+Sample count:         22245 samples
+Sample rate:          24000 Hz
+Loop start sample:    244
+Loop end sample:      21913
+Loop length:          21670 samples
+
+Sound 5
+Info table A offset:  0xa5aed
+Info table B offset:  0xa6399
+ADPCM audio offset:   0x18209
+Sample count:         18678 samples
+Sample rate:          24000 Hz
+Loop start sample:    50
+Loop end sample:      18628
+Loop length:          18579 samples
+
+Sound 6
+Info table A offset:  0xa5b0d
+Info table B offset:  0xa63c1
+ADPCM audio offset:   0x1abc9
+Sample count:         19504 samples
+Sample rate:          24000 Hz
+Loop start sample:    47
+Loop end sample:      19399
+Loop length:          19353 samples
+
+Sound 7
+Info table A offset:  0xa5b2d
+Info table B offset:  0xa63e9
+ADPCM audio offset:   0x1d769
+Sample count:         46721 samples
+Sample rate:          22050 Hz
+Loop start sample:    11
+Loop end sample:      46720
+Loop length:          46710 samples
+
+Sound 8
+Info table A offset:  0xa5b4d
+Info table B offset:  0xa6411
+ADPCM audio offset:   0x23fc9
+Sample count:         19820 samples
+Sample rate:          24000 Hz
+Loop start sample:    1
+Loop end sample:      19711
+Loop length:          19711 samples
+
+Sound 9
+Info table A offset:  0xa5b6d
+Info table B offset:  0xa6439
+ADPCM audio offset:   0x26c09
+Sample count:         31680 samples
+Sample rate:          24000 Hz
+Loop start sample:    21
+Loop end sample:      31658
+Loop length:          31638 samples
+
+Sound 10
+Info table A offset:  0xa5b8d
+Info table B offset:  0xa6461
+ADPCM audio offset:   0x2b2c9
+Sample count:         11670 samples
+Sample rate:          24000 Hz
+Loop start sample:    82
+Loop end sample:      11640
+Loop length:          11559 samples
+
+Sound 11
+Info table A offset:  0xa5bad
+Info table B offset:  0xa6489
+ADPCM audio offset:   0x2cce9
+Sample count:         41424 samples
+Sample rate:          24000 Hz
+Loop start sample:    178
+Loop end sample:      41423
+Loop length:          41246 samples
+
+Sound 12
+Info table A offset:  0xa5bcd
+Info table B offset:  0xa64b1
+ADPCM audio offset:   0x32969
+Sample count:         46086 samples
+Sample rate:          24000 Hz
+Loop start sample:    943
+Loop end sample:      45639
+Loop length:          44697 samples
+
+Sound 13
+Info table A offset:  0xa5bed
+Info table B offset:  0xa64d9
+ADPCM audio offset:   0x39049
+Sample count:         79164 samples
+Sample rate:          22050 Hz
+Loop start sample:    42740
+Loop end sample:      79145
+Loop length:          36406 samples
+
+Sound 14
+Info table A offset:  0xa5c0d
+Info table B offset:  0xa6501
+ADPCM audio offset:   0x44109
+Sample count:         15932 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 15
+Info table A offset:  0xa5c2d
+Info table B offset:  0xa6529
+ADPCM audio offset:   0x464a9
+Sample count:         14422 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 16
+Info table A offset:  0xa5c4d
+Info table B offset:  0xa6551
+ADPCM audio offset:   0x484e9
+Sample count:         21966 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 17
+Info table A offset:  0xa5c6d
+Info table B offset:  0xa6579
+ADPCM audio offset:   0x4b609
+Sample count:         4736 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 18
+Info table A offset:  0xa5c8d
+Info table B offset:  0xa65a1
+ADPCM audio offset:   0x4c0a9
+Sample count:         4826 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 19
+Info table A offset:  0xa5cad
+Info table B offset:  0xa65c9
+ADPCM audio offset:   0x4cb89
+Sample count:         28905 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 20
+Info table A offset:  0xa5ccd
+Info table B offset:  0xa65f1
+ADPCM audio offset:   0x50c29
+Sample count:         5478 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 21
+Info table A offset:  0xa5ced
+Info table B offset:  0xa6619
+ADPCM audio offset:   0x51869
+Sample count:         4291 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 22
+Info table A offset:  0xa5d0d
+Info table B offset:  0xa6641
+ADPCM audio offset:   0x52209
+Sample count:         7251 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 23
+Info table A offset:  0xa5d2d
+Info table B offset:  0xa6669
+ADPCM audio offset:   0x53249
+Sample count:         12058 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 24
+Info table A offset:  0xa5d4d
+Info table B offset:  0xa6691
+ADPCM audio offset:   0x54d49
+Sample count:         17629 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 25
+Info table A offset:  0xa5d6d
+Info table B offset:  0xa66b9
+ADPCM audio offset:   0x574a9
+Sample count:         17685 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 26
+Info table A offset:  0xa5d8d
+Info table B offset:  0xa66e1
+ADPCM audio offset:   0x59c29
+Sample count:         7935 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 27
+Info table A offset:  0xa5dad
+Info table B offset:  0xa6709
+ADPCM audio offset:   0x5ade9
+Sample count:         9437 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 28
+Info table A offset:  0xa5dcd
+Info table B offset:  0xa6731
+ADPCM audio offset:   0x5c309
+Sample count:         8803 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 29
+Info table A offset:  0xa5ded
+Info table B offset:  0xa6759
+ADPCM audio offset:   0x5d6c9
+Sample count:         10213 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 30
+Info table A offset:  0xa5e0d
+Info table B offset:  0xa6781
+ADPCM audio offset:   0x5eda9
+Sample count:         11888 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 31
+Info table A offset:  0xa5e2d
+Info table B offset:  0xa67a9
+ADPCM audio offset:   0x60849
+Sample count:         19120 samples
+Sample rate:          16000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 32
+Info table A offset:  0xa5e4d
+Info table B offset:  0xa67d1
+ADPCM audio offset:   0x63309
+Sample count:         7638 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 33
+Info table A offset:  0xa5e6d
+Info table B offset:  0xa67f9
+ADPCM audio offset:   0x64429
+Sample count:         7557 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 34
+Info table A offset:  0xa5e8d
+Info table B offset:  0xa6821
+ADPCM audio offset:   0x65509
+Sample count:         8318 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 35
+Info table A offset:  0xa5ead
+Info table B offset:  0xa6849
+ADPCM audio offset:   0x667a9
+Sample count:         11616 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 36
+Info table A offset:  0xa5ecd
+Info table B offset:  0xa6871
+ADPCM audio offset:   0x681a9
+Sample count:         10348 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 37
+Info table A offset:  0xa5eed
+Info table B offset:  0xa6899
+ADPCM audio offset:   0x698c9
+Sample count:         12064 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 38
+Info table A offset:  0xa5f0d
+Info table B offset:  0xa68c1
+ADPCM audio offset:   0x6b3c9
+Sample count:         12269 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 39
+Info table A offset:  0xa5f2d
+Info table B offset:  0xa68e9
+ADPCM audio offset:   0x6cf49
+Sample count:         7102 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 40
+Info table A offset:  0xa5f4d
+Info table B offset:  0xa6911
+ADPCM audio offset:   0x6df29
+Sample count:         7041 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 41
+Info table A offset:  0xa5f6d
+Info table B offset:  0xa6939
+ADPCM audio offset:   0x6eee9
+Sample count:         9298 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 42
+Info table A offset:  0xa5f8d
+Info table B offset:  0xa6961
+ADPCM audio offset:   0x703c9
+Sample count:         9253 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 43
+Info table A offset:  0xa5fad
+Info table B offset:  0xa6989
+ADPCM audio offset:   0x71889
+Sample count:         8531 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 44
+Info table A offset:  0xa5fcd
+Info table B offset:  0xa69b1
+ADPCM audio offset:   0x72ba9
+Sample count:         9338 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 45
+Info table A offset:  0xa5fed
+Info table B offset:  0xa69d9
+ADPCM audio offset:   0x74089
+Sample count:         12168 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 46
+Info table A offset:  0xa600d
+Info table B offset:  0xa6a01
+ADPCM audio offset:   0x75bc9
+Sample count:         12169 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 47
+Info table A offset:  0xa602d
+Info table B offset:  0xa6a29
+ADPCM audio offset:   0x77709
+Sample count:         7134 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 48
+Info table A offset:  0xa604d
+Info table B offset:  0xa6a51
+ADPCM audio offset:   0x78709
+Sample count:         6934 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 49
+Info table A offset:  0xa606d
+Info table B offset:  0xa6a79
+ADPCM audio offset:   0x79689
+Sample count:         4859 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 50
+Info table A offset:  0xa608d
+Info table B offset:  0xa6aa1
+ADPCM audio offset:   0x7a169
+Sample count:         5022 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 51
+Info table A offset:  0xa60ad
+Info table B offset:  0xa6ac9
+ADPCM audio offset:   0x7aca9
+Sample count:         19277 samples
+Sample rate:          22050 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 52
+Info table A offset:  0xa60cd
+Info table B offset:  0xa6af1
+ADPCM audio offset:   0x7d7c9
+Sample count:         17347 samples
+Sample rate:          22050 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 53
+Info table A offset:  0xa60ed
+Info table B offset:  0xa6b19
+ADPCM audio offset:   0x7fe89
+Sample count:         14239 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 54
+Info table A offset:  0xa610d
+Info table B offset:  0xa6b41
+ADPCM audio offset:   0x81e69
+Sample count:         13698 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 55
+Info table A offset:  0xa612d
+Info table B offset:  0xa6b69
+ADPCM audio offset:   0x83d09
+Sample count:         67055 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 56
+Info table A offset:  0xa614d
+Info table B offset:  0xa6b91
+ADPCM audio offset:   0x8d2c9
+Sample count:         9664 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 57
+Info table A offset:  0xa616d
+Info table B offset:  0xa6bb9
+ADPCM audio offset:   0x8e869
+Sample count:         17137 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 58
+Info table A offset:  0xa618d
+Info table B offset:  0xa6be1
+ADPCM audio offset:   0x90ec9
+Sample count:         19392 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 59
+Info table A offset:  0xa61ad
+Info table B offset:  0xa6c09
+ADPCM audio offset:   0x93a29
+Sample count:         21408 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 60
+Info table A offset:  0xa61cd
+Info table B offset:  0xa6c31
+ADPCM audio offset:   0x96a09
+Sample count:         18976 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 61
+Info table A offset:  0xa61ed
+Info table B offset:  0xa6c59
+ADPCM audio offset:   0x99469
+Sample count:         9396 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 62
+Info table A offset:  0xa620d
+Info table B offset:  0xa6c81
+ADPCM audio offset:   0x9a969
+Sample count:         4702 samples
+Sample rate:          12000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 63
+Info table A offset:  0xa622d
+Info table B offset:  0xa6ca9
+ADPCM audio offset:   0x9b3e9
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 64
+Info table A offset:  0xa624d
+Info table B offset:  0xa6cd1
+ADPCM audio offset:   0x9b9e9
+Sample count:         13721 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 65
+Info table A offset:  0xa626d
+Info table B offset:  0xa6cf9
+ADPCM audio offset:   0x9d8a9
+Sample count:         12077 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 66
+Info table A offset:  0xa628d
+Info table B offset:  0xa6d21
+ADPCM audio offset:   0x9f3a9
+Sample count:         16636 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 67
+Info table A offset:  0xa62ad
+Info table B offset:  0xa6d49
+ADPCM audio offset:   0xa18e9
+Sample count:         29285 samples
+Sample rate:          22050 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

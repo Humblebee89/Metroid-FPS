@@ -1,0 +1,56 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/FireFlea
+Original input file: 35f15f3b.AGSC
+File contains 5 sounds
+
+Sound 0
+Info table A offset:  0x127ac
+Info table B offset:  0x12850
+ADPCM audio offset:   0x3e0
+Sample count:         65563 samples
+Sample rate:          24000 Hz
+Loop start sample:    405
+Loop end sample:      64792
+Loop length:          64388 samples
+
+Sound 1
+Info table A offset:  0x127cc
+Info table B offset:  0x12878
+ADPCM audio offset:   0x9640
+Sample count:         24715 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0x127ec
+Info table B offset:  0x128a0
+ADPCM audio offset:   0xcd80
+Sample count:         13817 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0x1280c
+Info table B offset:  0x128c8
+ADPCM audio offset:   0xec60
+Sample count:         23860 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0x1282c
+Info table B offset:  0x128f0
+ADPCM audio offset:   0x121c0
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+

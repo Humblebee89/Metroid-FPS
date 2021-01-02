@@ -1,0 +1,86 @@
+AGSC - Audio Group file
+Version: Metroid Prime
+Directory: Audio/SpankWeed
+Original input file: c363bd5e.AGSC
+File contains 8 sounds
+
+Sound 0
+Info table A offset:  0xdb09
+Info table B offset:  0xdc0d
+ADPCM audio offset:   0x8a5
+Sample count:         344 samples
+Sample rate:          2000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 1
+Info table A offset:  0xdb29
+Info table B offset:  0xdc35
+ADPCM audio offset:   0x985
+Sample count:         2640 samples
+Sample rate:          4000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 2
+Info table A offset:  0xdb49
+Info table B offset:  0xdc5d
+ADPCM audio offset:   0xf85
+Sample count:         9986 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 3
+Info table A offset:  0xdb69
+Info table B offset:  0xdc85
+ADPCM audio offset:   0x25e5
+Sample count:         10022 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 4
+Info table A offset:  0xdb89
+Info table B offset:  0xdcad
+ADPCM audio offset:   0x3c45
+Sample count:         15369 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 5
+Info table A offset:  0xdba9
+Info table B offset:  0xdcd5
+ADPCM audio offset:   0x5ea5
+Sample count:         16104 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 6
+Info table A offset:  0xdbc9
+Info table B offset:  0xdcfd
+ADPCM audio offset:   0x82a5
+Sample count:         24777 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
+Sound 7
+Info table A offset:  0xdbe9
+Info table B offset:  0xdd25
+ADPCM audio offset:   0xba05
+Sample count:         14777 samples
+Sample rate:          24000 Hz
+Loop start sample:    0
+Loop end sample:      0
+Loop length:          0 samples
+
