@@ -8,12 +8,15 @@ public class PlayerMovementController : MonoBehaviour
 {
     public PlayerInput playerInput;
 
-    [SerializeField] float moveSpeed = 1f;
-    [SerializeField] float JumpHeight = 1f;
-    [SerializeField] bool enableDoubleJump;
-    [SerializeField] Transform groundCheck;
-    [SerializeField] float groundDistance = 0.4f;
-    [SerializeField] LayerMask groundMask;
+    [SerializeField] private bool enableDoubleJump;
+    [SerializeField] private bool enableDash;
+    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float jumpHeight = 1f;
+    [SerializeField] private float dashTime = 1f;
+    [SerializeField] private float dashSpeed = 3f;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundDistance = 0.4f;
+    [SerializeField] private LayerMask groundMask;
 
     private Vector3 moveDirection;
     private Rigidbody playerRigidbody;
@@ -27,6 +30,7 @@ public class PlayerMovementController : MonoBehaviour
         playerInput.Player.Move.performed += context => GetMoveInput(context.ReadValue<Vector2>());
         playerInput.Player.Move.canceled += context => GetMoveInput(context.ReadValue<Vector2>());
         playerInput.Player.Jump.performed += context => Jump();
+        playerInput.Player.Dash.performed += context => Dash();
     }
 
     private void OnEnable()
@@ -49,6 +53,24 @@ public class PlayerMovementController : MonoBehaviour
         inputDirection = input;
     }
 
+    private void Dash()
+    {
+        StartCoroutine(PerformDash());
+    }
+
+    private IEnumerator PerformDash()
+    {
+        playerRigidbody.velocity = Vector3.zero;
+        float elapsedTime = 0;
+
+        while (elapsedTime < dashTime)
+        {
+            playerRigidbody.MovePosition(playerRigidbody.position + moveDirection.normalized * dashSpeed * Time.deltaTime);
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
     private void Jump()
     {
         if(isGrounded)
@@ -56,19 +78,17 @@ public class PlayerMovementController : MonoBehaviour
             PerformJump();
             canDoubleJump = true;
         }
-
-        if(isGrounded == false && canDoubleJump && enableDoubleJump)
+        else if(canDoubleJump && enableDoubleJump)
         {
             PerformJump();    
             canDoubleJump = false;
         }
-
     }
 
     private void PerformJump()
     {
         playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, 0, playerRigidbody.velocity.z);
-        playerRigidbody.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
+        playerRigidbody.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
     }
 
     private void Update()
