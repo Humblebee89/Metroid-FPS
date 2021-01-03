@@ -37,6 +37,11 @@ public class CameraLookController : MonoBehaviour
         playerInput.Disable();
     }
 
+    private void Update()
+    {
+        CameraLook();
+    }
+
     private void GetLookInput(Vector2 axis)
     {
         inputDirection.x = axis.x;
@@ -45,9 +50,8 @@ public class CameraLookController : MonoBehaviour
         print("Input Direction " + inputDirection);
     }
 
-    private void Update()
+    private void CameraLook()
     {
-        //Camera Look
         int xDirection;
         int yDirection;
 
@@ -66,5 +70,4 @@ public class CameraLookController : MonoBehaviour
         playerCamera.localRotation = Quaternion.Euler(clampedRotationX, 0f, 0f);
         playerBody.Rotate(Vector3.up * modifiedInputX);
     }
-
 }
