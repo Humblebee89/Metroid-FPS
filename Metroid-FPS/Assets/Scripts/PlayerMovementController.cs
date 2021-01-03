@@ -10,6 +10,7 @@ public class PlayerMovementController : MonoBehaviour
 
     [SerializeField] float moveSpeed = 1f;
     [SerializeField] float JumpHeight = 1f;
+    [SerializeField] bool enableDoubleJump;
     [SerializeField] Transform groundCheck;
     [SerializeField] float groundDistance = 0.4f;
     [SerializeField] LayerMask groundMask;
@@ -18,6 +19,7 @@ public class PlayerMovementController : MonoBehaviour
     private Rigidbody playerRigidbody;
     private Vector2 inputDirection;
     private bool isGrounded;
+    private bool canDoubleJump;
 
     private void Awake()
     {
@@ -50,6 +52,22 @@ public class PlayerMovementController : MonoBehaviour
     private void Jump()
     {
         if(isGrounded)
+        {
+            PerformJump();
+            canDoubleJump = true;
+        }
+
+        if(isGrounded == false && canDoubleJump && enableDoubleJump)
+        {
+            PerformJump();    
+            canDoubleJump = false;
+        }
+
+    }
+
+    private void PerformJump()
+    {
+        playerRigidbody.velocity = new Vector3(playerRigidbody.velocity.x, 0, playerRigidbody.velocity.z);
         playerRigidbody.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
     }
 
