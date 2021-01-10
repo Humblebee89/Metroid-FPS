@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -44,8 +44,11 @@ public class CameraLookController : MonoBehaviour
 
     private void GetLookInput(Vector2 axis)
     {
-        inputDirection.x = axis.x;
-        inputDirection.y = axis.y;
+        //inputDirection.x = axis.x;
+        //inputDirection.y = axis.y;
+
+        Vector2 dir = axis.normalized;
+        inputDirection = axis / Mathf.Max (Mathf.Abs (dir.x), Mathf.Abs (dir.y), Mathf.Epsilon);
 
         print("Input Direction " + inputDirection);
     }
@@ -69,5 +72,7 @@ public class CameraLookController : MonoBehaviour
 
         playerCamera.localRotation = Quaternion.Euler(clampedRotationX, 0f, 0f);
         playerBody.Rotate(Vector3.up * modifiedInputX);
+
+        
     }
 }
