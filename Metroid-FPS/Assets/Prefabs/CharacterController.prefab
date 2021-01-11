@@ -265,7 +265,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &1848290562825684912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,30 +297,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBody: {fileID: 5872919601941089780}
   playerCamera: {fileID: 5872919603691514189}
-  lookSensitivity: 200
+  lookSensitivity: 175
   inputCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0.14526926
-      outSlope: 0.14526926
+      inSlope: 0.03600151
+      outSlope: 0.03600151
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.05241119
+      outWeight: 0.04229675
     - serializedVersion: 3
-      time: 0.949
-      value: 0.8
-      inSlope: 2.3387682
+      time: 0.9795
+      value: 0.65
+      inSlope: 1.383305
       outSlope: 2.3387682
       tangentMode: 1
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.03519534
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.95
+      time: 0.98
       value: 1
       inSlope: 2.868186
       outSlope: 0.000009047686
@@ -358,7 +358,7 @@ MonoBehaviour:
   moveSpeed: 6
   jumpHeight: 2
   dashTime: 0.25
-  dashSpeed: 10
+  dashSpeed: 12
   groundCheck: {fileID: 626366155}
   groundDistance: 0.4
   groundMask:

@@ -50,7 +50,7 @@ public class CameraLookController : MonoBehaviour
         Vector2 dir = axis.normalized;
         inputDirection = axis / Mathf.Max (Mathf.Abs (dir.x), Mathf.Abs (dir.y), Mathf.Epsilon);
 
-        print("Input Direction " + inputDirection);
+        //print("Input Direction " + inputDirection);
     }
 
     private void CameraLook()

@@ -4595,49 +4595,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: lookSensitivity
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[1].time
-      value: 0.9795
-      objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[2].time
-      value: 0.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[1].value
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[0].inSlope
-      value: 0.03600151
-      objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[1].inSlope
-      value: 1.383305
-      objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[0].outSlope
-      value: 0.03600151
-      objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[1].inWeight
-      value: 0.03519534
-      objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[0].outWeight
-      value: 0.04229675
+    - target: {fileID: 186391994694708100, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: dashCooldown
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 186391994694708100, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: dashSpeed
-      value: 12
+      propertyPath: enableDashAbility
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5666994830430025659, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
+    - target: {fileID: 186391994694708100, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: enableDoubleJumpAbility
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_Name

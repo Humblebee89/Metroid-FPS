@@ -8,12 +8,13 @@ public class PlayerMovementController : MonoBehaviour
 {
     public PlayerInput playerInput;
 
-    [SerializeField] private bool enableDoubleJump;
-    [SerializeField] private bool enableDash;
+    [SerializeField] private bool enableDoubleJumpAbility;
+    [SerializeField] private bool enableDashAbility;
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float jumpHeight = 1f;
     [SerializeField] private float dashTime = 1f;
     [SerializeField] private float dashSpeed = 3f;
+    [SerializeField] private float dashCooldown = 1f;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
@@ -23,6 +24,7 @@ public class PlayerMovementController : MonoBehaviour
     private Vector2 inputDirection;
     private bool isGrounded;
     private bool canDoubleJump;
+    private bool canDash = true;
 
     private void Awake()
     {
@@ -55,7 +57,11 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Dash()
     {
-        StartCoroutine(PerformDash());
+        if(enableDashAbility && canDash)
+        {
+            StartCoroutine(PerformDash());
+            StartCoroutine(CoolDownHelper.CoolDown(dashCooldown, value => canDash = value));
+        }
     }
 
     private IEnumerator PerformDash()
@@ -78,7 +84,7 @@ public class PlayerMovementController : MonoBehaviour
             PerformJump();
             canDoubleJump = true;
         }
-        else if(canDoubleJump && enableDoubleJump)
+        else if(canDoubleJump && enableDoubleJumpAbility)
         {
             PerformJump();    
             canDoubleJump = false;
