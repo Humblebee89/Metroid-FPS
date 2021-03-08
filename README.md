@@ -6,8 +6,6 @@ At the moment, the controls only work with an Xbox One/Series Controller
 
 ## Controls ##
 
-----
-
 **Left Stick** to move
 
 **Right Stick** to aim
