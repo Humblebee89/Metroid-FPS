@@ -8,20 +8,18 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private Animator ArmCannonAnimator;
 
     private float playerVelocityMagnitude;
-    private Vector3 previous;
-
 
     private void Update()
     {
         GetPlayerVelocity();
         print(playerVelocityMagnitude);
         ArmCannonAnimator.SetFloat("WalkSpeed", playerVelocityMagnitude);
+        ArmCannonAnimator.SetBool("isGrounded", playerMovementController.isGrounded);
     }
 
     private void GetPlayerVelocity()
     {
         playerVelocityMagnitude = (playerMovementController.inputDirection).magnitude;
-        //previous = transform.position;
     }
 
 }
