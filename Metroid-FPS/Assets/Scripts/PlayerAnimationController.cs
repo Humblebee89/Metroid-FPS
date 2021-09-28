@@ -9,6 +9,16 @@ public class PlayerAnimationController : MonoBehaviour
 
     private float playerVelocityMagnitude;
 
+    private void OnEnable()
+    {
+        Actions.OnFireNormal += FireNormal;
+    }
+    
+    private void OnDisable()
+    {
+        Actions.OnFireNormal -= FireNormal;
+    }
+
     private void Update()
     {
         GetPlayerVelocity();
@@ -20,6 +30,11 @@ public class PlayerAnimationController : MonoBehaviour
     private void GetPlayerVelocity()
     {
         playerVelocityMagnitude = (playerMovementController.inputDirection).magnitude;
+    }
+
+    private void FireNormal()
+    {
+        ArmCannonAnimator.SetTrigger("FireNormal");
     }
 
 }

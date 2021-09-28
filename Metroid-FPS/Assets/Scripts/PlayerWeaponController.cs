@@ -28,6 +28,7 @@ public class PlayerWeaponController : MonoBehaviour
     
     private void Fire()
     {
+        Actions.OnFireNormal();
         Instantiate(powerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
     }
 }
