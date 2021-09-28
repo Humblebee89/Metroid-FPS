@@ -19,9 +19,10 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
 
+    [HideInInspector] public Vector2 inputDirection;
+
     private Rigidbody playerRigidbody;
     private Vector3 moveDirection;
-    private Vector2 inputDirection;
     private bool isGrounded;
     private bool canDoubleJump;
     private bool canDash = true;

@@ -3922,11 +3922,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
   m_PrefabInstance: {fileID: 5872919602919825444}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &962935772 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5872919601941089780, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+--- !u!114 &962935767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 186391994694708100, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
   m_PrefabInstance: {fileID: 5872919602919825444}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962935765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90645796f2cae964292cda98fa49ab9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &962935773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3939,7 +3945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8214b9bfaaf10e74982e30a2d5822b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 962935772}
+  playerMovementController: {fileID: 962935767}
   ArmCannonAnimator: {fileID: 1237326322}
 --- !u!1 &1064695961
 GameObject:

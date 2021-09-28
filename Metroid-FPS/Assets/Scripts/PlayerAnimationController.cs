@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimationController : MonoBehaviour
 {
-    [SerializeField] private Transform playerTransform;
+    [SerializeField] private PlayerMovementController playerMovementController;
     [SerializeField] private Animator ArmCannonAnimator;
 
     private float playerVelocityMagnitude;
@@ -20,8 +20,8 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void GetPlayerVelocity()
     {
-        playerVelocityMagnitude = ((playerTransform.position - previous).magnitude) / Time.deltaTime;
-        previous = transform.position;
+        playerVelocityMagnitude = (playerMovementController.inputDirection).magnitude;
+        //previous = transform.position;
     }
 
 }
