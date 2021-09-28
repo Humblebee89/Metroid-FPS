@@ -19,8 +19,8 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
 
-    private Vector3 moveDirection;
     private Rigidbody playerRigidbody;
+    private Vector3 moveDirection;
     private Vector2 inputDirection;
     private bool isGrounded;
     private bool canDoubleJump;
@@ -28,6 +28,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void Awake()
     {
+        playerRigidbody = GetComponent<Rigidbody>();
         playerInput = new PlayerInput();
         playerInput.Player.Move.performed += context => GetMoveInput(context.ReadValue<Vector2>());
         playerInput.Player.Move.canceled += context => GetMoveInput(context.ReadValue<Vector2>());
@@ -43,11 +44,6 @@ public class PlayerMovementController : MonoBehaviour
     private void OnDisable()
     {
         playerInput.Disable();
-    }
-
-    private void Start()
-    {
-        playerRigidbody = GetComponent<Rigidbody>();
     }
 
     private void GetMoveInput(Vector2 input)
