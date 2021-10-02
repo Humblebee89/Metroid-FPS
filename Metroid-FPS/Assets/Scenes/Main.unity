@@ -2856,6 +2856,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
   m_PrefabInstance: {fileID: 5872919602919825444}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &962935766 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+  m_PrefabInstance: {fileID: 5872919602919825444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962935765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ce04c05ac49bf45a0be576b44f1f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &962935767 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 186391994694708100, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
@@ -2880,6 +2891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovementController: {fileID: 962935767}
+  playerWeaponController: {fileID: 962935766}
   ArmCannonAnimator: {fileID: 1237326322}
 --- !u!1 &1148806332
 GameObject:
@@ -3145,6 +3157,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 314664e3-cb69-42d9-9782-081f2e32e878
     m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b395ced7-9f7d-439b-9764-c26974699811
+    m_ActionName: Player/Dash[/XInputControllerWindows/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3db6733d-5af4-4349-9d93-7ab6857ff2e3
+    m_ActionName: Player/ChargeStart[/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9a85a391-226f-490d-a830-66c12742cc28
+    m_ActionName: Player/ChargeEnd[/XInputControllerWindows/rightTrigger]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
@@ -4362,7 +4386,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22762
+  m_Name: pb_Mesh22760
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

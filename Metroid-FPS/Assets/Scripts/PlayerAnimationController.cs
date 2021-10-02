@@ -13,11 +13,13 @@ public class PlayerAnimationController : MonoBehaviour
     private void OnEnable()
     {
         Actions.OnFireNormal += FireNormal;
+        Actions.OnFireCharged += FireCharged;
     }
     
     private void OnDisable()
     {
         Actions.OnFireNormal -= FireNormal;
+        Actions.OnFireCharged -= FireCharged;
     }
 
     private void Update()
@@ -36,6 +38,11 @@ public class PlayerAnimationController : MonoBehaviour
     private void FireNormal()
     {
         ArmCannonAnimator.SetTrigger("FireNormal");
+    }
+
+    private void FireCharged()
+    {
+        ArmCannonAnimator.SetTrigger("FireCharged");
     }
 
 }

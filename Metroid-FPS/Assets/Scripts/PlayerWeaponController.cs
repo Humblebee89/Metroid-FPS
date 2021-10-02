@@ -73,6 +73,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void FireCharged()
     {
+        Actions.OnFireCharged();
         GameObject chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
         chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
     }
