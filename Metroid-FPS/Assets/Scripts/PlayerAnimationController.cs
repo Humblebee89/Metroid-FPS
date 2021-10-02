@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] private PlayerMovementController playerMovementController;
+    [SerializeField] private PlayerWeaponController playerWeaponController;
     [SerializeField] private Animator ArmCannonAnimator;
 
     private float playerVelocityMagnitude;
@@ -22,9 +23,9 @@ public class PlayerAnimationController : MonoBehaviour
     private void Update()
     {
         GetPlayerVelocity();
-        print(playerVelocityMagnitude);
         ArmCannonAnimator.SetFloat("WalkSpeed", playerVelocityMagnitude);
         ArmCannonAnimator.SetBool("isGrounded", playerMovementController.isGrounded);
+        ArmCannonAnimator.SetLayerWeight(1, playerWeaponController.chargevalue);
     }
 
     private void GetPlayerVelocity()

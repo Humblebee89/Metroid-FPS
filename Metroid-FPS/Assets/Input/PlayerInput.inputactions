@@ -44,6 +44,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ChargeStart",
+                    "type": "Button",
+                    "id": "3db6733d-5af4-4349-9d93-7ab6857ff2e3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ChargeEnd",
+                    "type": "Button",
+                    "id": "9a85a391-226f-490d-a830-66c12742cc28",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -97,8 +113,30 @@
                     "path": "<Gamepad>/leftTrigger",
                     "interactions": "Press",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8e9c0cfd-cd84-4da2-b9f5-df5a7460c313",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ChargeStart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7bdaddbe-fe1d-4312-af09-f82f1c1997b1",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "Press(pressPoint=0.1,behavior=1)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ChargeEnd",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -4866,6 +4866,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: chargeTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: chargedPowerBeamProjectile
+      value: 
+      objectReference: {fileID: 7042478485343560404, guid: b2ce2ee128e5e3c4e893706b43619ff9, type: 3}
     - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: inputCurve.m_Curve.Array.data[3].time
       value: 1

@@ -57,6 +57,22 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ChargeStart"",
+                    ""type"": ""Button"",
+                    ""id"": ""3db6733d-5af4-4349-9d93-7ab6857ff2e3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ChargeEnd"",
+                    ""type"": ""Button"",
+                    ""id"": ""9a85a391-226f-490d-a830-66c12742cc28"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -110,8 +126,30 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8e9c0cfd-cd84-4da2-b9f5-df5a7460c313"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ChargeStart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7bdaddbe-fe1d-4312-af09-f82f1c1997b1"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": ""Press(pressPoint=0.1,behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""ChargeEnd"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -139,6 +177,8 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
+        m_Player_ChargeStart = m_Player.FindAction("ChargeStart", throwIfNotFound: true);
+        m_Player_ChargeEnd = m_Player.FindAction("ChargeEnd", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -193,6 +233,8 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Dash;
+    private readonly InputAction m_Player_ChargeStart;
+    private readonly InputAction m_Player_ChargeEnd;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -202,6 +244,8 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
+        public InputAction @ChargeStart => m_Wrapper.m_Player_ChargeStart;
+        public InputAction @ChargeEnd => m_Wrapper.m_Player_ChargeEnd;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -226,6 +270,12 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Dash.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
                 @Dash.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
                 @Dash.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
+                @ChargeStart.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeStart;
+                @ChargeStart.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeStart;
+                @ChargeStart.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeStart;
+                @ChargeEnd.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeEnd;
+                @ChargeEnd.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeEnd;
+                @ChargeEnd.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeEnd;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -245,6 +295,12 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Dash.started += instance.OnDash;
                 @Dash.performed += instance.OnDash;
                 @Dash.canceled += instance.OnDash;
+                @ChargeStart.started += instance.OnChargeStart;
+                @ChargeStart.performed += instance.OnChargeStart;
+                @ChargeStart.canceled += instance.OnChargeStart;
+                @ChargeEnd.started += instance.OnChargeEnd;
+                @ChargeEnd.performed += instance.OnChargeEnd;
+                @ChargeEnd.canceled += instance.OnChargeEnd;
             }
         }
     }
@@ -265,5 +321,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
+        void OnChargeStart(InputAction.CallbackContext context);
+        void OnChargeEnd(InputAction.CallbackContext context);
     }
 }
