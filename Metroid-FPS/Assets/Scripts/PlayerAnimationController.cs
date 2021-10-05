@@ -6,16 +6,18 @@ public class PlayerAnimationController : MonoBehaviour
 {
     [SerializeField] private PlayerMovementController playerMovementController;
     [SerializeField] private PlayerWeaponController playerWeaponController;
-    [SerializeField] private Animator ArmCannonAnimator;
+    [SerializeField] private Animator armCannonAnimator;
+    [SerializeField] private AnimationCurve shakeAdjustCurve;
 
     private float playerVelocityMagnitude;
+    private float adjustedShakeAmount;
 
     private void OnEnable()
     {
         Actions.OnFireNormal += FireNormal;
         Actions.OnFireCharged += FireCharged;
     }
-    
+
     private void OnDisable()
     {
         Actions.OnFireNormal -= FireNormal;
@@ -25,9 +27,10 @@ public class PlayerAnimationController : MonoBehaviour
     private void Update()
     {
         GetPlayerVelocity();
-        ArmCannonAnimator.SetFloat("WalkSpeed", playerVelocityMagnitude);
-        ArmCannonAnimator.SetBool("isGrounded", playerMovementController.isGrounded);
-        ArmCannonAnimator.SetLayerWeight(1, playerWeaponController.chargevalue);
+        Shake();
+        armCannonAnimator.SetFloat("WalkSpeed", playerVelocityMagnitude);
+        armCannonAnimator.SetBool("isGrounded", playerMovementController.isGrounded);
+        armCannonAnimator.SetFloat("ChargeValue", playerWeaponController.chargevalue);
     }
 
     private void GetPlayerVelocity()
@@ -35,14 +38,20 @@ public class PlayerAnimationController : MonoBehaviour
         playerVelocityMagnitude = (playerMovementController.inputDirection).magnitude;
     }
 
+    private void Shake()
+    {
+        adjustedShakeAmount = shakeAdjustCurve.Evaluate(playerWeaponController.chargevalue);
+        armCannonAnimator.SetLayerWeight(1, adjustedShakeAmount);
+    }
+
     private void FireNormal()
     {
-        ArmCannonAnimator.SetTrigger("FireNormal");
+        armCannonAnimator.SetTrigger("FireNormal");
     }
 
     private void FireCharged()
     {
-        ArmCannonAnimator.SetTrigger("FireCharged");
+        armCannonAnimator.SetTrigger("FireCharged");
     }
 
 }

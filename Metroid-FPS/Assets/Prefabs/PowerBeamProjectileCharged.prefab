@@ -150,7 +150,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  skinWidth: 0.1
+  skinWidth: 0.2
 --- !u!1 &7648935888026556368
 GameObject:
   m_ObjectHideFlags: 0

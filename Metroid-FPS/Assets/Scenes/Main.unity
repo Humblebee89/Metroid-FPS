@@ -2892,7 +2892,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovementController: {fileID: 962935767}
   playerWeaponController: {fileID: 962935766}
-  ArmCannonAnimator: {fileID: 1237326322}
+  armCannonAnimator: {fileID: 1237326322}
+  shakeAdjustCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1148806332
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,7 +4916,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: chargeTime
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: chargedPowerBeamProjectile
