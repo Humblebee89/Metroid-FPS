@@ -4919,9 +4919,13 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: chargeShotSizeMultiplyer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: chargedPowerBeamProjectile
       value: 
-      objectReference: {fileID: 7042478485343560404, guid: b2ce2ee128e5e3c4e893706b43619ff9, type: 3}
+      objectReference: {fileID: 7042478485343560404, guid: 493706d9daacf12459e4d5af1dbf4aab, type: 3}
     - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: inputCurve.m_Curve.Array.data[3].time
       value: 1

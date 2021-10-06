@@ -56,7 +56,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void ChargeEnd()
     {
-        if(charging == false) // Prevents this from firing with a standard shot
+        if(charging == false) // Prevents this from being called with a standard shot
         {
             return;
         }
