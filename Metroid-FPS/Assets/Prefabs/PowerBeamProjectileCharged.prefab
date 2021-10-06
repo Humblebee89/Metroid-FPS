@@ -4871,8 +4871,8 @@ MeshRenderer:
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
@@ -4913,7 +4913,6 @@ GameObject:
   - component: {fileID: 2949098716756461018}
   - component: {fileID: 5762779582325409805}
   - component: {fileID: 3020788781173254632}
-  - component: {fileID: 3802354013607825875}
   m_Layer: 0
   m_Name: PowerBeamProjectileCharged
   m_TagString: Untagged
@@ -5001,20 +5000,6 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 112
   m_CollisionDetection: 2
---- !u!114 &3802354013607825875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7042478485343560404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8352f316dc23a6b4880ab8c2d309e3ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightSource: {fileID: 6608474415362406662}
-  delay: 0.1
 --- !u!1 &7648935888026556368
 GameObject:
   m_ObjectHideFlags: 0
@@ -5054,13 +5039,13 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7648935888026556368}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.8795767, b: 0, a: 1}
-  m_Intensity: 1.5
-  m_Range: 12
+  m_Intensity: 4
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
