@@ -1207,7 +1207,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22728
+  m_Name: pb_Mesh29812
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2851,72 +2851,6 @@ Transform:
   m_Father: {fileID: 402102699}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &962935765 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-  m_PrefabInstance: {fileID: 5872919602919825444}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &962935766 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-  m_PrefabInstance: {fileID: 5872919602919825444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962935765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92ce04c05ac49bf45a0be576b44f1f88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &962935767 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 186391994694708100, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-  m_PrefabInstance: {fileID: 5872919602919825444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962935765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90645796f2cae964292cda98fa49ab9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &962935773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962935765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8214b9bfaaf10e74982e30a2d5822b00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMovementController: {fileID: 962935767}
-  playerWeaponController: {fileID: 962935766}
-  armCannonAnimator: {fileID: 1237326322}
-  shakeAdjustCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1148806332
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,11 +3228,6 @@ Transform:
   m_Father: {fileID: 2043077800}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1237326322 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 985448212, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-  m_PrefabInstance: {fileID: 5872919602919825444}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1309478809
 GameObject:
   m_ObjectHideFlags: 0
@@ -4410,7 +4339,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22766
+  m_Name: pb_Mesh29850
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4914,109 +4843,85 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: chargeTime
-      value: 2
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.size
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: chargeShotSizeMultiplyer
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[0].time
+      value: 0.001970727
+      objectReference: {fileID: 0}
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[1].time
+      value: 0.89829814
+      objectReference: {fileID: 0}
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[2].time
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: chargedPowerBeamProjectile
-      value: 
-      objectReference: {fileID: 7042478485343560404, guid: 493706d9daacf12459e4d5af1dbf4aab, type: 3}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[3].time
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[0].value
+      value: 0.10016946
+      objectReference: {fileID: 0}
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[1].value
+      value: 0.696757
+      objectReference: {fileID: 0}
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[2].value
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[2].value
-      value: 1.0982947
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[0].inSlope
+      value: 0.66559106
       objectReference: {fileID: 0}
-    - target: {fileID: 694470049, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: inputCurve.m_Curve.Array.data[3].value
-      value: 1.0982949
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[1].inSlope
+      value: 0.6966517
       objectReference: {fileID: 0}
-    - target: {fileID: 985448212, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 736fdf9ab6835c74d85dd2aa64ab16ec, type: 2}
-    - target: {fileID: 1789928600, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[2].inSlope
+      value: 0.06900276
       objectReference: {fileID: 0}
-    - target: {fileID: 1789928601, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[0].outSlope
+      value: 0.66559106
       objectReference: {fileID: 0}
-    - target: {fileID: 1789928601, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[1].inWeight
+      value: 0.03734599
       objectReference: {fileID: 0}
-    - target: {fileID: 1789928601, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.1
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[1].outSlope
+      value: 0.6966517
       objectReference: {fileID: 0}
-    - target: {fileID: 1789928602, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[2].inWeight
+      value: 0.42272016
       objectReference: {fileID: 0}
-    - target: {fileID: 1789928602, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_BoxSize.x
-      value: 1
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[2].outSlope
+      value: 0.06900276
       objectReference: {fileID: 0}
-    - target: {fileID: 1789928602, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_BoxSize.y
-      value: 0.5994011
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
       objectReference: {fileID: 0}
-    - target: {fileID: 1789928602, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_BoxSize.z
-      value: 1
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[1].outWeight
+      value: 0.42514098
       objectReference: {fileID: 0}
-    - target: {fileID: 1789928602, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_BoxOffset.y
-      value: 0.024406016
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
       objectReference: {fileID: 0}
-    - target: {fileID: 186391994694708100, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: dashCooldown
-      value: 0.5
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 659280739923865423, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_RenderShadows
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 659280739923865423, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 659280739923865423, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_VolumeLayerMask.m_Bits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2948562464226717921, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_Name
-      value: Barrel_4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3209621081213618304, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_Name
-      value: Barrel_5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3415653724909400988, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_Name
-      value: Barrel_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692817672284171448, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: field of view
-      value: 48.993553
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692817672284171448, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: far clip plane
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5096468814669236573, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_Name
-      value: Barrel_3
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: sizeAdjustCurve.m_Curve.Array.data[2].tangentMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_Name
@@ -5065,18 +4970,6 @@ PrefabInstance:
     - target: {fileID: 5872919601941089780, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5872919602919825449, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_Antialiasing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5872919602919825450, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: near clip plane
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7802292913010909503, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_Name
-      value: Barrel_2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}

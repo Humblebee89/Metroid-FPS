@@ -6,5 +6,6 @@ using System;
 public static class Actions
 {
     public static Action OnFireNormal;
+    public static Action OnChargeStarted;
     public static Action OnFireCharged;
 }

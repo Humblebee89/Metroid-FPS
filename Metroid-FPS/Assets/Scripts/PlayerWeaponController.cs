@@ -22,6 +22,7 @@ public class PlayerWeaponController : MonoBehaviour
         playerInput = new PlayerInput();
         playerInput.Player.Fire.performed += context => Fire();
         playerInput.Player.ChargeStart.performed += context => StartCoroutine("ChargeStart");
+        playerInput.Player.ChargeStart.performed += context => ChargeStarted();
         playerInput.Player.ChargeEnd.performed += context => ChargeEnd();
     }
 
@@ -52,6 +53,11 @@ public class PlayerWeaponController : MonoBehaviour
             totalTime += Time.deltaTime;
             yield return null;
         }
+    }
+
+    private void ChargeStarted()
+    {
+        Actions.OnChargeStarted();
     }
 
     private void ChargeEnd()
