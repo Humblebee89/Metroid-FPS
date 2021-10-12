@@ -35,17 +35,6 @@ public class ChargeEffectsController : MonoBehaviour
     private void ChargeStarted()
     {
         ChargeEffectGameObject.SetActive(true);
-        StartCoroutine("Charge");
-    }
-
-    private IEnumerator Charge()
-    {
-        while (playerWeaponController.chargevalue < 1)
-        {
-            float adjustedScale = sizeAdjustCurve.Evaluate(playerWeaponController.chargevalue);
-            ChargeEffectGameObject.transform.localScale = new Vector3(adjustedScale, adjustedScale, adjustedScale);
-            yield return null;
-        } 
     }
 
     private void FireCharged()

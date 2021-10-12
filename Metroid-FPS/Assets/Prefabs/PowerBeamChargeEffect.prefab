@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.003
+      scalar: 0.004
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4815,6 +4815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5477659765293729993}
+  - component: {fileID: 6057790982953156100}
   m_Layer: 8
   m_Name: PowerBeamChargeEffect
   m_TagString: Untagged
@@ -4837,6 +4838,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6057790982953156100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646202882686515749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb5d02a6b69024458ea2e734db61bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerWeaponController: {fileID: 0}
+  sizeAdjustCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.001970727
+      value: 0.10016946
+      inSlope: 0.66559106
+      outSlope: 0.66559106
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.89829814
+      value: 0.696757
+      inSlope: 0.6966517
+      outSlope: 0.6966517
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.03734599
+      outWeight: 0.42514098
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.06900276
+      outSlope: 0.06900276
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.42272016
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  chargeLight: {fileID: 1324588423119310189}
 --- !u!1 &2590023860434674619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,13 +4929,13 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.8795767, b: 0, a: 1}
-  m_Intensity: 4
-  m_Range: 10
+  m_Intensity: 3
+  m_Range: 8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
@@ -4915,7 +4963,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295

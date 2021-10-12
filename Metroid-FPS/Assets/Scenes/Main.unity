@@ -1011,6 +1011,11 @@ Transform:
   m_Father: {fileID: 2043077800}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &387677757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8785612259506986743, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+  m_PrefabInstance: {fileID: 5872919602919825444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &402102698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,7 +1151,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22728
+  m_Name: pb_Mesh22732
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3987,6 +3992,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524297257}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1530820384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+  m_PrefabInstance: {fileID: 5872919602919825444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ce04c05ac49bf45a0be576b44f1f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1635333403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4189,6 +4205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1753635749}
   - component: {fileID: 1753635748}
+  - component: {fileID: 1753635750}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -4215,11 +4232,11 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.2
+    m_Bias: 0
+    m_NormalBias: 0
     m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
@@ -4272,13 +4289,27 @@ Transform:
   m_Father: {fileID: 402102699}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: 30, z: 0}
+--- !u!114 &1753635750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753635747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
 --- !u!43 &1976140960
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22766
+  m_Name: pb_Mesh22770
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4782,6 +4813,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: ChargeEffectGameObject
+      value: 
+      objectReference: {fileID: 387677757}
+    - target: {fileID: 401195913710515788, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: playerWeaponController
+      value: 
+      objectReference: {fileID: 1530820384}
+    - target: {fileID: 5141054205581193837, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_Name
       value: CharacterController
@@ -4828,6 +4871,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5872919601941089780, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785612259506986743, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
