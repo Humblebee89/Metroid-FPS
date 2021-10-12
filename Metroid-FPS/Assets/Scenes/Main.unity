@@ -3506,7 +3506,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsText: {fileID: 1321788881}
-  refreshRate: 0.1
+  refreshRate: 0.5
+  vSyncValue: 0
 --- !u!1 &1440383231
 GameObject:
   m_ObjectHideFlags: 0

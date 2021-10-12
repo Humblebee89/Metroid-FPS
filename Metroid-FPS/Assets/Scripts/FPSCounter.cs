@@ -6,8 +6,14 @@ public class FPSCounter : MonoBehaviour
 {
     [SerializeField] private TMP_Text fpsText;
     [SerializeField] private float refreshRate = 1f;
+    [SerializeField] private int vSyncValue;
  
     private float timer;
+
+    void Start()
+    {
+        QualitySettings.vSyncCount = vSyncValue;
+    }
  
     private void Update()
     {
