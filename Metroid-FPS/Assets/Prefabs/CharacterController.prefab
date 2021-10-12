@@ -164,7 +164,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 6.22}
   m_LocalScale: {x: 8.333334, y: 8.333334, z: 8.333334}
-  m_Children: []
+  m_Children:
+  - {fileID: 2126899465913188481}
   m_Father: {fileID: 5730030493901873407}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -504,28 +505,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerWeaponController: {fileID: 230046703}
-  projectileSource: {fileID: 1731597865}
-  powerBeamChargeEffect: {fileID: 1646202882686515749, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+  ChargeEffectGameObject: {fileID: 5141054205581193837}
   sizeAdjustCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
+      time: 0.001970727
+      value: 0.10016946
+      inSlope: 0.66559106
+      outSlope: 0.66559106
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.89829814
+      value: 0.696757
+      inSlope: 0.6966517
+      outSlope: 0.6966517
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.03734599
+      outWeight: 0.42514098
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      inSlope: 0.06900276
+      outSlope: 0.06900276
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.42272016
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -667,6 +676,77 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &5872919603825412168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1731597865}
+    m_Modifications:
+    - target: {fileID: 1646202882686515749, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_Name
+      value: PowerBeamChargeEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 1646202882686515749, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+--- !u!1 &5141054205581193837 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1646202882686515749, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+  m_PrefabInstance: {fileID: 5872919603825412168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2126899465913188481 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5477659765293729993, guid: 6b72a5aff78d93d499fe3cba6630dab0, type: 3}
+  m_PrefabInstance: {fileID: 5872919603825412168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9171856918630622634
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,11 +5,8 @@ using UnityEngine;
 public class ChargeEffectsController : MonoBehaviour
 {
     [SerializeField] PlayerWeaponController playerWeaponController;
-    [SerializeField] Transform projectileSource;
-    [SerializeField] GameObject powerBeamChargeEffect;
+    [SerializeField] GameObject ChargeEffectGameObject;
     [SerializeField] private AnimationCurve sizeAdjustCurve;
-
-    private GameObject instantiatedChargeEffect;
 
     private void OnEnable()
     {
@@ -27,18 +24,17 @@ public class ChargeEffectsController : MonoBehaviour
 
     private void Awake()
     {
-        instantiatedChargeEffect = Instantiate(powerBeamChargeEffect, projectileSource.position, Quaternion.identity, projectileSource);
-        instantiatedChargeEffect.SetActive(false);
+        ChargeEffectGameObject.SetActive(false);
     }
 
     private void FireNormal()
     {
-        instantiatedChargeEffect.SetActive(false);
+        ChargeEffectGameObject.SetActive(false);
     }
 
     private void ChargeStarted()
     {
-        instantiatedChargeEffect.SetActive(true);
+        ChargeEffectGameObject.SetActive(true);
         StartCoroutine("Charge");
     }
 
@@ -47,13 +43,13 @@ public class ChargeEffectsController : MonoBehaviour
         while (playerWeaponController.chargevalue < 1)
         {
             float adjustedScale = sizeAdjustCurve.Evaluate(playerWeaponController.chargevalue);
-            instantiatedChargeEffect.transform.localScale = new Vector3(adjustedScale, adjustedScale, adjustedScale);
+            ChargeEffectGameObject.transform.localScale = new Vector3(adjustedScale, adjustedScale, adjustedScale);
             yield return null;
         } 
     }
 
     private void FireCharged()
     {
-        instantiatedChargeEffect.SetActive(false);
+        ChargeEffectGameObject.SetActive(false);
     }
 }
