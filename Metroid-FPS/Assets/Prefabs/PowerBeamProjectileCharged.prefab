@@ -221,8 +221,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.9433962, g: 0.65437424, b: 0.19134924, a: 0.5019608}
-      maxColor: {r: 0.98039216, g: 0.51374453, b: 0.36470586, a: 0.5019608}
+      minColor: {r: 0.9433962, g: 0.65437424, b: 0.19134924, a: 0.39215687}
+      maxColor: {r: 0.98039216, g: 0.51374453, b: 0.36470586, a: 0.39215687}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -866,7 +866,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 60
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
