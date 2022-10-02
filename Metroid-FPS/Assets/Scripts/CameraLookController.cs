@@ -58,8 +58,8 @@ public class CameraLookController : MonoBehaviour
         int xDirection;
         int yDirection;
 
-        xDirection = inputDirection.x > 0 ?  1 : -1;
-        yDirection = inputDirection.y > 0 ?  1 : -1;
+        xDirection = inputDirection.x > 0 ? 1 : -1;
+        yDirection = inputDirection.y > 0 ? 1 : -1;
 
         float curveEvaluatedX = inputCurve.Evaluate(inputDirection.x) * xDirection;
         float curveEvaluatedY = inputCurve.Evaluate(inputDirection.y) * yDirection;
@@ -72,7 +72,5 @@ public class CameraLookController : MonoBehaviour
 
         playerCamera.localRotation = Quaternion.Euler(clampedRotationX, 0f, 0f);
         playerBody.Rotate(Vector3.up * modifiedInputX);
-
-        
     }
 }
