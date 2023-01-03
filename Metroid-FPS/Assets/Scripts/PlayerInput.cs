@@ -301,6 +301,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""64e3011d-d245-4459-bc83-228c8350f665"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireMissile"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""a4b5399a-f81b-4692-af64-6eb1761a8922"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",

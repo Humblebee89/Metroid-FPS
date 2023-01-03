@@ -9,6 +9,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     [SerializeField] private Transform projectileSpawner;
     [SerializeField] private GameObject powerBeamProjectile;
+    [SerializeField] private GameObject powerBeamMuzzleFlash;
     [SerializeField] private GameObject missileProjectile;
     [SerializeField] private float missileFireCooldownTime = 1.0f;
     [SerializeField] private GameObject chargedPowerBeamProjectile;
@@ -40,10 +41,16 @@ public class PlayerWeaponController : MonoBehaviour
         playerInput.Disable();
     }
 
+    private void MuzzleFlash(GameObject muzzleFlash)
+    {
+        Instantiate(muzzleFlash, projectileSpawner.position, projectileSpawner.rotation, projectileSpawner.transform);
+    }
+
     private void Fire()
     {
         Actions.OnFireNormal();
         Instantiate(powerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+        MuzzleFlash(powerBeamMuzzleFlash);
     }
 
     private void FireMissle()
@@ -51,8 +58,10 @@ public class PlayerWeaponController : MonoBehaviour
         if (canFireMissile == true)
         {
             Instantiate(missileProjectile, projectileSpawner.position, projectileSpawner.rotation);
+            //TODO Make a Missile specific muzzle flash
+            MuzzleFlash(powerBeamMuzzleFlash);
+            //TODO Have reload animation control cooldown
             StartCoroutine(CoolDownHelper.CoolDown(missileFireCooldownTime, value => canFireMissile = value));
-            //TODO Have reload animation control cooldown.
         }
     }
 
@@ -96,5 +105,7 @@ public class PlayerWeaponController : MonoBehaviour
         Actions.OnFireCharged();
         GameObject chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
         chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
+        //TODO Change this to a larger muzzle flash
+        MuzzleFlash(powerBeamMuzzleFlash);
     }
 }
