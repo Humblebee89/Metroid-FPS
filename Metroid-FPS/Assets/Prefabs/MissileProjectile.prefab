@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 40
   destroyTimer: 6
-  hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
+  hitEffectPrefab: {fileID: 3382703020168127288, guid: ad309fbd33a9d7542ace60bfc41e3592, type: 3}
   hitEffectOffset: 0.01
 --- !u!54 &711863952904206459
 Rigidbody:
@@ -164,10 +164,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.4
+  m_Radius: 0.05
+  m_Height: 0.25
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0.125}
 --- !u!1 &6630289207209514153
 GameObject:
   m_ObjectHideFlags: 0
@@ -5220,7 +5220,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.6
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -6024,7 +6024,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2

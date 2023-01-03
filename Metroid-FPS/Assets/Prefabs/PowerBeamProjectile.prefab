@@ -136,7 +136,7 @@ MonoBehaviour:
   projectileSpeed: 150
   destroyTimer: 3
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
-  hitEffectOffset: 0.1
+  hitEffectOffset: 0.01
 --- !u!114 &2949098716756461018
 MonoBehaviour:
   m_ObjectHideFlags: 0
