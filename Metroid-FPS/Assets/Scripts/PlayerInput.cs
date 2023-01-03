@@ -89,6 +89,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FireMissile"",
+                    ""type"": ""Button"",
+                    ""id"": ""51c0e686-12e2-49a9-8154-3b6de9a553df"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -289,6 +298,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""ChargeEnd"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4b5399a-f81b-4692-af64-6eb1761a8922"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireMissile"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -316,6 +336,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_ChargeStart = m_Player.FindAction("ChargeStart", throwIfNotFound: true);
         m_Player_ChargeEnd = m_Player.FindAction("ChargeEnd", throwIfNotFound: true);
+        m_Player_FireMissile = m_Player.FindAction("FireMissile", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -382,6 +403,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_ChargeStart;
     private readonly InputAction m_Player_ChargeEnd;
+    private readonly InputAction m_Player_FireMissile;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -393,6 +415,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @ChargeStart => m_Wrapper.m_Player_ChargeStart;
         public InputAction @ChargeEnd => m_Wrapper.m_Player_ChargeEnd;
+        public InputAction @FireMissile => m_Wrapper.m_Player_FireMissile;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -423,6 +446,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @ChargeEnd.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeEnd;
                 @ChargeEnd.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeEnd;
                 @ChargeEnd.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChargeEnd;
+                @FireMissile.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireMissile;
+                @FireMissile.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireMissile;
+                @FireMissile.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireMissile;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -448,6 +474,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @ChargeEnd.started += instance.OnChargeEnd;
                 @ChargeEnd.performed += instance.OnChargeEnd;
                 @ChargeEnd.canceled += instance.OnChargeEnd;
+                @FireMissile.started += instance.OnFireMissile;
+                @FireMissile.performed += instance.OnFireMissile;
+                @FireMissile.canceled += instance.OnFireMissile;
             }
         }
     }
@@ -470,5 +499,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnChargeStart(InputAction.CallbackContext context);
         void OnChargeEnd(InputAction.CallbackContext context);
+        void OnFireMissile(InputAction.CallbackContext context);
     }
 }

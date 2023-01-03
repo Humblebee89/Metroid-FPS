@@ -9,6 +9,8 @@ public class PlayerWeaponController : MonoBehaviour
 
     [SerializeField] private Transform projectileSpawner;
     [SerializeField] private GameObject powerBeamProjectile;
+    [SerializeField] private GameObject missileProjectile;
+    [SerializeField] private float missileFireCooldownTime = 1.0f;
     [SerializeField] private GameObject chargedPowerBeamProjectile;
     [SerializeField] private float chargeTime = 1.0f;
     [SerializeField] private float standardShotThreshold = 0.5f;
@@ -16,11 +18,13 @@ public class PlayerWeaponController : MonoBehaviour
     [HideInInspector] public float chargevalue = 0;
 
     private bool charging = false;
+    private bool canFireMissile = true;
 
     private void Awake()
     {
         playerInput = new PlayerInput();
         playerInput.Player.Fire.performed += context => Fire();
+        playerInput.Player.FireMissile.performed += context => FireMissle();
         playerInput.Player.ChargeStart.performed += context => StartCoroutine("ChargeStart");
         playerInput.Player.ChargeStart.performed += context => ChargeStarted();
         playerInput.Player.ChargeEnd.performed += context => ChargeEnd();
@@ -40,6 +44,16 @@ public class PlayerWeaponController : MonoBehaviour
     {
         Actions.OnFireNormal();
         Instantiate(powerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+    }
+
+    private void FireMissle()
+    {
+        if (canFireMissile == true)
+        {
+            Instantiate(missileProjectile, projectileSpawner.position, projectileSpawner.rotation);
+            StartCoroutine(CoolDownHelper.CoolDown(missileFireCooldownTime, value => canFireMissile = value));
+            //TODO Have reload animation control cooldown.
+        }
     }
 
     private IEnumerator ChargeStart()

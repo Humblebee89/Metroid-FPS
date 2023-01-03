@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99061247a4a75134ca351069867adb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 15
+  projectileSpeed: 40
   destroyTimer: 6
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
   hitEffectOffset: 0.01
@@ -6081,7 +6081,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 6
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -6409,7 +6409,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 0}
+        key0: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 0}
         key1: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
         key2: {r: 1, g: 0.84337664, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
