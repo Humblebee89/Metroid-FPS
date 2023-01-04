@@ -57,6 +57,7 @@ public class PlayerWeaponController : MonoBehaviour
     {
         if (canFireMissile == true)
         {
+            Actions.OnFireMissile();
             Instantiate(missileProjectile, projectileSpawner.position, projectileSpawner.rotation);
             //TODO Make a Missile specific muzzle flash
             MuzzleFlash(powerBeamMuzzleFlash);

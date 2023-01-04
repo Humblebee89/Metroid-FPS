@@ -16,12 +16,14 @@ public class PlayerAnimationController : MonoBehaviour
     {
         Actions.OnFireNormal += FireNormal;
         Actions.OnFireCharged += FireCharged;
+        Actions.OnFireMissile += FireCharged;
     }
 
     private void OnDisable()
     {
         Actions.OnFireNormal -= FireNormal;
         Actions.OnFireCharged -= FireCharged;
+        Actions.OnFireMissile -= FireCharged;
     }
 
     private void Update()
