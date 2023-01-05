@@ -16,14 +16,14 @@ public class PlayerAnimationController : MonoBehaviour
     {
         Actions.OnFireNormal += FireNormal;
         Actions.OnFireCharged += FireCharged;
-        Actions.OnFireMissile += FireCharged;
+        Actions.OnFireMissile += FireMissile;
     }
 
     private void OnDisable()
     {
         Actions.OnFireNormal -= FireNormal;
         Actions.OnFireCharged -= FireCharged;
-        Actions.OnFireMissile -= FireCharged;
+        Actions.OnFireMissile -= FireMissile;
     }
 
     private void Update()
@@ -49,10 +49,17 @@ public class PlayerAnimationController : MonoBehaviour
     private void FireNormal()
     {
         armCannonAnimator.SetTrigger("FireNormal");
+        armCannonAnimator.SetTrigger("MissileClose");
     }
 
     private void FireCharged()
     {
+        armCannonAnimator.SetTrigger("FireCharged");
+    }
+
+    private void FireMissile()
+    {
+        armCannonAnimator.SetTrigger("MissileOpen");
         armCannonAnimator.SetTrigger("FireCharged");
     }
 
