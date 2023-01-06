@@ -4883,6 +4883,10 @@ PrefabInstance:
       propertyPath: powerBeamMuzzleFlash
       value: 
       objectReference: {fileID: 7605648277742803881, guid: 9aca68419b2ad17439f4525dc2a28c8a, type: 3}
+    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: missileFireCooldownTime
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 962935774, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: ChargeEffectGameObject
       value: 

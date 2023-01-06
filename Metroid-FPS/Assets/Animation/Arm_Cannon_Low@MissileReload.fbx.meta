@@ -5,13 +5,22 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: MissileReload
+    second: MissileOpen
   - first:
       74: -3970521815272968397
     second: MissileOpen
   - first:
       74: 7653960959872684765
+    second: MissileOpen
+  - first:
+      74: 7925813344385997964
     second: MissileClose
+  - first:
+      74: 7653960959872684765
+    second: MissileClose
+  - first:
+      74: 3513643790431239616
+    second: MissileFire&Reload
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -21,7 +30,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 0
+    resampleCurves: 1
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
@@ -32,8 +41,8 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
-    animationCompression: 1
+    importConstraints: 1
+    animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -42,146 +51,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: MissileReload
-      takeName: Take 001
-      internalID: 0
-      firstFrame: 15
-      lastFrame: 45
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Elbow_Locator
-        weight: 1
-      - path: Elbow_Locator/Elbow
-        weight: 1
-      - path: Elbow_Locator/Elbow/Accelerators
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_1_Parent
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_1_Parent/Barrel_1
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_2_Parent
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_2_Parent/Barrel_2
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_3_Parent
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_3_Parent/Barrel_3
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_4_Parent
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_4_Parent/Barrel_4
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_5_Parent
-        weight: 1
-      - path: Elbow_Locator/Elbow/Barrel_5_Parent/Barrel_5
-        weight: 1
-      - path: Elbow_Locator/Elbow/Indicator_1
-        weight: 1
-      - path: Elbow_Locator/Elbow/Indicator_2_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Indicator_2_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Indicator_3_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Indicator_3_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_1_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_1_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_2_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_2_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_3_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_3_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_4_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_4_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_5_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_5_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_6_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_6_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_7_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_7_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_8_L
-        weight: 1
-      - path: Elbow_Locator/Elbow/Panel_8_R
-        weight: 1
-      - path: Elbow_Locator/Elbow/Ring_1
-        weight: 1
-      - path: Elbow_Locator/Elbow/Ring_2
-        weight: 1
-      - path: Elbow_Locator/Elbow/Ring_3
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Accelerator_Rotator_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Barrel_Rotator_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Barrel_Rotator_Control/polyToCurve12
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Indicator_1_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Indicator_2_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Indicator_3_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Panel_1_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Panel_2_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Panel_3_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Panel_4_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Panel_5_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Panel_6_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Panel_7_Control
-        weight: 1
-      - path: Elbow_Locator/Elbow_Control/Panel_8_Control
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
-    - serializedVersion: 16
-      name: MissileOpen
+      name: MissileFire&Reload
       takeName: Take 001
       internalID: 0
       firstFrame: 1
-      lastFrame: 15
+      lastFrame: 45
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
