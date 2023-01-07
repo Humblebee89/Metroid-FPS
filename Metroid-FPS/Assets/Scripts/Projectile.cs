@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float projectileSpeed = 1.0f;
     [SerializeField] private float destroyTimer = 4.0f;
     [SerializeField] private GameObject hitEffectPrefab;
+    [SerializeField] private GameObject scorchMark;
     [SerializeField] private float hitEffectOffset = 0.1f;
 
     private Rigidbody projectileRigidbody;
@@ -31,11 +32,12 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        print(collision.gameObject);
         ContactPoint contact = collision.contacts[0];
         Quaternion hitNormal = Quaternion.FromToRotation(Vector3.forward, contact.normal);
         Vector3 contactPoint = contact.point + contact.normal * hitEffectOffset;
         Instantiate(hitEffectPrefab, contactPoint, hitNormal);
+        //TODO Add random rotation to scorch effect
+        Instantiate(scorchMark, contactPoint, hitNormal);
         Destroy(gameObject);
     }
 }

@@ -4878,6 +4878,7 @@ MonoBehaviour:
   projectileSpeed: 150
   destroyTimer: 3
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
+  scorchMark: {fileID: 5865114931768370392, guid: 89f919f93206f974a9335c3a3ebde1e3, type: 3}
   hitEffectOffset: 0.01
 --- !u!114 &2949098716756461018
 MonoBehaviour:
