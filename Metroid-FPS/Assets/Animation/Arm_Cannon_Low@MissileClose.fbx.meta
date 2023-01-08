@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 35b12ee2f67ba6641817d3e49f7e73f7
+guid: 1c4f6bf229934b243b8b9ef3a0f2196b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: MissileReload
+    second: MissileClose
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: MissileReload
+      name: MissileClose
       takeName: Take 001
       internalID: 0
       firstFrame: 1
-      lastFrame: 45
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

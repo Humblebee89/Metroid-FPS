@@ -11,6 +11,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     private float playerVelocityMagnitude;
     private float adjustedShakeAmount;
+    private bool barrelOpen;
 
     private void OnEnable()
     {
@@ -49,7 +50,12 @@ public class PlayerAnimationController : MonoBehaviour
     private void FireNormal()
     {
         armCannonAnimator.SetTrigger("FireNormal");
-        armCannonAnimator.SetTrigger("MissileClose");
+
+        if (barrelOpen)
+        {
+            armCannonAnimator.SetTrigger("MissileClose");
+            barrelOpen = false;
+        }
     }
 
     private void FireCharged()
@@ -61,6 +67,6 @@ public class PlayerAnimationController : MonoBehaviour
     {
         armCannonAnimator.SetTrigger("MissileOpen");
         armCannonAnimator.SetTrigger("FireCharged");
+        barrelOpen = true;
     }
-
 }
