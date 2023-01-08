@@ -19,7 +19,7 @@ public class PlayerWeaponController : MonoBehaviour
     [HideInInspector] public float chargevalue = 0;
 
     private bool charging = false;
-    private bool canFireMissile = true;
+    private bool canFire = true;
 
     private void Awake()
     {
@@ -41,6 +41,15 @@ public class PlayerWeaponController : MonoBehaviour
         playerInput.Disable();
     }
 
+    public void CanFire(int value)
+    {
+        if (value == 1)
+            canFire = true;
+
+        if (value == 0)
+            canFire = false;
+    }
+
     private void MuzzleFlash(GameObject muzzleFlash)
     {
         Instantiate(muzzleFlash, projectileSpawner.position, projectileSpawner.rotation, projectileSpawner.transform);
@@ -49,20 +58,22 @@ public class PlayerWeaponController : MonoBehaviour
     private void Fire()
     {
         Actions.OnFireNormal();
-        Instantiate(powerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
-        MuzzleFlash(powerBeamMuzzleFlash);
+
+        if (canFire)
+        {
+            Instantiate(powerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+            MuzzleFlash(powerBeamMuzzleFlash);
+        }
     }
 
     private void FireMissle()
     {
-        if (canFireMissile == true)
+        if (canFire)
         {
             Actions.OnFireMissile();
             Instantiate(missileProjectile, projectileSpawner.position, projectileSpawner.rotation);
             //TODO Make a Missile specific muzzle flash
             MuzzleFlash(powerBeamMuzzleFlash);
-            //TODO Have reload animation control cooldown
-            StartCoroutine(CoolDownHelper.CoolDown(missileFireCooldownTime, value => canFireMissile = value));
         }
     }
 

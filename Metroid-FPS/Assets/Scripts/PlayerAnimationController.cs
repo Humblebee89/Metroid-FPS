@@ -49,13 +49,14 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void FireNormal()
     {
-        armCannonAnimator.SetTrigger("FireNormal");
-
         if (barrelOpen)
         {
             armCannonAnimator.SetTrigger("MissileClose");
             barrelOpen = false;
+            return;
         }
+        else
+            armCannonAnimator.SetTrigger("FireNormal");
     }
 
     private void FireCharged()
