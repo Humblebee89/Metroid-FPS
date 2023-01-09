@@ -1034,7 +1034,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8325346551490861307, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
   m_PrefabInstance: {fileID: 5872919602919825444}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &365005643
+--- !u!114 &365005646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4866,10 +4866,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5666994830430025659, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_Name
       value: CharacterController
