@@ -43,8 +43,8 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void Shake()
     {
-        adjustedShakeAmount = shakeAdjustCurve.Evaluate(playerWeaponController.chargevalue);
-        armCannonAnimator.SetLayerWeight(1, adjustedShakeAmount);
+            adjustedShakeAmount = shakeAdjustCurve.Evaluate(playerWeaponController.chargevalue);
+            armCannonAnimator.SetLayerWeight(1, adjustedShakeAmount);
     }
 
     private void FireNormal()

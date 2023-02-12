@@ -14,17 +14,20 @@ public class PlayerWeaponController : MonoBehaviour
     [SerializeField] private float missileFireCooldownTime = 1.0f;
     [SerializeField] private GameObject chargedPowerBeamProjectile;
     [SerializeField] private float chargeTime = 1.0f;
+    [SerializeField] private float chargeCooldownTime = 1.0f;
     [SerializeField] private float standardShotThreshold = 0.5f;
 
     [HideInInspector] public float chargevalue = 0;
+ 
+    private bool canFireNormalShot = true;
+    private float totalChargeTime = 0;
 
-    private bool charging = false;
-    private bool canFire = true;
+    [HideInInspector] public bool charging = false;
 
     private void Awake()
     {
         playerInput = new PlayerInput();
-        playerInput.Player.Fire.performed += context => Fire();
+        playerInput.Player.Fire.performed += context => FireNormal();
         playerInput.Player.FireMissile.performed += context => FireMissle();
         playerInput.Player.ChargeStart.performed += context => StartCoroutine("ChargeStart");
         playerInput.Player.ChargeStart.performed += context => ChargeStarted();
@@ -44,10 +47,10 @@ public class PlayerWeaponController : MonoBehaviour
     public void CanFire(int value)
     {
         if (value == 1)
-            canFire = true;
+            canFireNormalShot = true;
 
         if (value == 0)
-            canFire = false;
+            canFireNormalShot = false;
     }
 
     private void MuzzleFlash(GameObject muzzleFlash)
@@ -55,12 +58,11 @@ public class PlayerWeaponController : MonoBehaviour
         Instantiate(muzzleFlash, projectileSpawner.position, projectileSpawner.rotation, projectileSpawner.transform);
     }
 
-    private void Fire()
+    private void FireNormal()
     {
-        Actions.OnFireNormal();
-
-        if (canFire)
+        if (canFireNormalShot)
         {
+            Actions.OnFireNormal();
             Instantiate(powerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
             MuzzleFlash(powerBeamMuzzleFlash);
         }
@@ -68,7 +70,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void FireMissle()
     {
-        if (canFire)
+        if (canFireNormalShot)
         {
             Actions.OnFireMissile();
             Instantiate(missileProjectile, projectileSpawner.position, projectileSpawner.rotation);
@@ -80,12 +82,34 @@ public class PlayerWeaponController : MonoBehaviour
     private IEnumerator ChargeStart()
     {
         charging = true;
+        totalChargeTime = 0;
 
-        float totalTime = 0;
-        while (totalTime <= chargeTime && charging == true)
+        while (totalChargeTime <= chargeTime && charging == true)
         {
-            chargevalue = totalTime / chargeTime;
-            totalTime += Time.deltaTime;
+            chargevalue = totalChargeTime / chargeTime;
+            totalChargeTime += Time.deltaTime;
+
+            if(chargevalue >= standardShotThreshold)
+                canFireNormalShot = false;
+
+            yield return null;
+        }
+    }
+
+    private IEnumerator ChargeCooldown()
+    {
+        totalChargeTime = totalChargeTime / chargeTime * chargeCooldownTime;
+
+        while (totalChargeTime > 0 && charging == false)
+        {
+            chargevalue = totalChargeTime / chargeCooldownTime;
+            totalChargeTime -= Time.deltaTime;
+
+            if (chargevalue < 0.01f)
+            {
+                canFireNormalShot = true;
+            }
+
             yield return null;
         }
     }
@@ -103,13 +127,12 @@ public class PlayerWeaponController : MonoBehaviour
         }
 
         if(chargevalue <= standardShotThreshold)
-            Fire();
+            FireNormal();
         else
             FireCharged();
 
         charging = false;
-        chargevalue = 0;
-          
+        StartCoroutine(ChargeCooldown());
     }
 
     private void FireCharged()

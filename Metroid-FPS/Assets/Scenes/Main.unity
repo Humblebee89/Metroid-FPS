@@ -394,17 +394,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &303809050 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-  m_PrefabInstance: {fileID: 5872919602919825444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92ce04c05ac49bf45a0be576b44f1f88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &314820977
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,24 +1018,6 @@ Transform:
   m_Father: {fileID: 2043077800}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &365005640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8325346551490861307, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-  m_PrefabInstance: {fileID: 5872919602919825444}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &365005646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365005640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99fc1e148651c5b4b8db813b31416ca4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerWeaponController: {fileID: 303809050}
 --- !u!1 &402102698
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,7 +1155,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25228
+  m_Name: pb_Mesh25232
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3393,7 +3364,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25266
+  m_Name: pb_Mesh25270
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4866,6 +4837,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: chargeCooldownTime
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_Name
       value: CharacterController
