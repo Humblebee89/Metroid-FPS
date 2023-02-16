@@ -4837,26 +4837,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: activeBeam
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: iceBeamProjectile
-      value: 
-      objectReference: {fileID: 7042478485343560404, guid: 7d9cb92b0ce7356469d26e67c8c6e249, type: 3}
-    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: chargeCooldownTime
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: waveBeamProjectile
-      value: 
-      objectReference: {fileID: 7042478485343560404, guid: 022b8f43a79e80f4aaf66a37d7702faf, type: 3}
-    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
-      propertyPath: plasmaBeamProjectile
-      value: 
-      objectReference: {fileID: 7042478485343560404, guid: 6da330f7a49adca41861bfb52a5981c4, type: 3}
     - target: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_Name
       value: CharacterController

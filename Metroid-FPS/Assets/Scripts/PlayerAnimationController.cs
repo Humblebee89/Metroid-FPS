@@ -18,6 +18,7 @@ public class PlayerAnimationController : MonoBehaviour
         Actions.OnFireNormal += FireNormal;
         Actions.OnFireCharged += FireCharged;
         Actions.OnFireMissile += FireMissile;
+        Actions.OnBeamChange += BeamChange;
     }
 
     private void OnDisable()
@@ -25,6 +26,7 @@ public class PlayerAnimationController : MonoBehaviour
         Actions.OnFireNormal -= FireNormal;
         Actions.OnFireCharged -= FireCharged;
         Actions.OnFireMissile -= FireMissile;
+        Actions.OnBeamChange -= BeamChange;
     }
 
     private void Update()
@@ -45,6 +47,25 @@ public class PlayerAnimationController : MonoBehaviour
     {
             adjustedShakeAmount = shakeAdjustCurve.Evaluate(playerWeaponController.chargevalue);
             armCannonAnimator.SetLayerWeight(1, adjustedShakeAmount);
+    }
+
+    private void BeamChange()
+    {
+        switch (playerWeaponController.activeBeam)
+        {
+            case PlayerWeaponController.ActiveBeam.Power:
+                //Add Animation
+                break;
+            case PlayerWeaponController.ActiveBeam.Wave:
+                armCannonAnimator.SetTrigger("WaveBeamSwap");
+                break;
+            case PlayerWeaponController.ActiveBeam.Ice:
+                //Add Animation
+                break;
+            case PlayerWeaponController.ActiveBeam.Plasma:
+                //Add Animation
+                break;
+        }
     }
 
     private void FireNormal()

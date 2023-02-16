@@ -454,8 +454,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce04c05ac49bf45a0be576b44f1f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargevalue: 0
+  activeBeam: 0
   projectileSpawner: {fileID: 1731597865}
   powerBeamProjectile: {fileID: 7042478485343560404, guid: 965c1f32804e4a9419922f4423a6529e, type: 3}
+  waveBeamProjectile: {fileID: 7042478485343560404, guid: 022b8f43a79e80f4aaf66a37d7702faf, type: 3}
+  iceBeamProjectile: {fileID: 7042478485343560404, guid: 7d9cb92b0ce7356469d26e67c8c6e249, type: 3}
+  plasmaBeamProjectile: {fileID: 7042478485343560404, guid: 6da330f7a49adca41861bfb52a5981c4, type: 3}
   powerBeamMuzzleFlash: {fileID: 7605648277742803881, guid: 9aca68419b2ad17439f4525dc2a28c8a, type: 3}
   missileProjectile: {fileID: 6313508548292698541, guid: 4f70f02bba8171e4da4567d8a7663df4, type: 3}
   missileFireCooldownTime: 1.25
@@ -463,7 +468,6 @@ MonoBehaviour:
   chargeTime: 2
   chargeCooldownTime: 0.75
   standardShotThreshold: 0.5
-  chargevalue: 0
   charging: 0
 --- !u!114 &962935773
 MonoBehaviour:

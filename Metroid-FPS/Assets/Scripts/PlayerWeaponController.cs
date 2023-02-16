@@ -6,8 +6,10 @@ using UnityEngine.InputSystem;
 public class PlayerWeaponController : MonoBehaviour
 {
     public PlayerInput playerInput;
+    [HideInInspector] public float chargevalue = 0;
+    public enum ActiveBeam { Power, Wave, Ice, Plasma};
+    public ActiveBeam activeBeam;
 
-    [SerializeField] private ActiveBeam activeBeam;
     [SerializeField] private Transform projectileSpawner;
     [SerializeField] private GameObject powerBeamProjectile;
     [SerializeField] private GameObject waveBeamProjectile;
@@ -21,9 +23,6 @@ public class PlayerWeaponController : MonoBehaviour
     [SerializeField] private float chargeCooldownTime = 1.0f;
     [SerializeField] private float standardShotThreshold = 0.5f;
 
-    [HideInInspector] public float chargevalue = 0;
-
-    private enum ActiveBeam { Power, Wave, Ice, Plasma };
     private bool canFireNormalShot = true;
     private float totalChargeTime = 0;
 
@@ -69,7 +68,11 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void SwapBeam(ActiveBeam beam)
     {
+        if (beam == activeBeam)
+            return;
+
         activeBeam = beam;
+        Actions.OnBeamChange();
     }
 
     private void FireNormal()
