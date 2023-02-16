@@ -98,6 +98,42 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwapBeamPower"",
+                    ""type"": ""Button"",
+                    ""id"": ""795fa8ed-482a-492b-9397-b2f69b3c4a0f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwapBeamWave"",
+                    ""type"": ""Button"",
+                    ""id"": ""6a8028f3-2171-4877-9cea-2ac483bd1d62"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwapBeamIce"",
+                    ""type"": ""Button"",
+                    ""id"": ""1410dd73-f4a4-4d06-9e5b-856762947d5e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwapBeamPlasma"",
+                    ""type"": ""Button"",
+                    ""id"": ""bce6bec2-c65c-438d-8668-6a1b7593cc18"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -320,6 +356,50 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""FireMissile"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8a1df811-d8cd-467a-aac9-7a65949e5330"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""SwapBeamPower"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d2a84fab-136d-4886-9930-7f280838460d"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwapBeamWave"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""12bf846e-e71f-4eed-9280-098a8e339cd3"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwapBeamIce"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""179e41c3-2765-466d-99e3-b2d9b6e76c9f"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwapBeamPlasma"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -348,6 +428,10 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Player_ChargeStart = m_Player.FindAction("ChargeStart", throwIfNotFound: true);
         m_Player_ChargeEnd = m_Player.FindAction("ChargeEnd", throwIfNotFound: true);
         m_Player_FireMissile = m_Player.FindAction("FireMissile", throwIfNotFound: true);
+        m_Player_SwapBeamPower = m_Player.FindAction("SwapBeamPower", throwIfNotFound: true);
+        m_Player_SwapBeamWave = m_Player.FindAction("SwapBeamWave", throwIfNotFound: true);
+        m_Player_SwapBeamIce = m_Player.FindAction("SwapBeamIce", throwIfNotFound: true);
+        m_Player_SwapBeamPlasma = m_Player.FindAction("SwapBeamPlasma", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -415,6 +499,10 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_ChargeStart;
     private readonly InputAction m_Player_ChargeEnd;
     private readonly InputAction m_Player_FireMissile;
+    private readonly InputAction m_Player_SwapBeamPower;
+    private readonly InputAction m_Player_SwapBeamWave;
+    private readonly InputAction m_Player_SwapBeamIce;
+    private readonly InputAction m_Player_SwapBeamPlasma;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -427,6 +515,10 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @ChargeStart => m_Wrapper.m_Player_ChargeStart;
         public InputAction @ChargeEnd => m_Wrapper.m_Player_ChargeEnd;
         public InputAction @FireMissile => m_Wrapper.m_Player_FireMissile;
+        public InputAction @SwapBeamPower => m_Wrapper.m_Player_SwapBeamPower;
+        public InputAction @SwapBeamWave => m_Wrapper.m_Player_SwapBeamWave;
+        public InputAction @SwapBeamIce => m_Wrapper.m_Player_SwapBeamIce;
+        public InputAction @SwapBeamPlasma => m_Wrapper.m_Player_SwapBeamPlasma;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -460,6 +552,18 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @FireMissile.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireMissile;
                 @FireMissile.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireMissile;
                 @FireMissile.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFireMissile;
+                @SwapBeamPower.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamPower;
+                @SwapBeamPower.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamPower;
+                @SwapBeamPower.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamPower;
+                @SwapBeamWave.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamWave;
+                @SwapBeamWave.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamWave;
+                @SwapBeamWave.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamWave;
+                @SwapBeamIce.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamIce;
+                @SwapBeamIce.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamIce;
+                @SwapBeamIce.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamIce;
+                @SwapBeamPlasma.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamPlasma;
+                @SwapBeamPlasma.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamPlasma;
+                @SwapBeamPlasma.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamPlasma;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -488,6 +592,18 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @FireMissile.started += instance.OnFireMissile;
                 @FireMissile.performed += instance.OnFireMissile;
                 @FireMissile.canceled += instance.OnFireMissile;
+                @SwapBeamPower.started += instance.OnSwapBeamPower;
+                @SwapBeamPower.performed += instance.OnSwapBeamPower;
+                @SwapBeamPower.canceled += instance.OnSwapBeamPower;
+                @SwapBeamWave.started += instance.OnSwapBeamWave;
+                @SwapBeamWave.performed += instance.OnSwapBeamWave;
+                @SwapBeamWave.canceled += instance.OnSwapBeamWave;
+                @SwapBeamIce.started += instance.OnSwapBeamIce;
+                @SwapBeamIce.performed += instance.OnSwapBeamIce;
+                @SwapBeamIce.canceled += instance.OnSwapBeamIce;
+                @SwapBeamPlasma.started += instance.OnSwapBeamPlasma;
+                @SwapBeamPlasma.performed += instance.OnSwapBeamPlasma;
+                @SwapBeamPlasma.canceled += instance.OnSwapBeamPlasma;
             }
         }
     }
@@ -511,5 +627,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnChargeStart(InputAction.CallbackContext context);
         void OnChargeEnd(InputAction.CallbackContext context);
         void OnFireMissile(InputAction.CallbackContext context);
+        void OnSwapBeamPower(InputAction.CallbackContext context);
+        void OnSwapBeamWave(InputAction.CallbackContext context);
+        void OnSwapBeamIce(InputAction.CallbackContext context);
+        void OnSwapBeamPlasma(InputAction.CallbackContext context);
     }
 }

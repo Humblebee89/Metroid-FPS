@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PowerBeamProjectile
+  m_Name: IceBeamProjectile
   m_Shader: {fileID: -6465566751694194690, guid: 7278210a39945294d83f0fda34a1bbbe, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -108,7 +108,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 0.82380354, b: 0, a: 1}
-    - _Color: {r: 1, g: 0.71847945, b: 0.19339621, a: 0}
+    - _Color: {r: 0.50787646, g: 0.80887455, b: 0.9528302, a: 0}
     - _EmissionColor: {r: 1, g: 0.18116418, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

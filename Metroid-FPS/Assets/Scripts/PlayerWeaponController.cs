@@ -7,8 +7,12 @@ public class PlayerWeaponController : MonoBehaviour
 {
     public PlayerInput playerInput;
 
+    [SerializeField] private ActiveBeam activeBeam;
     [SerializeField] private Transform projectileSpawner;
     [SerializeField] private GameObject powerBeamProjectile;
+    [SerializeField] private GameObject waveBeamProjectile;
+    [SerializeField] private GameObject iceBeamProjectile;
+    [SerializeField] private GameObject plasmaBeamProjectile;
     [SerializeField] private GameObject powerBeamMuzzleFlash;
     [SerializeField] private GameObject missileProjectile;
     [SerializeField] private float missileFireCooldownTime = 1.0f;
@@ -18,7 +22,8 @@ public class PlayerWeaponController : MonoBehaviour
     [SerializeField] private float standardShotThreshold = 0.5f;
 
     [HideInInspector] public float chargevalue = 0;
- 
+
+    private enum ActiveBeam { Power, Wave, Ice, Plasma };
     private bool canFireNormalShot = true;
     private float totalChargeTime = 0;
 
@@ -32,6 +37,10 @@ public class PlayerWeaponController : MonoBehaviour
         playerInput.Player.ChargeStart.performed += context => StartCoroutine("ChargeStart");
         playerInput.Player.ChargeStart.performed += context => ChargeStarted();
         playerInput.Player.ChargeEnd.performed += context => ChargeEnd();
+        playerInput.Player.SwapBeamPower.performed += context => SwapBeam(ActiveBeam.Power);
+        playerInput.Player.SwapBeamWave.performed += context => SwapBeam(ActiveBeam.Wave);
+        playerInput.Player.SwapBeamIce.performed += context => SwapBeam(ActiveBeam.Ice);
+        playerInput.Player.SwapBeamPlasma.performed += context => SwapBeam(ActiveBeam.Plasma);
     }
 
     private void OnEnable()
@@ -58,13 +67,37 @@ public class PlayerWeaponController : MonoBehaviour
         Instantiate(muzzleFlash, projectileSpawner.position, projectileSpawner.rotation, projectileSpawner.transform);
     }
 
+    private void SwapBeam(ActiveBeam beam)
+    {
+        activeBeam = beam;
+    }
+
     private void FireNormal()
     {
         if (canFireNormalShot)
         {
             Actions.OnFireNormal();
-            Instantiate(powerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
-            MuzzleFlash(powerBeamMuzzleFlash);
+
+            switch (activeBeam)
+            {
+                //TODO make this a function
+                case ActiveBeam.Power:
+                    Instantiate(powerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                    MuzzleFlash(powerBeamMuzzleFlash);
+                    break;
+                case ActiveBeam.Wave:
+                    Instantiate(waveBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                    MuzzleFlash(powerBeamMuzzleFlash);
+                    break;
+                case ActiveBeam.Ice:
+                    Instantiate(iceBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                    MuzzleFlash(powerBeamMuzzleFlash);
+                    break;
+                case ActiveBeam.Plasma:
+                    Instantiate(plasmaBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                    MuzzleFlash(powerBeamMuzzleFlash);
+                    break;
+            }
         }
     }
 

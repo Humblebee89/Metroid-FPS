@@ -101,6 +101,7 @@ public class PlayerMovementController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //TODO Fix juddery movement https://www.kinematicsoup.com/news/2016/8/9/rrypp5tkubynjwxhxjzd42s3o034o8
         moveDirection = transform.right * inputDirection.x + transform.forward * inputDirection.y;
         playerRigidbody.MovePosition(playerRigidbody.position + moveDirection * moveSpeed * Time.deltaTime);
     }
