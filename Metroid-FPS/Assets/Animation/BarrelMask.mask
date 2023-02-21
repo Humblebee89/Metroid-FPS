@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BarrelMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Elbow_Locator
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Accelerators
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Barrel_1_Parent
+    m_Weight: 1
+  - m_Path: Elbow_Locator/Elbow/Barrel_1_Parent/Barrel_1
+    m_Weight: 1
+  - m_Path: Elbow_Locator/Elbow/Barrel_2_Parent
+    m_Weight: 1
+  - m_Path: Elbow_Locator/Elbow/Barrel_2_Parent/Barrel_2
+    m_Weight: 1
+  - m_Path: Elbow_Locator/Elbow/Barrel_3_Parent
+    m_Weight: 1
+  - m_Path: Elbow_Locator/Elbow/Barrel_3_Parent/Barrel_3
+    m_Weight: 1
+  - m_Path: Elbow_Locator/Elbow/Barrel_4_Parent
+    m_Weight: 1
+  - m_Path: Elbow_Locator/Elbow/Barrel_4_Parent/Barrel_4
+    m_Weight: 1
+  - m_Path: Elbow_Locator/Elbow/Barrel_5_Parent
+    m_Weight: 1
+  - m_Path: Elbow_Locator/Elbow/Barrel_5_Parent/Barrel_5
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Indicator_1
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Indicator_2_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Indicator_2_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Indicator_3_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Indicator_3_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_1_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_1_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_2_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_2_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_3_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_3_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_4_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_4_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_5_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_5_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_6_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_6_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_7_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_7_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_8_L
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Panel_8_R
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Ring_1
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Ring_2
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow/Ring_3
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Accelerator_Rotator_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Barrel_Rotator_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Barrel_Rotator_Control/polyToCurve12
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Indicator_1_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Indicator_2_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Indicator_3_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Panel_1_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Panel_2_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Panel_3_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Panel_4_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Panel_5_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Panel_6_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Panel_7_Control
+    m_Weight: 0
+  - m_Path: Elbow_Locator/Elbow_Control/Panel_8_Control
+    m_Weight: 0

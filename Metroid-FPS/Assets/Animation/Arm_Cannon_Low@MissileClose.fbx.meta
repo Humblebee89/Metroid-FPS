@@ -67,9 +67,115 @@ ModelImporter:
         floatParameter: 0
         intParameter: 1
         messageOptions: 0
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Elbow_Locator
+        weight: 0
+      - path: Elbow_Locator/Elbow
+        weight: 0
+      - path: Elbow_Locator/Elbow/Accelerators
+        weight: 0
+      - path: Elbow_Locator/Elbow/Barrel_1_Parent
+        weight: 1
+      - path: Elbow_Locator/Elbow/Barrel_1_Parent/Barrel_1
+        weight: 1
+      - path: Elbow_Locator/Elbow/Barrel_2_Parent
+        weight: 1
+      - path: Elbow_Locator/Elbow/Barrel_2_Parent/Barrel_2
+        weight: 1
+      - path: Elbow_Locator/Elbow/Barrel_3_Parent
+        weight: 1
+      - path: Elbow_Locator/Elbow/Barrel_3_Parent/Barrel_3
+        weight: 1
+      - path: Elbow_Locator/Elbow/Barrel_4_Parent
+        weight: 1
+      - path: Elbow_Locator/Elbow/Barrel_4_Parent/Barrel_4
+        weight: 1
+      - path: Elbow_Locator/Elbow/Barrel_5_Parent
+        weight: 1
+      - path: Elbow_Locator/Elbow/Barrel_5_Parent/Barrel_5
+        weight: 0
+      - path: Elbow_Locator/Elbow/Indicator_1
+        weight: 0
+      - path: Elbow_Locator/Elbow/Indicator_2_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Indicator_2_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Indicator_3_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Indicator_3_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_1_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_1_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_2_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_2_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_3_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_3_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_4_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_4_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_5_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_5_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_6_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_6_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_7_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_7_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_8_L
+        weight: 0
+      - path: Elbow_Locator/Elbow/Panel_8_R
+        weight: 0
+      - path: Elbow_Locator/Elbow/Ring_1
+        weight: 0
+      - path: Elbow_Locator/Elbow/Ring_2
+        weight: 0
+      - path: Elbow_Locator/Elbow/Ring_3
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Accelerator_Rotator_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Barrel_Rotator_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Barrel_Rotator_Control/polyToCurve12
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Indicator_1_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Indicator_2_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Indicator_3_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Panel_1_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Panel_2_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Panel_3_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Panel_4_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Panel_5_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Panel_6_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Panel_7_Control
+        weight: 0
+      - path: Elbow_Locator/Elbow_Control/Panel_8_Control
+        weight: 0
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 9bd647df5a446bf499ea54ecc7e81c39, type: 2}
       additiveReferencePoseFrame: 1
     isReadable: 0
   meshes:
