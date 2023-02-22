@@ -1,11 +1,14 @@
 fileFormatVersion: 2
-guid: 1c4f6bf229934b243b8b9ef3a0f2196b
+guid: c1cafb3f6e442fb4f8f16e2d18298ca7
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: MissileClose
+    second: WaveBeamIdle
+  - first:
+      74: 8989089082432992693
+    second: WaveBeamIdleCharge
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +39,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: MissileClose
+      name: WaveBeamIdle
       takeName: Take 001
       internalID: 0
-      firstFrame: 1
-      lastFrame: 5
+      firstFrame: 61
+      lastFrame: 180
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -59,14 +62,36 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 1
-        functionName: CanFire
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 1
-        messageOptions: 0
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: WaveBeamIdleCharge
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 181
+      lastFrame: 241
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
       transformMask:
       - path: 
         weight: 1
@@ -95,87 +120,87 @@ ModelImporter:
       - path: Elbow_Locator/Elbow/Barrel_5_Parent
         weight: 1
       - path: Elbow_Locator/Elbow/Barrel_5_Parent/Barrel_5
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Indicator_1
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Indicator_2_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Indicator_2_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Indicator_3_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Indicator_3_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_1_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_1_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_2_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_2_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_3_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_3_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_4_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_4_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_5_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_5_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_6_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_6_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_7_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_7_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_8_L
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Panel_8_R
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Ring_1
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Ring_2
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow/Ring_3
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control
         weight: 0
       - path: Elbow_Locator/Elbow_Control/Accelerator_Rotator_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Barrel_Rotator_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Barrel_Rotator_Control/polyToCurve12
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Indicator_1_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Indicator_2_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Indicator_3_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Panel_1_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Panel_2_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Panel_3_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Panel_4_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Panel_5_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Panel_6_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Panel_7_Control
-        weight: 0
+        weight: 1
       - path: Elbow_Locator/Elbow_Control/Panel_8_Control
-        weight: 0
+        weight: 1
       maskType: 1
-      maskSource: {fileID: 31900000, guid: 9bd647df5a446bf499ea54ecc7e81c39, type: 2}
+      maskSource: {fileID: 31900000, guid: c7d51d43da95bd04e8e523d81b5c3031, type: 2}
       additiveReferencePoseFrame: 1
     isReadable: 0
   meshes:

@@ -51,6 +51,12 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void BeamChange()
     {
+        if (barrelOpen)
+        {
+            armCannonAnimator.SetTrigger("MissileClose");
+            barrelOpen = false;
+        }
+
         switch (playerWeaponController.activeBeam)
         {
             case PlayerWeaponController.ActiveBeam.Power:
