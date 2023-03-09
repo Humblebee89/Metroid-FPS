@@ -7,6 +7,7 @@ public class PlayerWeaponController : MonoBehaviour
 {
     public PlayerInput playerInput;
     [HideInInspector] public float chargevalue = 0;
+    [HideInInspector] public bool canFireNormalShot = true;
     public enum ActiveBeam { Power, Wave, Ice, Plasma};
     public ActiveBeam activeBeam;
 
@@ -23,7 +24,7 @@ public class PlayerWeaponController : MonoBehaviour
     [SerializeField] private float chargeCooldownTime = 1.0f;
     [SerializeField] private float standardShotThreshold = 0.5f;
 
-    private bool canFireNormalShot = true;
+    
     private float totalChargeTime = 0;
 
     [HideInInspector] public bool charging = false;
@@ -128,6 +129,9 @@ public class PlayerWeaponController : MonoBehaviour
             if(chargevalue >= standardShotThreshold)
                 canFireNormalShot = false;
 
+            if (chargevalue > 0.99f)
+                chargevalue = 1.0f;
+
             yield return null;
         }
     }
@@ -141,8 +145,9 @@ public class PlayerWeaponController : MonoBehaviour
             chargevalue = totalChargeTime / chargeCooldownTime;
             totalChargeTime -= Time.deltaTime;
 
-            if (chargevalue < 0.01f)
+            if (chargevalue < 0.015f)
             {
+                chargevalue = 0;
                 canFireNormalShot = true;
             }
 
