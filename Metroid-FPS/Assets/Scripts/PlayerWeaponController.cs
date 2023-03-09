@@ -20,6 +20,7 @@ public class PlayerWeaponController : MonoBehaviour
     [SerializeField] private GameObject missileProjectile;
     [SerializeField] private float missileFireCooldownTime = 1.0f;
     [SerializeField] private GameObject chargedPowerBeamProjectile;
+    [SerializeField] private GameObject chargedWaveBeamProjectile;
     [SerializeField] private float chargeTime = 1.0f;
     [SerializeField] private float chargeCooldownTime = 1.0f;
     [SerializeField] private float standardShotThreshold = 0.5f;
@@ -179,9 +180,33 @@ public class PlayerWeaponController : MonoBehaviour
     private void FireCharged()
     {
         Actions.OnFireCharged();
-        GameObject chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
-        chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
-        //TODO Change this to a larger muzzle flash
-        MuzzleFlash(powerBeamMuzzleFlash);
+
+        GameObject chargedShot = null;
+
+        switch (activeBeam)
+        {
+            //TODO make this a function
+            case ActiveBeam.Power:
+                chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
+                //TODO Change this to a larger muzzle flash
+                MuzzleFlash(powerBeamMuzzleFlash);
+                break;
+            case ActiveBeam.Wave:
+                chargedShot = Instantiate(chargedWaveBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
+                MuzzleFlash(powerBeamMuzzleFlash);
+                break;
+            case ActiveBeam.Ice:
+                chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
+                MuzzleFlash(powerBeamMuzzleFlash);
+                break;
+            case ActiveBeam.Plasma:
+                chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
+                MuzzleFlash(powerBeamMuzzleFlash);
+                break;
+        }
     }
 }
