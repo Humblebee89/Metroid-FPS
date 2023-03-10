@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3020788781173254632}
   m_Layer: 0
   m_Name: PlasmaBeamProjectile
-  m_TagString: Untagged
+  m_TagString: IgnoreWeaponCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
   scorchMark: {fileID: 5865114931768370392, guid: 0ce546e56e7a9444da04adcaa1b53f98, type: 3}
   hitEffectOffset: 0.01
+  randomZRotation: 0
 --- !u!114 &2949098716756461018
 MonoBehaviour:
   m_ObjectHideFlags: 0

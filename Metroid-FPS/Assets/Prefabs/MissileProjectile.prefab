@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 1859633893767479192}
   m_Layer: 0
   m_Name: MissileProjectile
-  m_TagString: Untagged
+  m_TagString: IgnoreWeaponCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,6 +185,7 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 3382703020168127288, guid: ad309fbd33a9d7542ace60bfc41e3592, type: 3}
   scorchMark: {fileID: 5865114931768370392, guid: 89f919f93206f974a9335c3a3ebde1e3, type: 3}
   hitEffectOffset: 0.01
+  randomZRotation: 0
 --- !u!54 &711863952904206459
 Rigidbody:
   m_ObjectHideFlags: 0

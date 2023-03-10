@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5302027088962376593}
   - component: {fileID: 6970063406024266179}
   - component: {fileID: 1069748835}
+  - component: {fileID: 5991662199257893125}
   m_Layer: 0
   m_Name: WaveBeamProjectile
-  m_TagString: Untagged
+  m_TagString: IgnoreWeaponCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,6 +54,7 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 0}
   scorchMark: {fileID: 0}
   hitEffectOffset: 0.1
+  randomZRotation: 1
 --- !u!54 &1069748835
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -69,6 +71,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &5991662199257893125
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5302027088962376592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.005
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2672414839482395901
 PrefabInstance:
   m_ObjectHideFlags: 0

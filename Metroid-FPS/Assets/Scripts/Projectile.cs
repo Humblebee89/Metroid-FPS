@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private GameObject hitEffectPrefab;
     [SerializeField] private GameObject scorchMark;
     [SerializeField] private float hitEffectOffset = 0.1f;
+    [SerializeField] private bool randomZRotation;
 
     private Rigidbody projectileRigidbody;
     private Collider playerCollider;
@@ -18,6 +19,9 @@ public class Projectile : MonoBehaviour
         projectileRigidbody = GetComponent<Rigidbody>();
         playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>();
         Destroy(gameObject, destroyTimer);
+
+        if(randomZRotation)
+            transform.Rotate(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
     }
 
     private void Start()
@@ -32,6 +36,11 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.tag == "IgnoreWeaponCollision")
+            return;
+
+        print(collision.gameObject.name);
+
         ContactPoint contact = collision.contacts[0];
         Quaternion hitNormal = Quaternion.FromToRotation(Vector3.forward, contact.normal);
         Vector3 contactPoint = contact.point + contact.normal * hitEffectOffset;

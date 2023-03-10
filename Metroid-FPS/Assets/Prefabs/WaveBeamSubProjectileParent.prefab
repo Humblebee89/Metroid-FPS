@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8157955301678558927}
   m_Layer: 0
   m_Name: WaveBeamSubProjectile
-  m_TagString: Untagged
+  m_TagString: IgnoreWeaponCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +58,7 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
   scorchMark: {fileID: 5865114931768370392, guid: 0ce546e56e7a9444da04adcaa1b53f98, type: 3}
   hitEffectOffset: 0.01
+  randomZRotation: 0
 --- !u!114 &5632874957194037582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +87,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.125
+  m_Radius: 0.05
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5705303309577610620
 Rigidbody:
@@ -176,7 +177,7 @@ TrailRenderer:
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 28142
+      ctime1: 27563
       ctime2: 0
       ctime3: 0
       ctime4: 0
@@ -5272,7 +5273,7 @@ GameObject:
   - component: {fileID: 8524110700329621058}
   m_Layer: 0
   m_Name: WaveBeamSubProjectileParent
-  m_TagString: Untagged
+  m_TagString: IgnoreWeaponCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
