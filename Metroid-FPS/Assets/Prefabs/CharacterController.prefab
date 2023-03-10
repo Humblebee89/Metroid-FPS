@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chargevalue: 0
+  canFireNormalShot: 1
   activeBeam: 0
   projectileSpawner: {fileID: 1731597865}
   powerBeamProjectile: {fileID: 7042478485343560404, guid: 965c1f32804e4a9419922f4423a6529e, type: 3}
@@ -465,6 +466,7 @@ MonoBehaviour:
   missileProjectile: {fileID: 6313508548292698541, guid: 4f70f02bba8171e4da4567d8a7663df4, type: 3}
   missileFireCooldownTime: 1.25
   chargedPowerBeamProjectile: {fileID: 7042478485343560404, guid: 493706d9daacf12459e4d5af1dbf4aab, type: 3}
+  chargedWaveBeamProjectile: {fileID: 7042478485343560404, guid: 9fadff928f845284fa9d8fb3aa2145e6, type: 3}
   chargeTime: 2
   chargeCooldownTime: 0.75
   standardShotThreshold: 0.5
