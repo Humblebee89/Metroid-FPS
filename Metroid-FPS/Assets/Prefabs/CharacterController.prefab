@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 230046703}
   - component: {fileID: 962935773}
   - component: {fileID: 962935774}
+  - component: {fileID: 1912121710}
   m_Layer: 0
   m_Name: CharacterController
   m_TagString: Player
@@ -454,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ce04c05ac49bf45a0be576b44f1f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargevalue: 0
+  chargeValue: 0
   canFireNormalShot: 1
   activeBeam: 0
   projectileSpawner: {fileID: 1731597865}
@@ -557,6 +558,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1912121710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872919601941089768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bbd7a4e1d133f44493d9d3b80453210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightMaterial: {fileID: 2100000, guid: a645b50a0b84f804a9b14a6fc62ae526, type: 2}
 --- !u!1 &5872919603691514178
 GameObject:
   m_ObjectHideFlags: 0
