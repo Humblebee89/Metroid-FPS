@@ -35,9 +35,9 @@ public class PowerBeamChargeEffectController : MonoBehaviour
 
     private IEnumerator Charge()
     {
-        while (playerWeaponController.chargevalue < 1)
+        while (playerWeaponController.chargeValue < 1)
         {
-            float adjustedScale = sizeAdjustCurve.Evaluate(playerWeaponController.chargevalue);
+            float adjustedScale = sizeAdjustCurve.Evaluate(playerWeaponController.chargeValue);
             float adjustedLightIntensity = Extensions.Remap(adjustedScale, 0, 1, 0, lightIntensity);
             float adjustedLightRange = Extensions.Remap(adjustedScale, 0, 1, 0, lightRange);
             chargeLight.intensity = adjustedLightIntensity;

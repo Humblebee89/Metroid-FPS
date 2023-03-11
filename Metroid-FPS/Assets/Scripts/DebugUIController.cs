@@ -43,7 +43,7 @@ public class DebugUIController : MonoBehaviour
 
     private void Update()
     {
-        chargeAmountText.text = "Charge Amount: " + playerWeaponController.chargevalue;
+        chargeAmountText.text = "Charge Amount: " + playerWeaponController.chargeValue;
 
         if (playerWeaponController.canFireNormalShot)
             canFireText.text = "Can Fire Normal: True";

@@ -35,7 +35,7 @@ public class PlayerAnimationController : MonoBehaviour
         Shake();
         armCannonAnimator.SetFloat("WalkSpeed", playerVelocityMagnitude);
         armCannonAnimator.SetBool("isGrounded", playerMovementController.isGrounded);
-        armCannonAnimator.SetFloat("ChargeValue", playerWeaponController.chargevalue);
+        armCannonAnimator.SetFloat("ChargeValue", playerWeaponController.chargeValue);
     }
 
     private void GetPlayerVelocity()
@@ -45,7 +45,7 @@ public class PlayerAnimationController : MonoBehaviour
 
     private void Shake()
     {
-            adjustedShakeAmount = shakeAdjustCurve.Evaluate(playerWeaponController.chargevalue);
+            adjustedShakeAmount = shakeAdjustCurve.Evaluate(playerWeaponController.chargeValue);
             armCannonAnimator.SetLayerWeight(1, adjustedShakeAmount);
     }
 

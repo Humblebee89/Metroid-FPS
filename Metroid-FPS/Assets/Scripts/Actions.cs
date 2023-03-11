@@ -10,4 +10,5 @@ public static class Actions
     public static Action OnFireCharged;
     public static Action OnFireMissile;
     public static Action OnBeamChange;
+    public static Action OnChargeCooldownEnd;
 }

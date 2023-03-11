@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerWeaponController : MonoBehaviour
 {
     public PlayerInput playerInput;
-    [HideInInspector] public float chargevalue = 0;
+    [HideInInspector] public float chargeValue = 0;
     [HideInInspector] public bool canFireNormalShot = true;
     public enum ActiveBeam { Power, Wave, Ice, Plasma};
     public ActiveBeam activeBeam;
@@ -124,14 +124,14 @@ public class PlayerWeaponController : MonoBehaviour
 
         while (totalChargeTime <= chargeTime && charging == true)
         {
-            chargevalue = totalChargeTime / chargeTime;
+            chargeValue = totalChargeTime / chargeTime;
             totalChargeTime += Time.deltaTime;
 
-            if(chargevalue >= standardShotThreshold)
+            if(chargeValue >= standardShotThreshold)
                 canFireNormalShot = false;
 
-            if (chargevalue > 0.99f)
-                chargevalue = 1.0f;
+            if (chargeValue > 0.99f)
+                chargeValue = 1.0f;
 
             yield return null;
         }
@@ -143,13 +143,14 @@ public class PlayerWeaponController : MonoBehaviour
 
         while (totalChargeTime > 0 && charging == false)
         {
-            chargevalue = totalChargeTime / chargeCooldownTime;
+            chargeValue = totalChargeTime / chargeCooldownTime;
             totalChargeTime -= Time.deltaTime;
 
-            if (chargevalue < 0.015f)
+            if (chargeValue < 0.015f)
             {
-                chargevalue = 0;
+                chargeValue = 0;
                 canFireNormalShot = true;
+                Actions.OnChargeCooldownEnd();
             }
 
             yield return null;
@@ -168,7 +169,7 @@ public class PlayerWeaponController : MonoBehaviour
             return;
         }
 
-        if(chargevalue <= standardShotThreshold)
+        if(chargeValue <= standardShotThreshold)
             FireNormal();
         else
             FireCharged();
@@ -188,23 +189,23 @@ public class PlayerWeaponController : MonoBehaviour
             //TODO make this a function
             case ActiveBeam.Power:
                 chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
-                chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
+                chargedShot.transform.localScale = new Vector3(chargeValue, chargeValue, chargeValue);
                 //TODO Change this to a larger muzzle flash
                 MuzzleFlash(powerBeamMuzzleFlash);
                 break;
             case ActiveBeam.Wave:
                 chargedShot = Instantiate(chargedWaveBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
-                chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
+                chargedShot.transform.localScale = new Vector3(chargeValue, chargeValue, chargeValue);
                 MuzzleFlash(powerBeamMuzzleFlash);
                 break;
             case ActiveBeam.Ice:
                 chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
-                chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
+                chargedShot.transform.localScale = new Vector3(chargeValue, chargeValue, chargeValue);
                 MuzzleFlash(powerBeamMuzzleFlash);
                 break;
             case ActiveBeam.Plasma:
                 chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
-                chargedShot.transform.localScale = new Vector3(chargevalue, chargevalue, chargevalue);
+                chargedShot.transform.localScale = new Vector3(chargeValue, chargeValue, chargeValue);
                 MuzzleFlash(powerBeamMuzzleFlash);
                 break;
         }
