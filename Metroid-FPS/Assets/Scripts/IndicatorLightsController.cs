@@ -13,11 +13,13 @@ public class IndicatorLightsController : MonoBehaviour
     {
         Actions.OnChargeStarted += ChargeStarted;
         Actions.OnChargeCooldownEnd += ChargeCooldownEnd;
+        Actions.OnBeamChange += BeamChange;
     }
     private void OnDisable()
     {
         Actions.OnChargeStarted -= ChargeStarted;
         Actions.OnChargeCooldownEnd -= ChargeCooldownEnd;
+        Actions.OnBeamChange -= BeamChange;
     }
 
     private void Awake()
@@ -35,6 +37,37 @@ public class IndicatorLightsController : MonoBehaviour
         charging = false;
     }
 
+    private void BeamChange()
+    {
+        switch (playerWeaponController.activeBeam)
+        {
+            case PlayerWeaponController.ActiveBeam.Power:
+                lightMaterial.EnableKeyword("_ACTIVEBEAM_POWER");
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_WAVE");
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_ICE");
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_PLASMA");
+                break;
+            case PlayerWeaponController.ActiveBeam.Wave:
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_POWER");
+                lightMaterial.EnableKeyword("_ACTIVEBEAM_WAVE");
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_ICE");
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_PLASMA");
+                break;
+            case PlayerWeaponController.ActiveBeam.Ice:
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_POWER");
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_WAVE");
+                lightMaterial.EnableKeyword("_ACTIVEBEAM_ICE");
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_PLASMA");
+                break;
+            case PlayerWeaponController.ActiveBeam.Plasma:
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_POWER");
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_WAVE");
+                lightMaterial.DisableKeyword("_ACTIVEBEAM_ICE");
+                lightMaterial.EnableKeyword("_ACTIVEBEAM_PLASMA");
+                break;
+        }
+    }
+
     private void Update()
     {
         if (!charging)
@@ -44,7 +77,4 @@ public class IndicatorLightsController : MonoBehaviour
             lightMaterial.SetFloat("_Fill", playerWeaponController.chargeValue);
         }
     }
-
-
-
 }
