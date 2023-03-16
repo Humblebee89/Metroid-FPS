@@ -146,7 +146,7 @@ public class PlayerWeaponController : MonoBehaviour
             chargeValue = totalChargeTime / chargeCooldownTime;
             totalChargeTime -= Time.deltaTime;
 
-            if (chargeValue < 0.015f)
+            if (chargeValue < 0.02f)
             {
                 chargeValue = 0;
                 canFireNormalShot = true;

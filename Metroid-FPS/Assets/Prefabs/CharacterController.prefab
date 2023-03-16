@@ -571,6 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightMaterial: {fileID: 2100000, guid: a645b50a0b84f804a9b14a6fc62ae526, type: 2}
+  energyFieldMaterial: {fileID: 2100000, guid: 7f2ac8053eb402f4191ab7eee494a03f, type: 2}
 --- !u!1 &5872919603691514178
 GameObject:
   m_ObjectHideFlags: 0
