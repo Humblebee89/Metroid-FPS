@@ -461,9 +461,13 @@ MonoBehaviour:
   activeBeam: 0
   projectileSpawner: {fileID: 1731597865}
   powerBeamProjectile: {fileID: 7042478485343560404, guid: 965c1f32804e4a9419922f4423a6529e, type: 3}
+  powerBeamShotDelay: 0.1
   waveBeamProjectile: {fileID: 5302027088962376592, guid: 39f1bae8711dd6d4e977292f1cd88c7c, type: 3}
+  waveBeamShotDelay: 0.6
   iceBeamProjectile: {fileID: 7042478485343560404, guid: 7d9cb92b0ce7356469d26e67c8c6e249, type: 3}
+  iceBeamShotDelay: 1
   plasmaBeamProjectile: {fileID: 7042478485343560404, guid: 6da330f7a49adca41861bfb52a5981c4, type: 3}
+  plasmaBeamShotDelay: 0.5
   powerBeamMuzzleFlash: {fileID: 7605648277742803881, guid: 9aca68419b2ad17439f4525dc2a28c8a, type: 3}
   missileProjectile: {fileID: 6313508548292698541, guid: 4f70f02bba8171e4da4567d8a7663df4, type: 3}
   missileFireCooldownTime: 1.25
@@ -755,6 +759,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2036052359226132437, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128759508469880770, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3118727504742243135, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -770,6 +782,10 @@ PrefabInstance:
     - target: {fileID: 3527723641569848819, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3821717630437791167, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4113504157252395483, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
       propertyPath: m_Layer
@@ -839,9 +855,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5904256225209056203, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+      propertyPath: scalingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904256225209056203, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967179240703720986, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8302836754850228487, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+      propertyPath: chargeLight
+      value: 
+      objectReference: {fileID: 7002972753152851747}
+    - target: {fileID: 8302836754850228487, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+      propertyPath: playerWeaponController
+      value: 
+      objectReference: {fileID: 230046703}
     - target: {fileID: 8311530271506045250, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669320970894778278, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1264
       objectReference: {fileID: 0}
     - target: {fileID: 8857754193451354468, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
       propertyPath: m_Layer
@@ -861,6 +901,11 @@ Transform:
 --- !u!1 &6566919184297436401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 766367815400260510, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
+  m_PrefabInstance: {fileID: 5872919602753087343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &7002972753152851747 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 3508097258324006988, guid: ea5419ac04d84b9408e66eced14d9fb2, type: 3}
   m_PrefabInstance: {fileID: 5872919602753087343}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5872919603825412168
