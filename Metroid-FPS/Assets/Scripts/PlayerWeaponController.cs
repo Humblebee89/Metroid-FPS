@@ -13,9 +13,13 @@ public class PlayerWeaponController : MonoBehaviour
 
     [SerializeField] private Transform projectileSpawner;
     [SerializeField] private GameObject powerBeamProjectile;
+    [SerializeField] private float powerBeamShotDelay;
     [SerializeField] private GameObject waveBeamProjectile;
+    [SerializeField] private float waveBeamShotDelay;
     [SerializeField] private GameObject iceBeamProjectile;
+    [SerializeField] private float iceBeamShotDelay;
     [SerializeField] private GameObject plasmaBeamProjectile;
+    [SerializeField] private float plasmaBeamShotDelay;
     [SerializeField] private GameObject powerBeamMuzzleFlash;
     [SerializeField] private GameObject missileProjectile;
     [SerializeField] private float missileFireCooldownTime = 1.0f;
@@ -77,6 +81,13 @@ public class PlayerWeaponController : MonoBehaviour
         Actions.OnBeamChange();
     }
 
+    IEnumerator ShotDelay(float waitTime)
+    {
+        canFireNormalShot = false;
+        yield return new WaitForSeconds(waitTime);
+        canFireNormalShot = true;
+    }
+
     private void FireNormal()
     {
         if (canFireNormalShot)
@@ -89,18 +100,22 @@ public class PlayerWeaponController : MonoBehaviour
                 case ActiveBeam.Power:
                     Instantiate(powerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
                     MuzzleFlash(powerBeamMuzzleFlash);
+                    StartCoroutine(ShotDelay(powerBeamShotDelay));
                     break;
                 case ActiveBeam.Wave:
                     Instantiate(waveBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
                     MuzzleFlash(powerBeamMuzzleFlash);
+                    StartCoroutine(ShotDelay(waveBeamShotDelay));
                     break;
                 case ActiveBeam.Ice:
                     Instantiate(iceBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
                     MuzzleFlash(powerBeamMuzzleFlash);
+                    StartCoroutine(ShotDelay(iceBeamShotDelay));
                     break;
                 case ActiveBeam.Plasma:
                     Instantiate(plasmaBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
                     MuzzleFlash(powerBeamMuzzleFlash);
+                    StartCoroutine(ShotDelay(plasmaBeamShotDelay));
                     break;
             }
         }
