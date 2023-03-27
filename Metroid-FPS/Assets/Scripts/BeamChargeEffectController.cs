@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerBeamChargeEffectController : MonoBehaviour
+public class BeamChargeEffectController : MonoBehaviour
 {
     public PlayerWeaponController playerWeaponController;
     [SerializeField] private AnimationCurve sizeAdjustCurve;
