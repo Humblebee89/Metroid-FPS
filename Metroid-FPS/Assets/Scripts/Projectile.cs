@@ -31,7 +31,8 @@ public class Projectile : MonoBehaviour
 
     private void FixedUpdate()
     {
-        projectileRigidbody.MovePosition(transform.position + transform.forward * projectileSpeed * Time.deltaTime);
+        if(projectileRigidbody != null)
+            projectileRigidbody.MovePosition(transform.position + transform.forward * projectileSpeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
