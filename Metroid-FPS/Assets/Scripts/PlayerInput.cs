@@ -295,7 +295,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""8e9c0cfd-cd84-4da2-b9f5-df5a7460c313"",
                     ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": ""Hold"",
+                    ""interactions"": ""Hold(pressPoint=0.7)"",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""ChargeStart"",
