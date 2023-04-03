@@ -60,10 +60,12 @@ public class PlayerAnimationController : MonoBehaviour
         switch (playerWeaponController.activeBeam)
         {
             case PlayerWeaponController.ActiveBeam.Power:
-                armCannonAnimator.SetTrigger("PowerBeamSwap");
+                armCannonAnimator.SetTrigger("BeamSwap");
+                armCannonAnimator.SetInteger("ActiveBeam", 0);
                 break;
             case PlayerWeaponController.ActiveBeam.Wave:
-                armCannonAnimator.SetTrigger("WaveBeamSwap");
+                armCannonAnimator.SetTrigger("BeamSwap");
+                armCannonAnimator.SetInteger("ActiveBeam", 1);
                 break;
             case PlayerWeaponController.ActiveBeam.Ice:
                 //Add Animation
