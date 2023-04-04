@@ -273,7 +273,7 @@
                     "name": "",
                     "id": "8e9c0cfd-cd84-4da2-b9f5-df5a7460c313",
                     "path": "<Gamepad>/rightTrigger",
-                    "interactions": "Hold(pressPoint=0.7)",
+                    "interactions": "Hold(pressPoint=0.9)",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "ChargeStart",
