@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 24749
+  controlID: 25494
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 24750
+  controlID: 25495
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 24751
+  controlID: 25496
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c64ff7ff7409010090090100
+      m_ExpandedIDs: 8aaff6ff4e1f0100581f01005e1f01007a1f0100801f0100921f0100961f0100c81f0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -489,7 +489,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: -231, y: -197}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
@@ -499,16 +499,16 @@ MonoBehaviour:
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 0
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0.3, z: 0}
+    m_Target: {x: 0.009456279, y: 0.10223699, z: -0.048672963}
     speed: 2
-    m_Value: {x: 0, y: 0.3, z: 0}
+    m_Value: {x: 0.009456279, y: 0.10223699, z: -0.048672963}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -555,13 +555,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.018660141, y: 0.9814474, z: -0.14409754, w: -0.12549153}
+    m_Target: {x: 0.05128834, y: -0.013494255, z: 0.00043390118, w: 0.9986452}
     speed: 2
-    m_Value: {x: -0.018659214, y: 0.98139864, z: -0.14409037, w: -0.12548529}
+    m_Value: {x: 0.05128565, y: -0.013493547, z: 0.00043387842, w: 0.9985928}
   m_Size:
-    m_Target: 0.3897114
+    m_Target: 0.3874335
     speed: 2
-    m_Value: 0.3897114
+    m_Value: 0.3874335
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -2265,24 +2265,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 74090100
-    m_LastClickedInstanceID: 67956
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 521f0100
+    m_LastClickedInstanceID: 73554
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009a6b0000466c0000086c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: WaveBeamChargeEffect
+      m_OriginalName: WaveBeamChargeEffect
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 26108
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:
@@ -2374,8 +2374,8 @@ MonoBehaviour:
     y: 0
     width: 584
     height: 1299
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -2416,7 +2416,7 @@ MonoBehaviour:
     m_CachedPref: 329
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 67956
+  m_LastInspectedObjectInstanceID: 73554
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
