@@ -4889,7 +4889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 0
   destroyTimer: 4
-  hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
+  hitEffectPrefab: {fileID: 2561897186148628345, guid: 71bcdb4c5d62332429998a96e71c2075, type: 3}
   scorchMark: {fileID: 5865114931768370392, guid: 0ce546e56e7a9444da04adcaa1b53f98, type: 3}
   hitEffectOffset: 0.01
   randomZRotation: 0
