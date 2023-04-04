@@ -4946,7 +4946,7 @@ TrailRenderer:
   m_Time: 0.3
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1.5
+    widthMultiplier: 0.6
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -4964,8 +4964,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.19215685, g: 0.42928097, b: 0.94509804, a: 1}
-      key1: {r: 0.69271547, g: 0.36470586, b: 0.98039216, a: 1}
+      key0: {r: 0.19215685, g: 0.42928097, b: 0.94509804, a: 0.5019608}
+      key1: {r: 0.69271547, g: 0.36470586, b: 0.98039216, a: 0.5019608}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
