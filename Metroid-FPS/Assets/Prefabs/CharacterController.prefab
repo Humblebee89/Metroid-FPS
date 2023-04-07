@@ -5355,7 +5355,7 @@ MonoBehaviour:
   chargedWaveBeamProjectile: {fileID: 7042478485343560404, guid: 9fadff928f845284fa9d8fb3aa2145e6, type: 3}
   chargeTime: 2
   chargeCooldownTime: 0.75
-  standardShotThreshold: 0.5
+  standardShotThreshold: 0.4
   charging: 0
 --- !u!114 &962935773
 MonoBehaviour:
@@ -5396,6 +5396,14 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  acceloratorMultiplierHighBound: 2
+  acceloratorMultiplierLowBound: 0.1
+  acceloratorMultiplier: 0.1
+  acceleratorDecayRate: 0.4
+  powerBeamAcceloratorAddValue: 0.1
+  waveBeamAcceloratorAddValue: 0.4
+  iceBeamAcceloratorAddValue: 0.7
+  plasmaBeamAcceloratorAddValue: 0.5
 --- !u!114 &962935774
 MonoBehaviour:
   m_ObjectHideFlags: 0

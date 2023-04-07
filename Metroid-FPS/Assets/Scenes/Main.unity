@@ -3634,6 +3634,26 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9a85a391-226f-490d-a830-66c12742cc28
     m_ActionName: Player/ChargeEnd[/XInputControllerWindows/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 51c0e686-12e2-49a9-8154-3b6de9a553df
+    m_ActionName: Player/FireMissile[/XInputControllerWindows/rightShoulder,/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 795fa8ed-482a-492b-9397-b2f69b3c4a0f
+    m_ActionName: Player/SwapBeamPower[/XInputControllerWindows/dpad/up]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6a8028f3-2171-4877-9cea-2ac483bd1d62
+    m_ActionName: Player/SwapBeamWave[/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1410dd73-f4a4-4d06-9e5b-856762947d5e
+    m_ActionName: Player/SwapBeamIce[/XInputControllerWindows/dpad/down]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bce6bec2-c65c-438d-8668-6a1b7593cc18
+    m_ActionName: Player/SwapBeamPlasma[/XInputControllerWindows/dpad/left]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player

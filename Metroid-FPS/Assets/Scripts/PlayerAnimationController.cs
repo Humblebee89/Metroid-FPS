@@ -8,6 +8,14 @@ public class PlayerAnimationController : MonoBehaviour
     [SerializeField] private PlayerWeaponController playerWeaponController;
     [SerializeField] private Animator armCannonAnimator;
     [SerializeField] private AnimationCurve shakeAdjustCurve;
+    [SerializeField] private float acceloratorMultiplierHighBound;
+    [SerializeField] private float acceloratorMultiplierLowBound;
+    [SerializeField] private float acceloratorMultiplier;
+    [SerializeField] private float acceleratorDecayRate;
+    [SerializeField] private float powerBeamAcceloratorAddValue;
+    [SerializeField] private float waveBeamAcceloratorAddValue;
+    [SerializeField] private float iceBeamAcceloratorAddValue;
+    [SerializeField] private float plasmaBeamAcceloratorAddValue;
 
     private float playerVelocityMagnitude;
     private float adjustedShakeAmount;
@@ -35,6 +43,7 @@ public class PlayerAnimationController : MonoBehaviour
     {
         GetPlayerVelocity();
         Shake();
+        AcceloratorDecay();
         armCannonAnimator.SetFloat("WalkSpeed", playerVelocityMagnitude);
         armCannonAnimator.SetBool("isGrounded", playerMovementController.isGrounded);
         armCannonAnimator.SetFloat("ChargeValue", playerWeaponController.chargeValue);
@@ -87,7 +96,11 @@ public class PlayerAnimationController : MonoBehaviour
             return;
         }
         else
+        {
             armCannonAnimator.SetTrigger("FireNormal");
+            AddValueToAccelerator(1);
+        }
+
     }
 
     private void ChargeStarted()
@@ -103,12 +116,53 @@ public class PlayerAnimationController : MonoBehaviour
     private void FireCharged()
     {
         armCannonAnimator.SetTrigger("FireCharged");
+        AddValueToAccelerator(3);
     }
 
     private void FireMissile()
     {
         armCannonAnimator.SetTrigger("MissileOpen");
         armCannonAnimator.SetTrigger("FireCharged");
+        AddValueToAccelerator(5);
         barrelOpen = true;
+    }
+
+    private void AddValueToAccelerator(float multiplier)
+    {
+        switch (playerWeaponController.activeBeam)
+        {
+            case PlayerWeaponController.ActiveBeam.Power:
+                armCannonAnimator.SetFloat("AcceleratorMultiplier", acceloratorMultiplier += powerBeamAcceloratorAddValue * multiplier);
+                break;
+            case PlayerWeaponController.ActiveBeam.Wave:
+                armCannonAnimator.SetFloat("AcceleratorMultiplier", acceloratorMultiplier += waveBeamAcceloratorAddValue * multiplier);
+                break;
+            case PlayerWeaponController.ActiveBeam.Ice:
+                armCannonAnimator.SetFloat("AcceleratorMultiplier", acceloratorMultiplier += iceBeamAcceloratorAddValue * multiplier);
+                break;
+            case PlayerWeaponController.ActiveBeam.Plasma:
+                armCannonAnimator.SetFloat("AcceleratorMultiplier", acceloratorMultiplier += plasmaBeamAcceloratorAddValue * multiplier);
+                break;
+        }
+
+    }
+
+    private void AcceloratorDecay()
+    {
+        if (acceloratorMultiplier == acceloratorMultiplierLowBound)
+            return;
+
+        if (acceloratorMultiplier < acceloratorMultiplierLowBound)
+        {
+            acceloratorMultiplier = acceloratorMultiplierLowBound;
+            return;
+        }
+
+        if (acceloratorMultiplier > acceloratorMultiplierHighBound)
+            acceloratorMultiplier = acceloratorMultiplierHighBound;
+
+        acceloratorMultiplier -= acceleratorDecayRate * Time.deltaTime;
+
+        armCannonAnimator.SetFloat("AcceleratorMultiplier", acceloratorMultiplier);
     }
 }
