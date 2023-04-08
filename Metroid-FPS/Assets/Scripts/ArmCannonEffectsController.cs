@@ -14,13 +14,13 @@ public class ArmCannonEffectsController : MonoBehaviour
     {
         Actions.OnChargeStarted += ChargeStarted;
         Actions.OnChargeCooldownEnd += ChargeCooldownEnd;
-        Actions.OnBeamChange += BeamChange;
+        //Actions.OnBeamChange += BeamChange;
     }
     private void OnDisable()
     {
         Actions.OnChargeStarted -= ChargeStarted;
         Actions.OnChargeCooldownEnd -= ChargeCooldownEnd;
-        Actions.OnBeamChange -= BeamChange;
+        //Actions.OnBeamChange -= BeamChange;
     }
 
     private void Awake()
@@ -48,7 +48,7 @@ public class ArmCannonEffectsController : MonoBehaviour
             energyFieldMaterial.SetFloat("_Transparency", 0.0f);
     }
 
-    private void BeamChange()
+    public void BeamChange()
     {
         UpdateMaterial(lightMaterial);
         UpdateMaterial(energyFieldMaterial);
