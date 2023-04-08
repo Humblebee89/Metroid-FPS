@@ -26,6 +26,13 @@ public class ArmCannonEffectsController : MonoBehaviour
     private void Awake()
     {
         playerWeaponController = GetComponent<PlayerWeaponController>();
+
+    }
+
+    private void Start()
+    {
+        UpdateMaterial(lightMaterial);
+        UpdateMaterial(energyFieldMaterial);
     }
 
     private void ChargeStarted()

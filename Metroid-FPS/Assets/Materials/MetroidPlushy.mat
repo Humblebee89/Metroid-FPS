@@ -7,26 +7,28 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArmCannonIndicatorLights
-  m_Shader: {fileID: -6465566751694194690, guid: a7c1e9c70f4912644bdcd7116cf3de72, type: 3}
+  m_Name: MetroidPlushy
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords:
-  - _ACTIVEBEAM_POWER
+  - _METALLICSPECGLOSSMAP
+  - _NORMALMAP
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 16b22b1038ebcab41a8ea7cc5b37c8c6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1587921a0fac3a44cb2fb0072ed7f822, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 8731c2b51a7b4bb49834ca004a7ec5d0, type: 3}
+        m_Texture: {fileID: 2800000, guid: b557190d24d3cb34096d5bb2d0286b1a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -42,15 +44,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 16b22b1038ebcab41a8ea7cc5b37c8c6, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 16b22b1038ebcab41a8ea7cc5b37c8c6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1587921a0fac3a44cb2fb0072ed7f822, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 30d87e37b46c23b4c84a5cb5eaf0434a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 836dd1f4969c620499511ffc9282a3f8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -59,22 +61,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_4ebafcefafe642ae9d319a94a9f683e6_Texture_1:
-        m_Texture: {fileID: 2800000, guid: e4cff4f962bac454bb03fc439559d01f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_75c6d8bdb3a04f2dae39f2314fec97b9_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 30d87e37b46c23b4c84a5cb5eaf0434a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_7da8c15467c9453c870cb190c64a57fc_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 16b22b1038ebcab41a8ea7cc5b37c8c6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_c1948caf6deb45ddb7e3784b3685f8f7_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 8731c2b51a7b4bb49834ca004a7ec5d0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -95,7 +81,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ACTIVEBEAM: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -107,14 +92,12 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fill: 0.021958357
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
-    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 1
@@ -127,19 +110,10 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.046813726, g: 0.046813726, b: 0.046813726, a: 1}
-    - _IceBeamBrightColor: {r: 1.5079345, g: 4.5211983, b: 5.608458, a: 0}
-    - _IceBeamDarkColor: {r: 0.03921569, g: 0.2113343, b: 0.28235295, a: 0}
-    - _PlasmaBeamBrightColor: {r: 7.627778, g: 1.3587549, b: 0.7188482, a: 0}
-    - _PlasmaBeamDarkColor: {r: 0.21698111, g: 0.06484493, b: 0, a: 0}
-    - _PowerBeamBrightColor: {r: 4.4472384, g: 2.1032598, b: 0.35661823, a: 1}
-    - _PowerBeamColor: {r: 0.8113208, g: 0.61737067, b: 0.25640798, a: 1}
-    - _PowerBeamDarkColor: {r: 0.4528302, g: 0.26560852, b: 0.10466359, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _WaveBeamBrightColor: {r: 0.26921564, g: 2.0578578, b: 5.7133574, a: 0}
-    - _WaveBeamDarkColor: {r: 0.29411766, g: 0.14509803, b: 0.35686272, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &8136964915597074188
+--- !u!114 &7532306390966986516
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
