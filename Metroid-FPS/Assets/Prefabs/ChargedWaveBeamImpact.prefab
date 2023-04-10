@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2561897186148628348}
   - component: {fileID: 8869256277036675268}
   m_Layer: 0
-  m_Name: ChargedWaveBeamHitEffect
+  m_Name: ChargedWaveBeamImpact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -333,8 +333,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 8
-      minScalar: 2
+      scalar: 10
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:

@@ -6766,7 +6766,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25432
+  m_Name: pb_Mesh25456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8015,7 +8015,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25324
+  m_Name: pb_Mesh25350
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9443,7 +9443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3485697643786567237, guid: e6528dc534f94804b92165ef99081dcf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -8.02
       objectReference: {fileID: 0}
     - target: {fileID: 3485697643786567237, guid: e6528dc534f94804b92165ef99081dcf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9451,7 +9451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3485697643786567237, guid: e6528dc534f94804b92165ef99081dcf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: -9.66
       objectReference: {fileID: 0}
     - target: {fileID: 3485697643786567237, guid: e6528dc534f94804b92165ef99081dcf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9494,6 +9494,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: chargeTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_Name
       value: CharacterController
