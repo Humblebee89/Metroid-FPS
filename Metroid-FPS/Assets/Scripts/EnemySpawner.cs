@@ -16,9 +16,14 @@ public class EnemySpawner : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        spawnedEnemy = GameObject.Instantiate(enemy, transform.position, transform.rotation);
-        //This feels hacky. Find out why Ienumerators don't work
-        spawnedEnemy.GetComponent<Damageable>().onDeath.AddListener(startCoroutine);
+        if (!spawnedEnemy)
+        {
+            spawnedEnemy = GameObject.Instantiate(enemy, transform.position, transform.rotation);
+            //This feels hacky. Find out why Ienumerators don't work
+            spawnedEnemy.GetComponent<Damageable>().onDeath.AddListener(startCoroutine);
+        }
+        else
+            print("Spawned enemy is " + spawnedEnemy);
     }
 
     private void startCoroutine()

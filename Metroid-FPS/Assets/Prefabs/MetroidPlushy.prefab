@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   destroyObjectOnDeath: 1
-  deathParticleEffect: {fileID: 7053516980068908923, guid: 9bf900fcc0b8c564e9a272d3d7c8b665, type: 3}
+  deathParticleEffect: {fileID: 1572366618425960737, guid: c2deceec26894234f9221f1187905639, type: 3}
   onDeath:
     m_PersistentCalls:
       m_Calls:
