@@ -48,8 +48,13 @@ public class Projectile : MonoBehaviour
         Quaternion hitNormal = Quaternion.FromToRotation(Vector3.forward, contact.normal);
         Vector3 contactPoint = contact.point + contact.normal * hitEffectOffset;
         Instantiate(hitEffectPrefab, contactPoint, hitNormal);
-        //TODO Add random rotation to scorch effect
-        Instantiate(scorchMark, contactPoint, hitNormal);
+
+        if (collision.gameObject.tag != "Enemy")
+        {
+            //TODO Add random rotation to scorch effect
+            Instantiate(scorchMark, contactPoint, hitNormal);
+        }
+
         Destroy(gameObject);
     }
 }

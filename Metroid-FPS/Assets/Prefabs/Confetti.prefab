@@ -235,12 +235,12 @@ ParticleSystem:
         key5: {r: 1, g: 1, b: 1, a: 0}
         key6: {r: 1, g: 1, b: 1, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 10023
-        ctime1: 21781
+        ctime0: 2891
+        ctime1: 17348
         ctime2: 32575
-        ctime3: 44525
-        ctime4: 55127
-        ctime5: 65535
+        ctime3: 47031
+        ctime4: 62258
+        ctime5: 65342
         ctime6: 65535
         ctime7: 0
         atime0: 0
@@ -251,8 +251,8 @@ ParticleSystem:
         atime5: 0
         atime6: 0
         atime7: 0
-        m_Mode: 1
-        m_NumColorKeys: 6
+        m_Mode: 0
+        m_NumColorKeys: 5
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
@@ -4862,7 +4862,7 @@ ParticleSystemRenderer:
   m_FreeformStretching: 1
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}

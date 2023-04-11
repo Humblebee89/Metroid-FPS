@@ -7,6 +7,7 @@ public class Damageable : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private bool destroyObjectOnDeath;
+    [SerializeField] private GameObject objectToDestroy;
     [SerializeField] private GameObject deathParticleEffect;
 
     private int health;
@@ -32,7 +33,7 @@ public class Damageable : MonoBehaviour
         onDeath?.Invoke();
 
         if (destroyObjectOnDeath)
-            Destroy(gameObject);
+            Destroy(objectToDestroy);
     }
 
 }
