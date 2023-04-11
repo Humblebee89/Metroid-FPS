@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 30
   destroyTimer: 4
+  damage: 0
   hitEffectPrefab: {fileID: 0}
   scorchMark: {fileID: 0}
   hitEffectOffset: 0.1

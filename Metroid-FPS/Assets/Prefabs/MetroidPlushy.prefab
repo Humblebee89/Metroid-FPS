@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 572084819410776544}
   - component: {fileID: 2311616911190754602}
   - component: {fileID: 4023147081849952771}
+  - component: {fileID: 1087650761}
   m_Layer: 0
   m_Name: MetroidPlushy
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4257167346388444415}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.130274, y: 1.8, z: -29.33}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -97,3 +98,33 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.64
   m_Center: {x: 0, y: 0.010103673, z: 0}
+--- !u!114 &1087650761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257167346388444415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7aed9797c04c634ca23c3209e2ac8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  destroyObjectOnDeath: 1
+  deathParticleEffect: {fileID: 7053516980068908923, guid: 9bf900fcc0b8c564e9a272d3d7c8b665, type: 3}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

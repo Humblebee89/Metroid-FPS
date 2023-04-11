@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField] private float projectileSpeed = 1.0f;
     [SerializeField] private float destroyTimer = 4.0f;
+    [SerializeField] private int damage = 10;
     [SerializeField] private GameObject hitEffectPrefab;
     [SerializeField] private GameObject scorchMark;
     [SerializeField] private float hitEffectOffset = 0.1f;
@@ -40,7 +41,8 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.tag == "IgnoreWeaponCollision")
             return;
 
-        print(collision.gameObject.name);
+        if (collision.gameObject.TryGetComponent<Damageable>(out Damageable damageable))
+            damageable.TakeDamage(damage);
 
         ContactPoint contact = collision.contacts[0];
         Quaternion hitNormal = Quaternion.FromToRotation(Vector3.forward, contact.normal);
