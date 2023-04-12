@@ -12,6 +12,10 @@ A modern first person Metroid project based on this unused concept art from Metr
 
 ![WaveBeam](https://user-images.githubusercontent.com/26914463/231594292-bd1d8836-fc1e-4a00-9f61-f580745939a8.png)
 
+## Missile Launcher ##
+
+![Missles](https://user-images.githubusercontent.com/26914463/231601696-d53e9f7a-6c62-48aa-bdc6-97fed1be2feb.png)
+
 ## Demo ##
 
 https://www.youtube.com/watch?v=piUu-Dplmtg&t=2s
