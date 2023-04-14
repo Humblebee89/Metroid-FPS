@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99061247a4a75134ca351069867adb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 40
+  projectileSpeed: 30
   destroyTimer: 6
   damage: 50
   hitEffectPrefab: {fileID: 3382703020168127288, guid: ad309fbd33a9d7542ace60bfc41e3592, type: 3}
