@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 public class CameraLookController : MonoBehaviour
 {
     public PlayerInput playerInput;
+    [HideInInspector]
+    public Vector2 inputDirection;
 
     [SerializeField] private Transform playerBody;
     [SerializeField] private Transform playerCamera;
@@ -13,7 +15,7 @@ public class CameraLookController : MonoBehaviour
     [SerializeField] private AnimationCurve inputCurve;
     [SerializeField] private float clampAngle = 90f;
 
-    private Vector2 inputDirection;
+    
     private float clampedRotationX;
 
     private void Awake()
@@ -44,13 +46,8 @@ public class CameraLookController : MonoBehaviour
 
     private void GetLookInput(Vector2 axis)
     {
-        //inputDirection.x = axis.x;
-        //inputDirection.y = axis.y;
-
         Vector2 dir = axis.normalized;
         inputDirection = axis / Mathf.Max (Mathf.Abs (dir.x), Mathf.Abs (dir.y), Mathf.Epsilon);
-
-        //print("Input Direction " + inputDirection);
     }
 
     private void CameraLook()

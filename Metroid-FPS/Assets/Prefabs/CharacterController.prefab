@@ -483,6 +483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 918833493}
+  - component: {fileID: 2066532305}
   m_Layer: 8
   m_Name: HelmetParent
   m_TagString: Untagged
@@ -507,6 +508,19 @@ Transform:
   m_Father: {fileID: 826070802}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2066532305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918833492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9f4c68488e5254a90a6668a95db4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraLookController: {fileID: 694470049}
 --- !u!1 &1062581338
 GameObject:
   m_ObjectHideFlags: 0
@@ -5721,6 +5735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a36419f4c0d91f4395e8cc90be0ce69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputDirection: {x: 0, y: 0}
   playerBody: {fileID: 5872919601941089780}
   playerCamera: {fileID: 5872919603691514189}
   lookSensitivity: 175
