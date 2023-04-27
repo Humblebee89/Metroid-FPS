@@ -26,6 +26,8 @@ public class CameraLookController : MonoBehaviour
         playerInput.Player.Look.canceled += context => GetLookInput(context.ReadValue<Vector2>());
 
         inputCurve.preWrapMode = WrapMode.PingPong;
+
+        modifiedInputX = playerBody.transform.eulerAngles.y;
     }
 
     private void OnEnable()
