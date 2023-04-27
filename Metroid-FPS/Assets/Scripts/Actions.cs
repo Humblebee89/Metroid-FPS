@@ -11,4 +11,6 @@ public static class Actions
     public static Action OnFireMissile;
     public static Action OnBeamChange;
     public static Action OnChargeCooldownEnd;
+    public static Action OnGrounded;
+    public static Action OnAirBorne;
 }

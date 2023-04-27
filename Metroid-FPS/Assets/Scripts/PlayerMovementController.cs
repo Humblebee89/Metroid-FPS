@@ -23,28 +23,44 @@ public class PlayerMovementController : MonoBehaviour
     [HideInInspector] public bool isGrounded;
 
     private Rigidbody playerRigidbody;
+    private CapsuleCollider playerCollider;
     private Vector3 moveDirection;
     private bool canDoubleJump;
     private bool canDash = true;
+    private bool deltaIsGrounded;
+    private float dynamicFriction;
+    private float staticFriction;
+    private PhysicMaterialCombine physicMaterialCombine;
 
     private void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody>();
+        playerCollider = GetComponent<CapsuleCollider>();
         playerInput = new PlayerInput();
         playerInput.Player.Move.performed += context => GetMoveInput(context.ReadValue<Vector2>());
         playerInput.Player.Move.canceled += context => GetMoveInput(context.ReadValue<Vector2>());
         playerInput.Player.Jump.performed += context => Jump();
         playerInput.Player.Dash.performed += context => Dash();
+
+        dynamicFriction = playerCollider.material.dynamicFriction;
+        staticFriction = playerCollider.material.staticFriction;
+        physicMaterialCombine = playerCollider.material.frictionCombine;
     }
 
     private void OnEnable()
     {
         playerInput.Enable();
+
+        Actions.OnGrounded += OnGrounded;
+        Actions.OnAirBorne += OnAirborne;
     }
 
     private void OnDisable()
     {
         playerInput.Disable();
+
+        Actions.OnGrounded -= OnGrounded;
+        Actions.OnAirBorne -= OnAirborne;
     }
 
     private void GetMoveInput(Vector2 input)
@@ -94,9 +110,36 @@ public class PlayerMovementController : MonoBehaviour
         playerRigidbody.AddForce(Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
     }
 
+    private void OnAirborne()
+    {
+        playerCollider.material.dynamicFriction = 0;
+        playerCollider.material.staticFriction = 0;
+        playerCollider.material.frictionCombine = PhysicMaterialCombine.Minimum;
+    }
+
+    private void OnGrounded()
+    {
+        playerCollider.material.dynamicFriction = dynamicFriction;
+        playerCollider.material.staticFriction = staticFriction;
+        playerCollider.material.frictionCombine = physicMaterialCombine;
+
+    }
+
     private void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if( isGrounded != deltaIsGrounded)
+        {
+            if (isGrounded)
+                Actions.OnGrounded();
+            else
+                Actions.OnAirBorne();
+        }
+
+        //print("isGrounded " + isGrounded + " dynamic friction " + playerCollider.material.dynamicFriction);
+
+        deltaIsGrounded = isGrounded;
 
         moveDirection = transform.right * inputDirection.x + transform.forward * inputDirection.y;
         playerRigidbody.MovePosition(playerRigidbody.position + moveDirection * moveSpeed * Time.deltaTime);
