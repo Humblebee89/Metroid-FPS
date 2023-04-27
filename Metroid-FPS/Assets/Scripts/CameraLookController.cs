@@ -9,7 +9,7 @@ public class CameraLookController : MonoBehaviour
     [HideInInspector]
     public Vector2 inputDirection;
 
-    [SerializeField] private Transform playerBody;
+    [SerializeField] private Rigidbody playerBody;
     [SerializeField] private Transform playerCamera;
     [SerializeField] private float lookSensitivity;
     [SerializeField] private AnimationCurve inputCurve;
@@ -17,6 +17,7 @@ public class CameraLookController : MonoBehaviour
 
     
     private float clampedRotationX;
+    private float modifiedInputX;
 
     private void Awake()
     {
@@ -61,13 +62,13 @@ public class CameraLookController : MonoBehaviour
         float curveEvaluatedX = inputCurve.Evaluate(inputDirection.x) * xDirection;
         float curveEvaluatedY = inputCurve.Evaluate(inputDirection.y) * yDirection;
 
-        float modifiedInputX = curveEvaluatedX * lookSensitivity * Time.deltaTime;
+        modifiedInputX = modifiedInputX + curveEvaluatedX * lookSensitivity * Time.deltaTime % 360f;
         float modifiedInputY = curveEvaluatedY * lookSensitivity * Time.deltaTime;
 
         clampedRotationX -= modifiedInputY;
         clampedRotationX = Mathf.Clamp(clampedRotationX, -clampAngle, clampAngle);
 
         playerCamera.localRotation = Quaternion.Euler(clampedRotationX, 0f, 0f);
-        playerBody.Rotate(Vector3.up * modifiedInputX);
+        playerBody.MoveRotation(Quaternion.Euler(0f, modifiedInputX, 0f));
     }
 }

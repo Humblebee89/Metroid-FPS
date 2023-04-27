@@ -5736,7 +5736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputDirection: {x: 0, y: 0}
-  playerBody: {fileID: 5872919601941089780}
+  playerBody: {fileID: 5666994830430025659}
   playerCamera: {fileID: 5872919603691514189}
   lookSensitivity: 175
   inputCurve:
