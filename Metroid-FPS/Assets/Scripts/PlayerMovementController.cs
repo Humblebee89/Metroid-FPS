@@ -25,8 +25,7 @@ public class PlayerMovementController : MonoBehaviour
     private Rigidbody playerRigidbody;
     private CapsuleCollider playerCollider;
     private Vector3 moveDirection;
-    //private bool canDoubleJump;
-    private int jumpAmount = 1;
+    private bool canDoubleJump;
     private bool canDash = true;
     private bool deltaIsGrounded;
     private float dynamicFriction;
@@ -98,10 +97,10 @@ public class PlayerMovementController : MonoBehaviour
             PerformJump();
         }
 
-        if(enableDoubleJumpAbility && isGrounded == false  && jumpAmount != 0)
+        if(enableDoubleJumpAbility && isGrounded == false && canDoubleJump)
         {
             PerformJump();
-            jumpAmount--;
+            canDoubleJump = false;
         }
     }
 
@@ -124,7 +123,7 @@ public class PlayerMovementController : MonoBehaviour
         playerCollider.material.staticFriction = staticFriction;
         playerCollider.material.frictionCombine = physicMaterialCombine;
 
-        jumpAmount = 1;
+        canDoubleJump = true;
     }
 
     private void Update()
