@@ -6,20 +6,26 @@ using TMPro;
 public class DebugUIController : MonoBehaviour
 {
     [SerializeField] PlayerWeaponController playerWeaponController;
+    [SerializeField] PlayerMovementController playerMovementController;
     [SerializeField] private TMP_Text currentBeamText;
     [SerializeField] private TMP_Text canFireText;
     [SerializeField] private TMP_Text chargeAmountText;
-
+    [SerializeField] private TMP_Text groundedText;
+ 
 
     private void OnEnable()
     {
         Actions.OnBeamChange += BeamChange;
+        Actions.OnGrounded += Grounded;
+        Actions.OnAirBorne += Grounded;
         currentBeamText.text = "Active Beam: <color=#FFB731> Power";
     }
 
     private void OnDisable()
     {
         Actions.OnBeamChange -= BeamChange;
+        Actions.OnGrounded -= Grounded;
+        Actions.OnAirBorne -= Grounded;
     }
 
     private void BeamChange()
@@ -39,6 +45,11 @@ public class DebugUIController : MonoBehaviour
                 currentBeamText.text = "Active Beam: <color=#D92900> Plasma";
                 break;
         }
+    }
+
+    private void Grounded()
+    {
+        groundedText.text = "Grounded " + playerMovementController.isGrounded.ToString();
     }
 
     private void Update()

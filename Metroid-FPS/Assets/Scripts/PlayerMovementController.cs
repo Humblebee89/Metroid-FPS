@@ -25,7 +25,8 @@ public class PlayerMovementController : MonoBehaviour
     private Rigidbody playerRigidbody;
     private CapsuleCollider playerCollider;
     private Vector3 moveDirection;
-    private bool canDoubleJump;
+    //private bool canDoubleJump;
+    private int jumpAmount = 1;
     private bool canDash = true;
     private bool deltaIsGrounded;
     private float dynamicFriction;
@@ -95,12 +96,12 @@ public class PlayerMovementController : MonoBehaviour
         if(isGrounded)
         {
             PerformJump();
-            canDoubleJump = true;
         }
-        else if(canDoubleJump && enableDoubleJumpAbility)
+
+        if(enableDoubleJumpAbility && isGrounded == false  && jumpAmount != 0)
         {
-            PerformJump();    
-            canDoubleJump = false;
+            PerformJump();
+            jumpAmount--;
         }
     }
 
@@ -123,6 +124,7 @@ public class PlayerMovementController : MonoBehaviour
         playerCollider.material.staticFriction = staticFriction;
         playerCollider.material.frictionCombine = physicMaterialCombine;
 
+        jumpAmount = 1;
     }
 
     private void Update()
@@ -136,8 +138,6 @@ public class PlayerMovementController : MonoBehaviour
             else
                 Actions.OnAirBorne();
         }
-
-        //print("isGrounded " + isGrounded + " dynamic friction " + playerCollider.material.dynamicFriction);
 
         deltaIsGrounded = isGrounded;
 

@@ -5802,7 +5802,7 @@ MonoBehaviour:
   dashSpeed: 12
   dashCooldown: 0.5
   groundCheck: {fileID: 626366155}
-  groundDistance: 0.1
+  groundDistance: 0.2
   groundMask:
     serializedVersion: 2
     m_Bits: 1024
