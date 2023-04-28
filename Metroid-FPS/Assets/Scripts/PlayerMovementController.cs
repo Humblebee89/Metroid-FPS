@@ -11,6 +11,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private bool enableDoubleJumpAbility;
     [SerializeField] private bool enableDashAbility;
     [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float maxVelocity = 10f;
     [SerializeField] private float jumpHeight = 1f;
     [SerializeField] private float dashTime = 1f;
     [SerializeField] private float dashSpeed = 3f;
@@ -31,6 +32,7 @@ public class PlayerMovementController : MonoBehaviour
     private float dynamicFriction;
     private float staticFriction;
     private PhysicMaterialCombine physicMaterialCombine;
+    private Vector3 clampedVelocity;
 
     private void Awake()
     {
@@ -141,7 +143,10 @@ public class PlayerMovementController : MonoBehaviour
         deltaIsGrounded = isGrounded;
 
         moveDirection = transform.right * inputDirection.x + transform.forward * inputDirection.y;
-        playerRigidbody.MovePosition(playerRigidbody.position + moveDirection * moveSpeed * Time.deltaTime);
+        playerRigidbody.velocity = new Vector3(moveDirection.x * moveSpeed * Time.deltaTime, playerRigidbody.velocity.y, moveDirection.z * moveSpeed * Time.deltaTime);
+        clampedVelocity = new Vector3(Mathf.Clamp(playerRigidbody.velocity.x, -maxVelocity, maxVelocity), playerRigidbody.velocity.y, Mathf.Clamp(playerRigidbody.velocity.z, -maxVelocity, maxVelocity));
+        playerRigidbody.velocity = clampedVelocity;
 
+        print(playerRigidbody.velocity);
     }
 }

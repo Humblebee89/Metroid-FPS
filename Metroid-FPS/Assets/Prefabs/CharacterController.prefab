@@ -5796,13 +5796,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableDoubleJumpAbility: 1
   enableDashAbility: 1
-  moveSpeed: 6
+  moveSpeed: 600
+  airSpeed: 20
+  maxVelocity: 6
   jumpHeight: 2
   dashTime: 0.25
   dashSpeed: 12
   dashCooldown: 0.5
   groundCheck: {fileID: 626366155}
-  groundDistance: 0.2
+  groundDistance: 0.3
   groundMask:
     serializedVersion: 2
     m_Bits: 1024
