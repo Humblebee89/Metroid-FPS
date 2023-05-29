@@ -4931,7 +4931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99061247a4a75134ca351069867adb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 40
+  projectileSpeed: 35
   destroyTimer: 4
   damage: 60
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 38b492a1577714a408700529a5e002de, type: 3}
