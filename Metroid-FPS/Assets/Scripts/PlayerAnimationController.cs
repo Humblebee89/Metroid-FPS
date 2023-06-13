@@ -79,7 +79,8 @@ public class PlayerAnimationController : MonoBehaviour
                 armCannonAnimator.SetInteger("ActiveBeam", 1);
                 break;
             case PlayerWeaponController.ActiveBeam.Ice:
-                //Add Animation
+                armCannonAnimator.SetTrigger("BeamSwap");
+                armCannonAnimator.SetInteger("ActiveBeam", 2);
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
                 //Add Animation

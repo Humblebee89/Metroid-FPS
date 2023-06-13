@@ -135,6 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 150
   destroyTimer: 3
+  damage: 20
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
   scorchMark: {fileID: 5865114931768370392, guid: 0ce546e56e7a9444da04adcaa1b53f98, type: 3}
   hitEffectOffset: 0.01
