@@ -47,7 +47,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -169,7 +169,7 @@ ModelImporter:
         weight: 1
       maskType: 1
       maskSource: {fileID: 31900000, guid: c7d51d43da95bd04e8e523d81b5c3031, type: 2}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 61
     isReadable: 0
   meshes:
     lODScreenPercentages: []
