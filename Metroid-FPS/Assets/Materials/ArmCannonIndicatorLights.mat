@@ -10,7 +10,7 @@ Material:
   m_Name: ArmCannonIndicatorLights
   m_Shader: {fileID: -6465566751694194690, guid: a7c1e9c70f4912644bdcd7116cf3de72, type: 3}
   m_ValidKeywords:
-  - _ACTIVEBEAM_ICE
+  - _ACTIVEBEAM_POWER
   m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -107,7 +107,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fill: 0.026304735
+    - _Fill: 0.02471962
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
