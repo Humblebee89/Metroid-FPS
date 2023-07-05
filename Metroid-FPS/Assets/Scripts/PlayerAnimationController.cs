@@ -83,7 +83,8 @@ public class PlayerAnimationController : MonoBehaviour
                 armCannonAnimator.SetInteger("ActiveBeam", 2);
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
-                //Add Animation
+                armCannonAnimator.SetTrigger("BeamSwap");
+                armCannonAnimator.SetInteger("ActiveBeam", 3);
                 break;
         }
     }
