@@ -23,7 +23,7 @@ Material:
   m_Name: EnergyField
   m_Shader: {fileID: -6465566751694194690, guid: 9dc07e1c7adb4ef4090d94f93b8fa9ea, type: 3}
   m_ValidKeywords:
-  - _ACTIVEBEAM_POWER
+  - _ACTIVEBEAM_ICE
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -125,7 +125,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _Transparancy: 0.4136456
-    - _Transparency: 0.021022895
+    - _Transparency: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

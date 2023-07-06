@@ -10,7 +10,7 @@ Material:
   m_Name: ArmCannonIndicatorLights
   m_Shader: {fileID: -6465566751694194690, guid: a7c1e9c70f4912644bdcd7116cf3de72, type: 3}
   m_ValidKeywords:
-  - _ACTIVEBEAM_POWER
+  - _ACTIVEBEAM_ICE
   m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -107,7 +107,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fill: 0.021022895
+    - _Fill: 0.054509133
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -130,7 +130,7 @@ Material:
     - _EmissionColor: {r: 0.046813726, g: 0.046813726, b: 0.046813726, a: 1}
     - _IceBeamBrightColor: {r: 1.5079345, g: 4.5211983, b: 5.608458, a: 0}
     - _IceBeamDarkColor: {r: 0.03921569, g: 0.2113343, b: 0.28235295, a: 0}
-    - _PlasmaBeamBrightColor: {r: 7.627778, g: 1.3587549, b: 0.7188482, a: 0}
+    - _PlasmaBeamBrightColor: {r: 9.215447, g: 1.1620854, b: 0.38598752, a: 0}
     - _PlasmaBeamDarkColor: {r: 0.21698111, g: 0.06484493, b: 0, a: 0}
     - _PowerBeamBrightColor: {r: 4.4472384, g: 2.1032598, b: 0.35661823, a: 1}
     - _PowerBeamColor: {r: 0.8113208, g: 0.61737067, b: 0.25640798, a: 1}
