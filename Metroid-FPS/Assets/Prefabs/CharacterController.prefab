@@ -5797,7 +5797,6 @@ MonoBehaviour:
   enableDoubleJumpAbility: 1
   enableDashAbility: 1
   moveSpeed: 600
-  airSpeed: 20
   maxVelocity: 6
   jumpHeight: 2
   dashTime: 0.25
@@ -5951,8 +5950,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bbd7a4e1d133f44493d9d3b80453210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  glowMeshRenderer: {fileID: 3823310884297430246}
   lightMaterial: {fileID: 2100000, guid: a645b50a0b84f804a9b14a6fc62ae526, type: 2}
-  energyFieldMaterial: {fileID: 2100000, guid: 7f2ac8053eb402f4191ab7eee494a03f, type: 2}
+  powerEnergyFieldMaterial: {fileID: 2100000, guid: 7f2ac8053eb402f4191ab7eee494a03f, type: 2}
+  waveEnergyFieldMaterial: {fileID: 2100000, guid: d6aef1630d35351449255582b2113e8a, type: 2}
+  iceEnergyFieldMaterial: {fileID: 2100000, guid: c6c58fa35df699e4399adb790e66bfa0, type: 2}
+  plasmaEnergyFieldMaterial: {fileID: 2100000, guid: b2fdcb984d20d2d4f93ae5db3a0a8d1d, type: 2}
 --- !u!1 &5872919603691514178
 GameObject:
   m_ObjectHideFlags: 0
@@ -7010,7 +7013,7 @@ PrefabInstance:
     - target: {fileID: -3870883755111403188, guid: c798516a9b723744fae3a09f8ce9405c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7f2ac8053eb402f4191ab7eee494a03f, type: 2}
+      objectReference: {fileID: 2100000, guid: b2fdcb984d20d2d4f93ae5db3a0a8d1d, type: 2}
     - target: {fileID: -3862269438001413410, guid: c798516a9b723744fae3a09f8ce9405c, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -8057,6 +8060,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d4a1772b2aba1d94bb8409acc36baa38, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c798516a9b723744fae3a09f8ce9405c, type: 3}
+--- !u!137 &3823310884297430246 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3870883755111403188, guid: c798516a9b723744fae3a09f8ce9405c, type: 3}
+  m_PrefabInstance: {fileID: 9171856918630622634}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5730030493901873407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3516699043411690837, guid: c798516a9b723744fae3a09f8ce9405c, type: 3}

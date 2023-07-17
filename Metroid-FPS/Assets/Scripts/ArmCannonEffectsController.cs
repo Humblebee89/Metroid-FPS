@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class ArmCannonEffectsController : MonoBehaviour
 {
+    [SerializeField] private SkinnedMeshRenderer glowMeshRenderer;
     [SerializeField] private Material lightMaterial;
-    [SerializeField] private Material energyFieldMaterial;
+    [SerializeField] private Material powerEnergyFieldMaterial;
+    [SerializeField] private Material waveEnergyFieldMaterial;
+    [SerializeField] private Material iceEnergyFieldMaterial;
+    [SerializeField] private Material plasmaEnergyFieldMaterial;
 
     private PlayerWeaponController playerWeaponController;
     private bool charging;
@@ -14,13 +18,11 @@ public class ArmCannonEffectsController : MonoBehaviour
     {
         Actions.OnChargeStarted += ChargeStarted;
         Actions.OnChargeCooldownEnd += ChargeCooldownEnd;
-        //Actions.OnBeamChange += BeamChange;
     }
     private void OnDisable()
     {
         Actions.OnChargeStarted -= ChargeStarted;
         Actions.OnChargeCooldownEnd -= ChargeCooldownEnd;
-        //Actions.OnBeamChange -= BeamChange;
     }
 
     private void Awake()
@@ -31,8 +33,8 @@ public class ArmCannonEffectsController : MonoBehaviour
 
     private void Start()
     {
-        UpdateMaterial(lightMaterial);
-        UpdateMaterial(energyFieldMaterial);
+        UpdateLightMaterial(lightMaterial);
+        UpdateGlowMaterial();
     }
 
     private void ChargeStarted()
@@ -45,46 +47,62 @@ public class ArmCannonEffectsController : MonoBehaviour
         charging = false;
 
         if(playerWeaponController.activeBeam == PlayerWeaponController.ActiveBeam.Power)
-            energyFieldMaterial.SetFloat("_Transparency", 0.0f);
+            powerEnergyFieldMaterial.SetFloat("_Transparency", 0.0f);
     }
 
     public void BeamChange()
     {
-        UpdateMaterial(lightMaterial);
-        UpdateMaterial(energyFieldMaterial);
+        UpdateLightMaterial(lightMaterial);
+        UpdateGlowMaterial();
     }
 
-    private void UpdateMaterial(Material material)
+    private void UpdateLightMaterial(Material material)
     {
         switch (playerWeaponController.activeBeam)
         {
             case PlayerWeaponController.ActiveBeam.Power:
-                energyFieldMaterial.SetFloat("_Transparency", playerWeaponController.chargeValue);
+                powerEnergyFieldMaterial.SetFloat("_Transparency", playerWeaponController.chargeValue);
                 material.EnableKeyword("_ACTIVEBEAM_POWER");
                 material.DisableKeyword("_ACTIVEBEAM_WAVE");
                 material.DisableKeyword("_ACTIVEBEAM_ICE");
                 material.DisableKeyword("_ACTIVEBEAM_PLASMA");
                 break;
             case PlayerWeaponController.ActiveBeam.Wave:
-                energyFieldMaterial.SetFloat("_Transparency", 1.0f);
                 material.DisableKeyword("_ACTIVEBEAM_POWER");
                 material.EnableKeyword("_ACTIVEBEAM_WAVE");
                 material.DisableKeyword("_ACTIVEBEAM_ICE");
                 material.DisableKeyword("_ACTIVEBEAM_PLASMA");
                 break;
             case PlayerWeaponController.ActiveBeam.Ice:
-                energyFieldMaterial.SetFloat("_Transparency", 1.0f);
                 material.DisableKeyword("_ACTIVEBEAM_POWER");
                 material.DisableKeyword("_ACTIVEBEAM_WAVE");
                 material.EnableKeyword("_ACTIVEBEAM_ICE");
                 material.DisableKeyword("_ACTIVEBEAM_PLASMA");
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
-                energyFieldMaterial.SetFloat("_Transparency", 1.0f);
                 material.DisableKeyword("_ACTIVEBEAM_POWER");
                 material.DisableKeyword("_ACTIVEBEAM_WAVE");
                 material.DisableKeyword("_ACTIVEBEAM_ICE");
                 material.EnableKeyword("_ACTIVEBEAM_PLASMA");
+                break;
+        }
+    }
+
+    private void UpdateGlowMaterial()
+    {
+        switch (playerWeaponController.activeBeam)
+        {
+            case PlayerWeaponController.ActiveBeam.Power:
+                glowMeshRenderer.material = powerEnergyFieldMaterial;
+                break;
+            case PlayerWeaponController.ActiveBeam.Wave:
+                glowMeshRenderer.material = waveEnergyFieldMaterial;
+                break;
+            case PlayerWeaponController.ActiveBeam.Ice:
+                glowMeshRenderer.material = iceEnergyFieldMaterial;
+                break;
+            case PlayerWeaponController.ActiveBeam.Plasma:
+                glowMeshRenderer.material = plasmaEnergyFieldMaterial;
                 break;
         }
     }
@@ -100,7 +118,7 @@ public class ArmCannonEffectsController : MonoBehaviour
 
         if (playerWeaponController.activeBeam == PlayerWeaponController.ActiveBeam.Power && charging)
         {
-            energyFieldMaterial.SetFloat("_Transparency", playerWeaponController.chargeValue);
+            powerEnergyFieldMaterial.SetFloat("_Transparency", playerWeaponController.chargeValue);
         }
     }
 }

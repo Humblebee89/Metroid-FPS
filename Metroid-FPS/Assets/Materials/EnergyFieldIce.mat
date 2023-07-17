@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2370756951148865342
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,12 +20,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ArmCannonIndicatorLights
-  m_Shader: {fileID: -6465566751694194690, guid: a7c1e9c70f4912644bdcd7116cf3de72, type: 3}
-  m_ValidKeywords:
-  - _ACTIVEBEAM_POWER
+  m_Name: EnergyFieldIce
+  m_Shader: {fileID: -6465566751694194690, guid: 7df5ec5900050604b890499da7274e09, type: 3}
+  m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -22,11 +34,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 16b22b1038ebcab41a8ea7cc5b37c8c6, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 8731c2b51a7b4bb49834ca004a7ec5d0, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -42,15 +54,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 16b22b1038ebcab41a8ea7cc5b37c8c6, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 16b22b1038ebcab41a8ea7cc5b37c8c6, type: 3}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: 7e3d4cc7bf71d314cb55c16395eb6b80, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 30d87e37b46c23b4c84a5cb5eaf0434a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -61,20 +77,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_4ebafcefafe642ae9d319a94a9f683e6_Texture_1:
-        m_Texture: {fileID: 2800000, guid: e4cff4f962bac454bb03fc439559d01f, type: 3}
+    - _Pattern:
+        m_Texture: {fileID: 2800000, guid: d9351977736225c47870152aa40dab74, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_75c6d8bdb3a04f2dae39f2314fec97b9_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 30d87e37b46c23b4c84a5cb5eaf0434a, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_7da8c15467c9453c870cb190c64a57fc_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 16b22b1038ebcab41a8ea7cc5b37c8c6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_c1948caf6deb45ddb7e3784b3685f8f7_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 8731c2b51a7b4bb49834ca004a7ec5d0, type: 3}
+    - _SampleTexture2D_941a2221416048448d64b14c0821a96a_Texture_1:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -107,48 +115,38 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fill: 0.027311837
+    - _FadeAmount: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
+    - _Power: 3
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 1
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: -0.3
     - _SrcBlend: 1
     - _Surface: 0
+    - _Transparancy: 0.4136456
+    - _Transparency: 1
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.046813726, g: 0.046813726, b: 0.046813726, a: 1}
-    - _IceBeamBrightColor: {r: 1.5079345, g: 4.5211983, b: 5.608458, a: 0}
-    - _IceBeamDarkColor: {r: 0.03921569, g: 0.2113343, b: 0.28235295, a: 0}
-    - _PlasmaBeamBrightColor: {r: 9.215447, g: 1.1620854, b: 0.38598752, a: 0}
-    - _PlasmaBeamDarkColor: {r: 0.21698111, g: 0.06484493, b: 0, a: 0}
-    - _PowerBeamBrightColor: {r: 4.4472384, g: 2.1032598, b: 0.35661823, a: 1}
-    - _PowerBeamColor: {r: 0.8113208, g: 0.61737067, b: 0.25640798, a: 1}
-    - _PowerBeamDarkColor: {r: 0.4528302, g: 0.26560852, b: 0.10466359, a: 1}
+    - _Color_1: {r: 0.28335086, g: 1.3518097, b: 1.4651314, a: 1}
+    - _Color_2: {r: 0.28382123, g: 0.7558063, b: 1.4651314, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _IceBeamColor: {r: 0.28335086, g: 1.3518097, b: 1.4651314, a: 1}
+    - _Inner_Color: {r: 0.5640963, g: 0, b: 23.96863, a: 1}
+    - _Outer_Color: {r: 0, g: 1.1722642, b: 2.670157, a: 1}
+    - _PlasmaBeamColor: {r: 7.027452, g: 0.63056445, b: 0, a: 1}
+    - _PowerBeamColor: {r: 31.999996, g: 9.047119, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _WaveBeamBrightColor: {r: 0.26921564, g: 2.0578578, b: 5.7133574, a: 0}
-    - _WaveBeamDarkColor: {r: 0.29411766, g: 0.14509803, b: 0.35686272, a: 0}
+    - _WaveBeamColor: {r: 0.4646715, g: 0.13056912, b: 5.536131, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &8136964915597074188
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5
