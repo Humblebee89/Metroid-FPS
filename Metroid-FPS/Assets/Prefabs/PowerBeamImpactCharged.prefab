@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2561897186148628348}
   - component: {fileID: 8869256277036675268}
   m_Layer: 0
-  m_Name: ChargedPowerBeamImpact
+  m_Name: PowerBeamImpactCharged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

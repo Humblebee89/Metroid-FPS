@@ -10,9 +10,19 @@ public class ArmCannonEffectsController : MonoBehaviour
     [SerializeField] private Material waveEnergyFieldMaterial;
     [SerializeField] private Material iceEnergyFieldMaterial;
     [SerializeField] private Material plasmaEnergyFieldMaterial;
+    [SerializeField] private ParticleSystem powerBeamParticleSystem;
+    [SerializeField] private float powerBeamEmissionMultiplier;
+    [SerializeField] private ParticleSystem waveBeamParticleSystem;
+    [SerializeField] private float waveBeamEmissionMultiplier;
+    [SerializeField] private ParticleSystem iceBeamParticleSystem;
+    [SerializeField] private float iceBeamEmissionMultiplier;
+    [SerializeField] private ParticleSystem plasmaBeamParticleSystem;
+    [SerializeField] private float plasmaBeamEmissionMultiplier;
 
     private PlayerWeaponController playerWeaponController;
+    private ParticleSystem activeParticleSystem;
     private bool charging;
+    private ParticleSystem.EmissionModule waveBeamEmission;
 
     private void OnEnable()
     {
@@ -33,8 +43,11 @@ public class ArmCannonEffectsController : MonoBehaviour
 
     private void Start()
     {
+        waveBeamEmission = waveBeamParticleSystem.emission;
+
         UpdateLightMaterial(lightMaterial);
         UpdateGlowMaterial();
+        ChangeParticleEffect();
     }
 
     private void ChargeStarted()
@@ -54,6 +67,7 @@ public class ArmCannonEffectsController : MonoBehaviour
     {
         UpdateLightMaterial(lightMaterial);
         UpdateGlowMaterial();
+        ChangeParticleEffect();
     }
 
     private void UpdateLightMaterial(Material material)
@@ -107,6 +121,55 @@ public class ArmCannonEffectsController : MonoBehaviour
         }
     }
 
+    private void ChangeParticleEffect()
+    {
+        //powerBeamParticleSystem.gameObject.SetActive(false);
+        waveBeamParticleSystem.gameObject.SetActive(false);
+        //iceBeamParticleSystem.gameObject.SetActive(false);
+        //plasmaBeamParticleSystem.gameObject.SetActive(false);
+
+        switch (playerWeaponController.activeBeam)
+        {
+            case PlayerWeaponController.ActiveBeam.Power:
+                //powerBeamParticleSystem.gameObject.SetActive(true);
+                activeParticleSystem = powerBeamParticleSystem;
+                break;
+            case PlayerWeaponController.ActiveBeam.Wave:
+                waveBeamParticleSystem.gameObject.SetActive(true);
+                activeParticleSystem = waveBeamParticleSystem;
+                break;
+            case PlayerWeaponController.ActiveBeam.Ice:
+                //iceBeamParticleSystem.gameObject.SetActive(true);
+                activeParticleSystem = iceBeamParticleSystem;
+                break;
+            case PlayerWeaponController.ActiveBeam.Plasma:
+                //plasmaBeamParticleSystem.gameObject.SetActive(true);
+                activeParticleSystem = plasmaBeamParticleSystem;
+                break;
+        }
+    }
+
+    private void UpdateParticleEffect()
+    {
+
+
+        switch (playerWeaponController.activeBeam)
+        {
+            case PlayerWeaponController.ActiveBeam.Power:
+                //Add Once Effect is created
+                break;
+            case PlayerWeaponController.ActiveBeam.Wave:
+                waveBeamEmission.rateOverTimeMultiplier = playerWeaponController.chargeValue * waveBeamEmissionMultiplier;
+                break;
+            case PlayerWeaponController.ActiveBeam.Ice:
+                //Add Once Effect is created
+                break;
+            case PlayerWeaponController.ActiveBeam.Plasma:
+                //Add Once Effect is created
+                break;
+        }
+    }
+
     private void Update()
     {
         if (!charging)
@@ -114,6 +177,7 @@ public class ArmCannonEffectsController : MonoBehaviour
         else
         {
             lightMaterial.SetFloat("_Fill", playerWeaponController.chargeValue);
+            UpdateParticleEffect();
         }
 
         if (playerWeaponController.activeBeam == PlayerWeaponController.ActiveBeam.Power && charging)

@@ -9936,7 +9936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7119927492582216422}
   m_Layer: 0
-  m_Name: ChargedWaveBeamSubProjectileParent
+  m_Name: WaveBeamSubProjectileParentCharged
   m_TagString: IgnoreWeaponCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
