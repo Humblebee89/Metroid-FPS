@@ -146,7 +146,5 @@ public class PlayerMovementController : MonoBehaviour
         playerRigidbody.velocity = new Vector3(moveDirection.x * moveSpeed * Time.deltaTime, playerRigidbody.velocity.y, moveDirection.z * moveSpeed * Time.deltaTime);
         clampedVelocity = new Vector3(Mathf.Clamp(playerRigidbody.velocity.x, -maxVelocity, maxVelocity), playerRigidbody.velocity.y, Mathf.Clamp(playerRigidbody.velocity.z, -maxVelocity, maxVelocity));
         playerRigidbody.velocity = clampedVelocity;
-
-        print(playerRigidbody.velocity);
     }
 }
