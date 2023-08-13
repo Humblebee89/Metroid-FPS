@@ -8,10 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WaveBeamProjectile
-  m_Shader: {fileID: -6465566751694194690, guid: 7278210a39945294d83f0fda34a1bbbe, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 310a1e5d108c04940be13ff4e44de309, type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _EMISSION
+  m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -112,7 +111,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 0.82380354, b: 0, a: 1}
-    - _Color: {r: 0.038105488, g: 0, b: 1, a: 0}
+    - _Color: {r: 0.15883636, g: 0, b: 2.9960785, a: 1}
     - _EmissionColor: {r: 1, g: 0.18116418, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
