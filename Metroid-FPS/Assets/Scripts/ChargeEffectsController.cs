@@ -5,9 +5,9 @@ using UnityEngine;
 public class ChargeEffectsController : MonoBehaviour
 {
     [SerializeField] PlayerWeaponController playerWeaponController;
-    [SerializeField] GameObject PowerBeamChargeEffectGameObject;
-    [SerializeField] GameObject WaveBeamChargeEffectGameObject;
-    [SerializeField] private AnimationCurve sizeAdjustCurve;
+    [SerializeField] GameObject powerBeamChargeEffectGameObject;
+    [SerializeField] GameObject waveBeamChargeEffectGameObject;
+    [SerializeField] GameObject iceBeamChargeEffectGameObject;
 
     private GameObject ChargeEffectGameObject;
 
@@ -37,13 +37,13 @@ public class ChargeEffectsController : MonoBehaviour
         switch (playerWeaponController.activeBeam)
         {
             case PlayerWeaponController.ActiveBeam.Power:
-                ChargeEffectGameObject = PowerBeamChargeEffectGameObject;
+                ChargeEffectGameObject = powerBeamChargeEffectGameObject;
                 break;
             case PlayerWeaponController.ActiveBeam.Wave:
-                ChargeEffectGameObject = WaveBeamChargeEffectGameObject;
+                ChargeEffectGameObject = waveBeamChargeEffectGameObject;
                 break;
             case PlayerWeaponController.ActiveBeam.Ice:
-                //Add Effect
+                ChargeEffectGameObject = iceBeamChargeEffectGameObject;
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
                 //Add Effect

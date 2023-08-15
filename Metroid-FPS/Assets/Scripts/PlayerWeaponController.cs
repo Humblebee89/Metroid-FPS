@@ -12,20 +12,21 @@ public class PlayerWeaponController : MonoBehaviour
     public ActiveBeam activeBeam;
 
     [SerializeField] private Transform projectileSpawner;
+    [SerializeField] private GameObject powerBeamMuzzleFlash;
     [SerializeField] private GameObject powerBeamProjectile;
+    [SerializeField] private GameObject chargedPowerBeamProjectile;
     [SerializeField] private float powerBeamShotDelay;
+    [SerializeField] private GameObject waveBeamMuzzleFlash;
     [SerializeField] private GameObject waveBeamProjectile;
+    [SerializeField] private GameObject chargedWaveBeamProjectile;
     [SerializeField] private float waveBeamShotDelay;
     [SerializeField] private GameObject iceBeamProjectile;
+    [SerializeField] private GameObject chargedIceBeamProjectile;
     [SerializeField] private float iceBeamShotDelay;
     [SerializeField] private GameObject plasmaBeamProjectile;
     [SerializeField] private float plasmaBeamShotDelay;
-    [SerializeField] private GameObject powerBeamMuzzleFlash;
-    [SerializeField] private GameObject waveBeamMuzzleFlash;
     [SerializeField] private GameObject missileProjectile;
     [SerializeField] private float missileFireCooldownTime = 1.0f;
-    [SerializeField] private GameObject chargedPowerBeamProjectile;
-    [SerializeField] private GameObject chargedWaveBeamProjectile;
     [SerializeField] private float chargeTime = 1.0f;
     [SerializeField] private float chargeCooldownTime = 1.0f;
     [SerializeField] private float standardShotThreshold = 0.5f;
@@ -215,7 +216,7 @@ public class PlayerWeaponController : MonoBehaviour
                 MuzzleFlash(powerBeamMuzzleFlash);
                 break;
             case ActiveBeam.Ice:
-                chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                chargedShot = Instantiate(chargedIceBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
                 chargedShot.transform.localScale = new Vector3(chargeValue, chargeValue, chargeValue);
                 MuzzleFlash(powerBeamMuzzleFlash);
                 break;
