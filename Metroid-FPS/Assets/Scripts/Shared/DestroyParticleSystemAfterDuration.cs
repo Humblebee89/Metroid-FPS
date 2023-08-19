@@ -5,9 +5,13 @@ using UnityEngine;
 public class DestroyParticleSystemAfterDuration : MonoBehaviour
 {
     [SerializeField] private ParticleSystem myParticleSystem;
+    [SerializeField] private GameObject specificObjectToDestroy;
 
     private void Awake()
     {
-        Destroy(gameObject, myParticleSystem.main.duration);
+        if(specificObjectToDestroy == null)
+            Destroy(gameObject, myParticleSystem.main.duration);
+        else
+            Destroy(specificObjectToDestroy, myParticleSystem.main.duration);
     }
 }

@@ -4928,3 +4928,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myParticleSystem: {fileID: 1576484274119001837}
+  specificObjectToDestroy: {fileID: 2826771291072791156}
