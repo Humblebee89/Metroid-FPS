@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private GameObject scorchMark;
     [SerializeField] private float hitEffectOffset = 0.1f;
     [SerializeField] private bool randomZRotation;
+    [SerializeField] private bool destroyAfterParticleSystemLifetime = false;
 
     private Rigidbody projectileRigidbody;
     private Collider playerCollider;
@@ -27,7 +28,7 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-         Physics.IgnoreCollision(transform.GetComponent<Collider>(), playerCollider);
+        Physics.IgnoreCollision(transform.GetComponent<Collider>(), playerCollider);
     }
 
     private void FixedUpdate()
@@ -55,6 +56,11 @@ public class Projectile : MonoBehaviour
             Instantiate(scorchMark, contactPoint, hitNormal);
         }
 
+        if(!destroyAfterParticleSystemLifetime)
         Destroy(gameObject);
+        else 
+        {
+            projectileRigidbody.isKinematic = true;
+        }
     }
 }
