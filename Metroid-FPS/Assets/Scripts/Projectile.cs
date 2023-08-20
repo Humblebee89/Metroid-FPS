@@ -11,19 +11,34 @@ public class Projectile : MonoBehaviour
     [SerializeField] private GameObject scorchMark;
     [SerializeField] private float hitEffectOffset = 0.1f;
     [SerializeField] private bool randomZRotation;
-    [SerializeField] private bool destroyAfterParticleSystemLifetime = false;
+    [SerializeField] private GameObject[] gameObjectsToDestroyOnCollision;
+    [SerializeField] private ParticleSystem[] particleSystemsToDestroyDelayed;
 
     private Rigidbody projectileRigidbody;
     private Collider playerCollider;
+    private float longestParticleLifetime = 0f;
 
     private void Awake()
     {
         projectileRigidbody = GetComponent<Rigidbody>();
         playerCollider = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>();
-        Destroy(gameObject, destroyTimer);
+        FindLongestParticleLifetime();
+        Invoke("DestroyAfterParticleEffects", destroyTimer);
 
         if(randomZRotation)
             transform.Rotate(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
+    }
+
+    private void FindLongestParticleLifetime()
+    {
+        if (particleSystemsToDestroyDelayed == null)
+            return;
+
+        for(int i=0; i < particleSystemsToDestroyDelayed.Length; i++)
+        {
+            if (particleSystemsToDestroyDelayed[i].main.startLifetimeMultiplier > longestParticleLifetime)
+                longestParticleLifetime = particleSystemsToDestroyDelayed[i].main.startLifetimeMultiplier;
+        }
     }
 
     private void Start()
@@ -35,6 +50,28 @@ public class Projectile : MonoBehaviour
     {
         if(projectileRigidbody != null)
             projectileRigidbody.MovePosition(transform.position + transform.forward * projectileSpeed * Time.deltaTime);
+    }
+
+    private void DestroyAfterParticleEffects()
+    {
+        if (particleSystemsToDestroyDelayed == null)
+            Destroy(gameObject);
+        else
+        {
+            //Stop the pojectile before killing the particle effects
+            projectileSpeed = 0f;
+
+            if (gameObjectsToDestroyOnCollision != null)
+            {
+                for (int i = 0; i < gameObjectsToDestroyOnCollision.Length; i++)
+                {
+                    print(gameObjectsToDestroyOnCollision[i].gameObject.name);
+                    gameObjectsToDestroyOnCollision[i].gameObject.SetActive(false);
+                }
+            }
+
+            Destroy(gameObject, longestParticleLifetime);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,11 +93,7 @@ public class Projectile : MonoBehaviour
             Instantiate(scorchMark, contactPoint, hitNormal);
         }
 
-        if(!destroyAfterParticleSystemLifetime)
-        Destroy(gameObject);
-        else 
-        {
-            projectileRigidbody.isKinematic = true;
-        }
+        CancelInvoke("DestroyAfterParticleEffects");
+        DestroyAfterParticleEffects();
     }
 }
