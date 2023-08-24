@@ -15576,7 +15576,7 @@ MonoBehaviour:
   chargedIceBeamProjectile: {fileID: 7042478485343560404, guid: 1b4b6f68a59ecd146bf4e441eab9f6bd, type: 3}
   iceBeamShotDelay: 1
   plasmaBeamProjectile: {fileID: 7042478485343560404, guid: 6da330f7a49adca41861bfb52a5981c4, type: 3}
-  plasmaBeamShotDelay: 0.5
+  plasmaBeamShotDelay: 0.4
   missileProjectile: {fileID: 6313508548292698541, guid: 4f70f02bba8171e4da4567d8a7663df4, type: 3}
   missileFireCooldownTime: 1.25
   chargeTime: 1.5

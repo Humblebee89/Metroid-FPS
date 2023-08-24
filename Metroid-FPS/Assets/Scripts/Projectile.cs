@@ -66,7 +66,7 @@ public class Projectile : MonoBehaviour
                 for (int i = 0; i < gameObjectsToDestroyOnCollision.Length; i++)
                 {
                     print(gameObjectsToDestroyOnCollision[i].gameObject.name);
-                    gameObjectsToDestroyOnCollision[i].gameObject.SetActive(false);
+                    Destroy(gameObjectsToDestroyOnCollision[i]);
                 }
             }
 
