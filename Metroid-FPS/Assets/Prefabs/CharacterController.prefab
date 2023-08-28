@@ -15391,7 +15391,7 @@ GameObject:
   - component: {fileID: 962935773}
   - component: {fileID: 962935774}
   - component: {fileID: 1912121710}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CharacterController
   m_TagString: Player
   m_Icon: {fileID: 0}

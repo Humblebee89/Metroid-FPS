@@ -11,12 +11,15 @@ public class Projectile : MonoBehaviour
     [SerializeField] private GameObject scorchMark;
     [SerializeField] private float hitEffectOffset = 0.1f;
     [SerializeField] private bool randomZRotation;
+    [SerializeField] private LayerMask rayCastLayerMask;
+    [SerializeField] private float triggerRaycastRange = 10f;
     [SerializeField] private GameObject[] gameObjectsToDestroyOnCollision;
     [SerializeField] private ParticleSystem[] particleSystemsToDestroyDelayed;
 
     private Rigidbody projectileRigidbody;
     private Collider playerCollider;
     private float longestParticleLifetime = 0f;
+    private bool hasCollided;
 
     private void Awake()
     {
@@ -92,6 +95,39 @@ public class Projectile : MonoBehaviour
             //TODO Add random rotation to scorch effect
             Instantiate(scorchMark, contactPoint, hitNormal);
         }
+
+        CancelInvoke("DestroyAfterParticleEffects");
+        DestroyAfterParticleEffects();
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (hasCollided)
+            return;
+
+        hasCollided = true;
+
+        if(collider.gameObject.tag == "IgnoreWeaponCollision")
+            return;
+
+        if (collider.gameObject.TryGetComponent<Damageable>(out Damageable damageable))
+            damageable.TakeDamage(damage);
+
+        RaycastHit hitInfo;
+        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hitInfo, triggerRaycastRange, rayCastLayerMask))
+        {
+            Quaternion hitNormal = Quaternion.FromToRotation(Vector3.forward, hitInfo.normal);
+            Vector3 contactPoint = hitInfo.point;
+            Instantiate(hitEffectPrefab, contactPoint, hitNormal);
+
+            if (collider.gameObject.tag != "Enemy")
+            {
+                //TODO Add random rotation to scorch effect
+                Instantiate(scorchMark, contactPoint, hitNormal);
+            }
+        }
+
+     
 
         CancelInvoke("DestroyAfterParticleEffects");
         DestroyAfterParticleEffects();

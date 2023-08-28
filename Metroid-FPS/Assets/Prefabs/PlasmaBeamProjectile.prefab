@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7327988270717660600}
   - component: {fileID: 4785844096230765886}
   - component: {fileID: 3354705422256456074}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlasmaParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5104,11 +5104,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 281cd30f2e91b074081224f9d76003e2, type: 2}
     - target: {fileID: 919132149155446097, guid: ca65ea23878db484c98c9a9b19be807c, type: 3}
       propertyPath: m_Name
-      value: PlasmaBeamProjectile
+      value: PlasmaBeamProjectileChild
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca65ea23878db484c98c9a9b19be807c, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca65ea23878db484c98c9a9b19be807c, type: 3}
@@ -5160,11 +5160,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 0
   destroyTimer: 0.3
-  damage: 50
+  damage: 35
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
   scorchMark: {fileID: 5865114931768370392, guid: 0ce546e56e7a9444da04adcaa1b53f98, type: 3}
   hitEffectOffset: 0.01
   randomZRotation: 0
+  rayCastLayerMask:
+    serializedVersion: 2
+    m_Bits: 1025
+  triggerRaycastRange: 60
   gameObjectsToDestroyOnCollision: []
   particleSystemsToDestroyDelayed:
   - {fileID: 4785844096230765886}
