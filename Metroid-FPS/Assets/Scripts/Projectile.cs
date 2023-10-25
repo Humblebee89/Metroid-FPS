@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float destroyTimer = 4.0f;
     [SerializeField] private int damage = 10;
     [SerializeField] private GameObject hitEffectPrefab;
+    [SerializeField] private bool hitEffectAlignWithProjectile;
     [SerializeField] private GameObject scorchMark;
     [SerializeField] private float hitEffectOffset = 0.1f;
     [SerializeField] private bool randomZRotation;
@@ -20,6 +21,7 @@ public class Projectile : MonoBehaviour
     private Collider playerCollider;
     private float longestParticleLifetime = 0f;
     private bool hasCollided;
+    private Quaternion projectileHitNormalAveraged;
 
     private void Awake()
     {
@@ -88,7 +90,12 @@ public class Projectile : MonoBehaviour
         ContactPoint contact = collision.contacts[0];
         Quaternion hitNormal = Quaternion.FromToRotation(Vector3.forward, contact.normal);
         Vector3 contactPoint = contact.point + contact.normal * hitEffectOffset;
-        Instantiate(hitEffectPrefab, contactPoint, hitNormal);
+        projectileHitNormalAveraged = transform.rotation * Quaternion.Euler(0, 180, 0);
+
+        if(hitEffectAlignWithProjectile)
+            Instantiate(hitEffectPrefab, contactPoint, projectileHitNormalAveraged);
+        else
+            Instantiate(hitEffectPrefab, contactPoint, hitNormal);
 
         if (collision.gameObject.tag != "Enemy")
         {

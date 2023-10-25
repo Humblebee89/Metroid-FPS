@@ -9783,10 +9783,15 @@ MonoBehaviour:
   projectileSpeed: 100
   destroyTimer: 0.3
   damage: 10
-  hitEffectPrefab: {fileID: 601321548204471970, guid: 0abdcb9b131698f4f8c9e7f17fa350be, type: 3}
+  hitEffectPrefab: {fileID: 601321548204471970, guid: 56f993b9d7c0cb24abeac6e5f636195d, type: 3}
+  hitEffectAlignWithProjectile: 1
   scorchMark: {fileID: 5865114931768370392, guid: 0ce546e56e7a9444da04adcaa1b53f98, type: 3}
   hitEffectOffset: 0.01
   randomZRotation: 0
+  rayCastLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  triggerRaycastRange: 10
   gameObjectsToDestroyOnCollision:
   - {fileID: 7813785586705303463}
   - {fileID: 8531712229217849470}
