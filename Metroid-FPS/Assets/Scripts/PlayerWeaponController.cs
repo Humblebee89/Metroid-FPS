@@ -24,6 +24,7 @@ public class PlayerWeaponController : MonoBehaviour
     [SerializeField] private GameObject chargedIceBeamProjectile;
     [SerializeField] private float iceBeamShotDelay;
     [SerializeField] private GameObject plasmaBeamProjectile;
+    [SerializeField] private GameObject chargedPlasmaBeamProjectile;
     [SerializeField] private float plasmaBeamShotDelay;
     [SerializeField] private GameObject missileProjectile;
     [SerializeField] private float missileFireCooldownTime = 1.0f;
@@ -221,7 +222,7 @@ public class PlayerWeaponController : MonoBehaviour
                 MuzzleFlash(powerBeamMuzzleFlash);
                 break;
             case ActiveBeam.Plasma:
-                chargedShot = Instantiate(chargedPowerBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
+                chargedShot = Instantiate(chargedPlasmaBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
                 chargedShot.transform.localScale = new Vector3(chargeValue, chargeValue, chargeValue);
                 MuzzleFlash(powerBeamMuzzleFlash);
                 break;

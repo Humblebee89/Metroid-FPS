@@ -10069,6 +10069,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230046703, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
+      propertyPath: chargedPlasmaBeamProjectile
+      value: 
+      objectReference: {fileID: 7042478485343560404, guid: 79f8f04192120b54185f6f6fb8280891, type: 3}
     - target: {fileID: 5872919601941089768, guid: 8dc3ff9526ddf6a4fb1e3cc91e4bbfe2, type: 3}
       propertyPath: m_Name
       value: CharacterController
