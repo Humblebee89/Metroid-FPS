@@ -85,24 +85,28 @@ public class ArmCannonEffectsController : MonoBehaviour
                 material.DisableKeyword("_ACTIVEBEAM_WAVE");
                 material.DisableKeyword("_ACTIVEBEAM_ICE");
                 material.DisableKeyword("_ACTIVEBEAM_PLASMA");
+                CancelInvoke("UpdateWaveBeamEnergyField");
                 break;
             case PlayerWeaponController.ActiveBeam.Wave:
                 material.DisableKeyword("_ACTIVEBEAM_POWER");
                 material.EnableKeyword("_ACTIVEBEAM_WAVE");
                 material.DisableKeyword("_ACTIVEBEAM_ICE");
                 material.DisableKeyword("_ACTIVEBEAM_PLASMA");
+                InvokeRepeating("UpdateWaveBeamEnergyField", 0.1f, 0.1f);
                 break;
             case PlayerWeaponController.ActiveBeam.Ice:
                 material.DisableKeyword("_ACTIVEBEAM_POWER");
                 material.DisableKeyword("_ACTIVEBEAM_WAVE");
                 material.EnableKeyword("_ACTIVEBEAM_ICE");
                 material.DisableKeyword("_ACTIVEBEAM_PLASMA");
+                CancelInvoke("UpdateWaveBeamEnergyField");
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
                 material.DisableKeyword("_ACTIVEBEAM_POWER");
                 material.DisableKeyword("_ACTIVEBEAM_WAVE");
                 material.DisableKeyword("_ACTIVEBEAM_ICE");
                 material.EnableKeyword("_ACTIVEBEAM_PLASMA");
+                CancelInvoke("UpdateWaveBeamEnergyField");
                 break;
         }
     }
@@ -192,5 +196,11 @@ public class ArmCannonEffectsController : MonoBehaviour
         {
             powerEnergyFieldMaterial.SetFloat("_Transparency", playerWeaponController.chargeValue);
         }
+    }
+
+    private void UpdateWaveBeamEnergyField()
+    {
+        var position = new Vector2(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
+        waveEnergyFieldMaterial.SetVector("_Position", position);
     }
 }
