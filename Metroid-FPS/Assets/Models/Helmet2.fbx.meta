@@ -7,7 +7,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Visor
+    second: {fileID: 2100000, guid: 514d72a2c4bf38141b5631cdcc8e696b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lambert3
+    second: {fileID: 2100000, guid: 39c47c9e443b35941a744cba4c502c25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert4
     second: {fileID: 2100000, guid: 39c47c9e443b35941a744cba4c502c25, type: 2}
   materials:
     materialImportMode: 2
