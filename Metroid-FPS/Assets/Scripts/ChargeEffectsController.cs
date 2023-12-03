@@ -8,6 +8,7 @@ public class ChargeEffectsController : MonoBehaviour
     [SerializeField] GameObject powerBeamChargeEffectGameObject;
     [SerializeField] GameObject waveBeamChargeEffectGameObject;
     [SerializeField] GameObject iceBeamChargeEffectGameObject;
+    [SerializeField] GameObject plasmaBeamChargeEffectGameObject;
 
     private GameObject ChargeEffectGameObject;
 
@@ -46,7 +47,7 @@ public class ChargeEffectsController : MonoBehaviour
                 ChargeEffectGameObject = iceBeamChargeEffectGameObject;
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
-                //Add Effect
+                ChargeEffectGameObject = plasmaBeamChargeEffectGameObject;
                 break;
         }
     }
