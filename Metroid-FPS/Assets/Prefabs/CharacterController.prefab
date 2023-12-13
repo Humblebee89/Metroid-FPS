@@ -21785,6 +21785,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 918833493}
     m_Modifications:
+    - target: {fileID: 2596920968544828470, guid: 0d796ebf92e4d8b4097dbfa609625f69, type: 3}
+      propertyPath: playerWeaponController
+      value: 
+      objectReference: {fileID: 230046703}
     - target: {fileID: 7795236053177361474, guid: 0d796ebf92e4d8b4097dbfa609625f69, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1

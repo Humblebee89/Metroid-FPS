@@ -485,7 +485,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &2098496480008204509
 GameObject:
@@ -1464,9 +1464,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332066239425547522}
-  - component: {fileID: 1472918416827197605}
+  - component: {fileID: 7311070248297691691}
+  - component: {fileID: 2596920968544828470}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: ChargeIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1493,7 +1494,7 @@ RectTransform:
   m_AnchoredPosition: {x: 115.586426, y: -551.1264}
   m_SizeDelta: {x: 91.52289, y: 467.36682}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!331 &1472918416827197605
+--- !u!331 &7311070248297691691
 SpriteMask:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1535,7 +1536,7 @@ SpriteMask:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -93465884, guid: 2cefe013fe932ab459ae5b0ee8253af2, type: 3}
-  m_MaskAlphaCutoff: 0.197
+  m_MaskAlphaCutoff: 1
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
@@ -1544,6 +1545,19 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2596920968544828470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713655886701647450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7046e8c7b6981b14eb1324c893e03346, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerWeaponController: {fileID: 0}
 --- !u!1 &5742785353787782786
 GameObject:
   m_ObjectHideFlags: 0

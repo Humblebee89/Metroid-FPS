@@ -380,12 +380,12 @@ TextureImporter:
       name: UI_Bar_Mask
       rect:
         serializedVersion: 2
-        x: 868
-        y: 1076
-        width: 133
-        height: 624
+        x: 848
+        y: 1069
+        width: 176
+        height: 641
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
