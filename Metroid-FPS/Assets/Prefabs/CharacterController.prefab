@@ -21885,6 +21885,10 @@ PrefabInstance:
       propertyPath: playerWeaponController
       value: 
       objectReference: {fileID: 230046703}
+    - target: {fileID: 8359398087310531988, guid: 0d796ebf92e4d8b4097dbfa609625f69, type: 3}
+      propertyPath: playerWeaponController
+      value: 
+      objectReference: {fileID: 230046703}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d796ebf92e4d8b4097dbfa609625f69, type: 3}
 --- !u!224 &1560258255 stripped

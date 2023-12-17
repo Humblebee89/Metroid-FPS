@@ -397,6 +397,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_MissileBar
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1387
+        width: 122
+        height: 623
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce61f001ad11a5e4bb73e3f4f3f06726
+      internalID: -1465184786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -409,6 +430,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       UI_SpriteSheetI_10: -1809464188
+      UI_MissileBar: -1465184786
       UI_SpriteSheetI_11: -1291004525
       QuarterCircle: 1079812269
       UI_SpriteSheetI_21: 40816464
