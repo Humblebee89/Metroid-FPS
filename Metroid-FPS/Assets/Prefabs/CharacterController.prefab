@@ -21789,6 +21789,10 @@ PrefabInstance:
       propertyPath: playerWeaponController
       value: 
       objectReference: {fileID: 230046703}
+    - target: {fileID: 7424698340269224377, guid: 0d796ebf92e4d8b4097dbfa609625f69, type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 5872919603691514189}
     - target: {fileID: 7795236053177361474, guid: 0d796ebf92e4d8b4097dbfa609625f69, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
@@ -21885,6 +21889,10 @@ PrefabInstance:
       propertyPath: playerWeaponController
       value: 
       objectReference: {fileID: 230046703}
+    - target: {fileID: 8110633740800017896, guid: 0d796ebf92e4d8b4097dbfa609625f69, type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 5872919603691514189}
     - target: {fileID: 8359398087310531988, guid: 0d796ebf92e4d8b4097dbfa609625f69, type: 3}
       propertyPath: playerWeaponController
       value: 
