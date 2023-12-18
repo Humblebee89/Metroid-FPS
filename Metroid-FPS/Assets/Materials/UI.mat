@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UI
-  m_Shader: {fileID: -6465566751694194690, guid: 9db5f62c44f89af418ffb0eb0b06c324, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: a4754fcd5c57709419aa840b9d833139, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -73,6 +73,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ScanLine_Texture:
+        m_Texture: {fileID: 2800000, guid: ff88800b28d03bc47af0ff2a7fb017a1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Scanlines:
         m_Texture: {fileID: 2800000, guid: ff88800b28d03bc47af0ff2a7fb017a1, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -103,6 +107,7 @@ Material:
     - _Blend: 0
     - _BumpScale: 1
     - _Channel_Split_Amount: -5.2
+    - _Chromatic_Abberation_Amount: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -120,6 +125,7 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Scanline_Opacity: 0.3
     - _Scanline_Speed: 0.03
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -130,8 +136,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - _B_Offset: {r: 0, g: -0.008, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Chromatic_Abberation_Amount: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _G_Offset: {r: 0, g: 0, b: 0, a: 0}
+    - _R_Offset: {r: 0.008, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpriteColor: {r: 0.20512757, g: 0.5943396, b: 0.12615702, a: 1}
   m_BuildTextureStacks: []
