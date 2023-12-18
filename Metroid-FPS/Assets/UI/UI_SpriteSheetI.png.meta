@@ -418,6 +418,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI_RadarBlip
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1357
+        width: 280
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f609a061cd4e7674196ce2853f84d394
+      internalID: 279336841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -456,6 +477,7 @@ TextureImporter:
       UI_SpriteSheetI_9: 1087968199
       UI_SpriteSheetI_26: 1495004063
       UI_SpriteSheetI_22: -1433049923
+      UI_RadarBlip: 279336841
       UI_SpriteSheetI_12: 976692626
       HealthBar: 1699406089
   spritePackingTag: 
