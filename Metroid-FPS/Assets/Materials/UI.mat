@@ -104,10 +104,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+    - _B_Boost: 1
     - _Blend: 0
     - _BumpScale: 1
     - _Channel_Split_Amount: -5.2
     - _Chromatic_Abberation_Amount: 0
+    - _Chromatic_Abberation_Opacity: 20
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -125,7 +127,7 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Scanline_Opacity: 0.3
+    - _Scanline_Opacity: 0.2
     - _Scanline_Speed: 0.03
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -133,16 +135,17 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _Tiling: 14
+    - _UI_Opacity: 0.5
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _B_Offset: {r: 0, g: -0.008, b: 0, a: 0}
+    - _B_Offset: {r: 0.003, g: 0.003, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Chromatic_Abberation_Amount: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _G_Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _R_Offset: {r: 0.008, g: 0, b: 0, a: 0}
+    - _R_Offset: {r: 0.006, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _SpriteColor: {r: 0.20512757, g: 0.5943396, b: 0.12615702, a: 1}
+    - _SpriteColor: {r: 0.08838438, g: 0.5, b: 0.077830195, a: 1}
   m_BuildTextureStacks: []
