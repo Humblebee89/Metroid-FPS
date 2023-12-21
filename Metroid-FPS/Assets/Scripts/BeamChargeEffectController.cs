@@ -29,7 +29,6 @@ public class BeamChargeEffectController : MonoBehaviour
 
     private void ChargeStarted()
     {
-        print("Charge Started");
         StartCoroutine("Charge");
     }
 

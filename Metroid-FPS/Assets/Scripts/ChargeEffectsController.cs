@@ -25,6 +25,7 @@ public class ChargeEffectsController : MonoBehaviour
         Actions.OnFireNormal -= FireNormal;
         Actions.OnChargeStarted -= ChargeStarted;
         Actions.OnFireCharged -= FireCharged;
+        Actions.OnBeamChange -= BeamChange;
     }
 
     private void Awake()
@@ -35,6 +36,12 @@ public class ChargeEffectsController : MonoBehaviour
 
     private void BeamChange()
     {
+        powerBeamChargeEffectGameObject.SetActive(false);
+        waveBeamChargeEffectGameObject.SetActive(false);
+        iceBeamChargeEffectGameObject.SetActive(false);
+        plasmaBeamChargeEffectGameObject.SetActive(false);
+
+
         switch (playerWeaponController.activeBeam)
         {
             case PlayerWeaponController.ActiveBeam.Power:

@@ -7,7 +7,7 @@ public class PlayerWeaponController : MonoBehaviour
 {
     public PlayerInput playerInput;
     [HideInInspector] public float chargeValue = 0;
-    [HideInInspector] public bool canFireNormalShot = true;
+    [HideInInspector] public bool canFire = true;
     public enum ActiveBeam { Power, Wave, Ice, Plasma};
     public ActiveBeam activeBeam;
 
@@ -64,10 +64,10 @@ public class PlayerWeaponController : MonoBehaviour
     public void CanFire(int value)
     {
         if (value == 1)
-            canFireNormalShot = true;
+            canFire = true;
 
         if (value == 0)
-            canFireNormalShot = false;
+            canFire = false;
     }
 
     private void MuzzleFlash(GameObject muzzleFlash)
@@ -82,18 +82,20 @@ public class PlayerWeaponController : MonoBehaviour
 
         activeBeam = beam;
         Actions.OnBeamChange();
+
+        BeamSwapChargeEnd();
     }
 
     IEnumerator ShotDelay(float waitTime)
     {
-        canFireNormalShot = false;
+        canFire = false;
         yield return new WaitForSeconds(waitTime);
-        canFireNormalShot = true;
+        canFire = true;
     }
 
     private void FireNormal()
     {
-        if (canFireNormalShot)
+        if (canFire)
         {
             Actions.OnFireNormal();
 
@@ -126,7 +128,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void FireMissle()
     {
-        if (canFireNormalShot)
+        if (canFire)
         {
             Actions.OnFireMissile();
             Instantiate(missileProjectile, projectileSpawner.position, projectileSpawner.rotation);
@@ -146,7 +148,7 @@ public class PlayerWeaponController : MonoBehaviour
             totalChargeTime += Time.deltaTime;
 
             if(chargeValue >= standardShotThreshold)
-                canFireNormalShot = false;
+                canFire = false;
 
             if (chargeValue > 0.99f)
                 chargeValue = 1.0f;
@@ -167,7 +169,7 @@ public class PlayerWeaponController : MonoBehaviour
             if (chargeValue < 0.02f)
             {
                 chargeValue = 0;
-                canFireNormalShot = true;
+                canFire = true;
                 Actions.OnChargeCooldownEnd();
             }
 
@@ -192,6 +194,12 @@ public class PlayerWeaponController : MonoBehaviour
         else
             FireCharged();
 
+        charging = false;
+        StartCoroutine(ChargeCooldown());
+    }
+
+    private void BeamSwapChargeEnd()
+    {
         charging = false;
         StartCoroutine(ChargeCooldown());
     }

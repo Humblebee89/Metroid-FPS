@@ -20,7 +20,6 @@ public class PitchIndicatorUIController : MonoBehaviour
             rotationCorrected = cameraTransform.localEulerAngles.x;
 
        float rotationPercent =  math.remap(maxAngle, -maxAngle, 0, 1, rotationCorrected);
-        tickParent.anchoredPosition = new Vector2(tickParent.anchoredPosition.x, Mathf.Lerp(maxScroll, -maxScroll, rotationPercent));
-        print(cameraTransform.localEulerAngles.x);
+       tickParent.anchoredPosition = new Vector2(tickParent.anchoredPosition.x, Mathf.Lerp(maxScroll, -maxScroll, rotationPercent));
     }
 }

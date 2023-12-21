@@ -56,7 +56,7 @@ public class DebugUIController : MonoBehaviour
     {
         chargeAmountText.text = "Charge Amount: " + playerWeaponController.chargeValue;
 
-        if (playerWeaponController.canFireNormalShot)
+        if (playerWeaponController.canFire)
             canFireText.text = "Can Fire Normal: True";
         else
             canFireText.text = "Can Fire Normal: False";
