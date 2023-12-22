@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402084985}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -0, y: 0, z: 0.4942}
+  m_LocalPosition: {x: -0, y: 0.013, z: 0.4942}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10441,7 +10441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734202162}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -0, y: 0.0454, z: 0.4942}
+  m_LocalPosition: {x: -0, y: 0.073, z: 0.4942}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10638,7 +10638,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 0, g: 0.5425911, b: 1, a: 1}
-      maxColor: {r: 0.81768423, g: 0.98193055, b: 0.990566, a: 0.4}
+      maxColor: {r: 0.81768423, g: 0.98193055, b: 0.990566, a: 0.6}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -11016,7 +11016,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 5000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -11076,7 +11076,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 5
+    type: 15
     angle: 1
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -20541,7 +20541,7 @@ MonoBehaviour:
   waveBeamParticleSystem: {fileID: 5072203243184657141}
   waveBeamEmissionMultiplier: 20
   iceBeamParticleSystem: {fileID: 402084988}
-  iceBeamEmissionMultiplier: 30
+  iceBeamEmissionMultiplier: 5
   snowflakeParticleSystem: {fileID: 1734202165}
   snowflakeEmissionMultiplier: 300
   plasmaBeamParticleSystem: {fileID: 1348193128}

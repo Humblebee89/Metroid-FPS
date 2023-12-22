@@ -167,6 +167,7 @@ public class ArmCannonEffectsController : MonoBehaviour
                 iceBeamParticleSystem.gameObject.SetActive(true);
                 snowflakeParticleSystem.gameObject.SetActive(true);
                 beamEmission[0] = iceBeamParticleSystem.emission;
+                beamEmission[1] = snowflakeParticleSystem.emission;
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
                 plasmaBeamParticleSystem.gameObject.SetActive(true);
