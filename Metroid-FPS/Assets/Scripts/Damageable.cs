@@ -11,6 +11,7 @@ public class Damageable : MonoBehaviour
     [SerializeField] private GameObject deathParticleEffect;
 
     private int health;
+    private bool dead;
 
     public UnityEvent onDeath;
 
@@ -21,7 +22,8 @@ public class Damageable : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        health -= amount;
+        if(health > 0)
+            health -= amount;
 
         if (health <= 0)
             KillDamageable();
@@ -29,11 +31,16 @@ public class Damageable : MonoBehaviour
 
     private void KillDamageable()
     {
-        GameObject.Instantiate(deathParticleEffect, transform.position, Quaternion.identity);
-        onDeath?.Invoke();
+        if (dead == false)
+        {
+            GameObject.Instantiate(deathParticleEffect, transform.position, Quaternion.identity);
+            onDeath?.Invoke();
 
-        if (destroyObjectOnDeath)
-            Destroy(objectToDestroy);
-    }
+            dead = true;
+
+            if (destroyObjectOnDeath)
+                Destroy(objectToDestroy);
+        }
+    }   
 
 }
