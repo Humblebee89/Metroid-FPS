@@ -20538,10 +20538,8 @@ MonoBehaviour:
   waveEnergyFieldMaterial: {fileID: 2100000, guid: d6aef1630d35351449255582b2113e8a, type: 2}
   iceEnergyFieldMaterial: {fileID: 2100000, guid: c6c58fa35df699e4399adb790e66bfa0, type: 2}
   plasmaEnergyFieldMaterial: {fileID: 2100000, guid: b2fdcb984d20d2d4f93ae5db3a0a8d1d, type: 2}
-  powerBeamParticleSystem: {fileID: 0}
-  powerBeamEmissionMultiplier: 0
   waveBeamParticleSystem: {fileID: 5072203243184657141}
-  waveBeamEmissionMultiplier: 15
+  waveBeamEmissionMultiplier: 20
   iceBeamParticleSystem: {fileID: 402084988}
   iceBeamEmissionMultiplier: 30
   snowflakeParticleSystem: {fileID: 1734202165}
@@ -21554,7 +21552,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.1
       minScalar: 0
       maxCurve:
         serializedVersion: 2

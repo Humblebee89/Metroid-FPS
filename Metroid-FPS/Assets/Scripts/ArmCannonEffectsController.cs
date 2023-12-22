@@ -10,8 +10,8 @@ public class ArmCannonEffectsController : MonoBehaviour
     [SerializeField] private Material waveEnergyFieldMaterial;
     [SerializeField] private Material iceEnergyFieldMaterial;
     [SerializeField] private Material plasmaEnergyFieldMaterial;
-    [SerializeField] private ParticleSystem powerBeamParticleSystem;
-    [SerializeField] private float powerBeamEmissionMultiplier;
+    //[SerializeField] private ParticleSystem powerBeamParticleSystem;
+    //[SerializeField] private float powerBeamEmissionMultiplier;
     [SerializeField] private ParticleSystem waveBeamParticleSystem;
     [SerializeField] private float waveBeamEmissionMultiplier;
     [SerializeField] private ParticleSystem iceBeamParticleSystem;
@@ -25,6 +25,7 @@ public class ArmCannonEffectsController : MonoBehaviour
     private PlayerWeaponController playerWeaponController;
     private bool charging;
     private ParticleSystem.EmissionModule[] beamEmission;
+    private float initialWaveBeamEmissionRate;
     private float initialIcebeamEmissionRate;
     private float initialSnowflakeEmissionRate;
     private float initialPlasmaAshEmissionRate;
@@ -53,6 +54,7 @@ public class ArmCannonEffectsController : MonoBehaviour
     {
         //change this if adding more particle systems
         beamEmission = new ParticleSystem.EmissionModule[2];
+        initialWaveBeamEmissionRate = waveBeamParticleSystem.emission.rateOverTimeMultiplier;
         initialIcebeamEmissionRate = iceBeamParticleSystem.emission.rateOverTimeMultiplier;
         initialSnowflakeEmissionRate = snowflakeParticleSystem.emission.rateOverTimeMultiplier;
         initialPlasmaAshEmissionRate = plasmaBeamParticleSystem.emission.rateOverTimeMultiplier;
@@ -159,12 +161,12 @@ public class ArmCannonEffectsController : MonoBehaviour
             case PlayerWeaponController.ActiveBeam.Wave:
                 waveBeamParticleSystem.gameObject.SetActive(true);
                 beamEmission[0] = waveBeamParticleSystem.emission;
+                beamEmission[0].rateOverTimeMultiplier = initialWaveBeamEmissionRate;
                 break;
             case PlayerWeaponController.ActiveBeam.Ice:
                 iceBeamParticleSystem.gameObject.SetActive(true);
                 snowflakeParticleSystem.gameObject.SetActive(true);
                 beamEmission[0] = iceBeamParticleSystem.emission;
-                beamEmission[1] = snowflakeParticleSystem.emission;
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
                 plasmaBeamParticleSystem.gameObject.SetActive(true);
@@ -185,7 +187,7 @@ public class ArmCannonEffectsController : MonoBehaviour
                 //Add Once Effect is created
                 break;
             case PlayerWeaponController.ActiveBeam.Wave:
-                beamEmission[0].rateOverTimeMultiplier = playerWeaponController.chargeValue * waveBeamEmissionMultiplier;
+                beamEmission[0].rateOverTimeMultiplier = playerWeaponController.chargeValue * waveBeamEmissionMultiplier + initialWaveBeamEmissionRate;
                 break;
             case PlayerWeaponController.ActiveBeam.Ice:
                 beamEmission[0].rateOverTimeMultiplier = playerWeaponController.chargeValue * iceBeamEmissionMultiplier + initialIcebeamEmissionRate;
