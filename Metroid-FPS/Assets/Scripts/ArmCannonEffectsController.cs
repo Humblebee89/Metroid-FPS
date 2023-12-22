@@ -20,27 +20,33 @@ public class ArmCannonEffectsController : MonoBehaviour
     [SerializeField] private float snowflakeEmissionMultiplier;
     [SerializeField] private ParticleSystem plasmaBeamParticleSystem;
     [SerializeField] private float plasmaBeamEmissionMultiplier;
+    [SerializeField] private GameObject heatDistortionGameObject;
 
     private PlayerWeaponController playerWeaponController;
     private bool charging;
     private ParticleSystem.EmissionModule[] beamEmission;
     private float initialIcebeamEmissionRate;
     private float initialSnowflakeEmissionRate;
+    private float initialPlasmaAshEmissionRate;
+    private Animator heatDistortionAnimator;
 
     private void OnEnable()
     {
         Actions.OnChargeStarted += ChargeStarted;
         Actions.OnChargeCooldownEnd += ChargeCooldownEnd;
+        Actions.OnBeamChange += BeamSwap;
     }
     private void OnDisable()
     {
         Actions.OnChargeStarted -= ChargeStarted;
         Actions.OnChargeCooldownEnd -= ChargeCooldownEnd;
+        Actions.OnBeamChange -= BeamSwap;
     }
 
     private void Awake()
     {
         playerWeaponController = GetComponent<PlayerWeaponController>();
+        heatDistortionAnimator = heatDistortionGameObject.GetComponent<Animator>();
     }
 
     private void Start()
@@ -49,6 +55,7 @@ public class ArmCannonEffectsController : MonoBehaviour
         beamEmission = new ParticleSystem.EmissionModule[2];
         initialIcebeamEmissionRate = iceBeamParticleSystem.emission.rateOverTimeMultiplier;
         initialSnowflakeEmissionRate = snowflakeParticleSystem.emission.rateOverTimeMultiplier;
+        initialPlasmaAshEmissionRate = plasmaBeamParticleSystem.emission.rateOverTimeMultiplier;
 
         UpdateLightMaterial(lightMaterial);
         UpdateGlowMaterial();
@@ -68,11 +75,16 @@ public class ArmCannonEffectsController : MonoBehaviour
             powerEnergyFieldMaterial.SetFloat("_Transparency", 0.0f);
     }
 
-    public void BeamChange()
+    public void BeamChange() //This gets called from the AnimationEventPasser durring the beam transition animation
     {
         UpdateLightMaterial(lightMaterial);
         UpdateGlowMaterial();
         ChangeParticleEffect();
+    }
+
+    private void BeamSwap()
+    {
+        heatDistortionAnimator.SetTrigger("BeamSwap");
     }
 
     private void UpdateLightMaterial(Material material)
@@ -136,7 +148,8 @@ public class ArmCannonEffectsController : MonoBehaviour
         waveBeamParticleSystem.gameObject.SetActive(false);
         iceBeamParticleSystem.gameObject.SetActive(false);
         snowflakeParticleSystem.gameObject.SetActive(false);
-        //plasmaBeamParticleSystem.gameObject.SetActive(false);
+        plasmaBeamParticleSystem.gameObject.SetActive(false);
+        heatDistortionGameObject.gameObject.SetActive(false);
 
         switch (playerWeaponController.activeBeam)
         {
@@ -154,7 +167,9 @@ public class ArmCannonEffectsController : MonoBehaviour
                 beamEmission[1] = snowflakeParticleSystem.emission;
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
-                //plasmaBeamParticleSystem.gameObject.SetActive(true);
+                plasmaBeamParticleSystem.gameObject.SetActive(true);
+                heatDistortionGameObject.SetActive(true);
+                beamEmission[0] = plasmaBeamParticleSystem.emission;
                 break;
         }
 
@@ -177,7 +192,7 @@ public class ArmCannonEffectsController : MonoBehaviour
                 beamEmission[1].rateOverTimeMultiplier = playerWeaponController.chargeValue * snowflakeEmissionMultiplier + initialSnowflakeEmissionRate;
                 break;
             case PlayerWeaponController.ActiveBeam.Plasma:
-                //Add Once Effect is created
+                beamEmission[0].rateOverTimeMultiplier = playerWeaponController.chargeValue * plasmaBeamEmissionMultiplier + initialPlasmaAshEmissionRate;
                 break;
         }
     }

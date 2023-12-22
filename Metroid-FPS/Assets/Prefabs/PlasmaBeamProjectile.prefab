@@ -4809,7 +4809,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bc80afd39c6d4c2479e01e63568c1ca9, type: 2}
+  - {fileID: 2100000, guid: 2ae30f61f3f323a4ba5a81b7a1e16b23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5162,6 +5162,7 @@ MonoBehaviour:
   destroyTimer: 0.3
   damage: 35
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
+  hitEffectAlignWithProjectile: 0
   scorchMark: {fileID: 5865114931768370392, guid: 0ce546e56e7a9444da04adcaa1b53f98, type: 3}
   hitEffectOffset: 0.01
   randomZRotation: 0
