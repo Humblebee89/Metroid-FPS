@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5865114931768370373}
   - component: {fileID: 5865114931768370375}
   m_Layer: 0
-  m_Name: PowerBeamShotDecalCharged
+  m_Name: WaveBeamNormalShotDecal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5865114931768370392}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -11.428492, y: -0.025, z: -4.902}
+  m_LocalPosition: {x: -11.42849, y: -0.025, z: -4.902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeDelay: 4
   fadeTime: 4
-  emissionFadeTime: 1.5
-  emissionBrightness: 1
+  emissionFadeTime: 1
+  emissionBrightness: 0.8
 --- !u!114 &5865114931768370375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0571943085084264e834d50ff1aeeb75, type: 2}
+  m_Material: {fileID: 2100000, guid: 4bba34ec204f45c489c81232f9576476, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
   m_StartAngleFade: 180
@@ -70,5 +70,5 @@ MonoBehaviour:
   m_UVBias: {x: 0, y: 0}
   m_ScaleMode: 0
   m_Offset: {x: 0, y: 0, z: 0}
-  m_Size: {x: 4, y: 4, z: 2}
-  m_FadeFactor: 0.8
+  m_Size: {x: 1.2, y: 1.2, z: 0.5}
+  m_FadeFactor: 0.9

@@ -7,13 +7,17 @@ public class DecalController : MonoBehaviour
 {
     [SerializeField] float fadeDelay = 1.0f;
     [SerializeField] float fadeTime = 3.0f;
+    [SerializeField] float emissionFadeTime = 1.5f;
+    [SerializeField] private float emissionBrightness = 1f;
 
     private DecalProjector decalProjector;
     private float startingOpacity;
 
+
     private void Awake()
     {
         decalProjector = GetComponent<DecalProjector>();
+        decalProjector.material = new Material(decalProjector.material);
     }
 
     private void Start()
@@ -24,6 +28,20 @@ public class DecalController : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(FadeOut());
+        StartCoroutine(EmissionFade());
+    }
+
+    private IEnumerator EmissionFade()
+    {
+        float emissionOpacity = emissionBrightness;
+        float elapsedTime = 0.0f;
+
+        while (elapsedTime < fadeTime)
+        {
+            decalProjector.material.SetFloat("_Brightness",  Mathf.Lerp(emissionOpacity, 0.0f, (elapsedTime / emissionFadeTime)));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
     }
 
     private IEnumerator FadeOut()

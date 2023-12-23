@@ -9785,7 +9785,7 @@ MonoBehaviour:
   damage: 10
   hitEffectPrefab: {fileID: 601321548204471970, guid: 56f993b9d7c0cb24abeac6e5f636195d, type: 3}
   hitEffectAlignWithProjectile: 1
-  scorchMark: {fileID: 5865114931768370392, guid: 0ce546e56e7a9444da04adcaa1b53f98, type: 3}
+  scorchMark: {fileID: 5865114931768370392, guid: d156ffa2bd856c64098c7c46e56b0ce3, type: 3}
   hitEffectOffset: 0.01
   randomZRotation: 0
   rayCastLayerMask:

@@ -4891,9 +4891,16 @@ MonoBehaviour:
   destroyTimer: 4
   damage: 5
   hitEffectPrefab: {fileID: 2561897186148628345, guid: 71bcdb4c5d62332429998a96e71c2075, type: 3}
-  scorchMark: {fileID: 5865114931768370392, guid: 0ce546e56e7a9444da04adcaa1b53f98, type: 3}
+  hitEffectAlignWithProjectile: 0
+  scorchMark: {fileID: 5865114931768370392, guid: b03d4372ed3d77d43ac5714984f4ecac, type: 3}
   hitEffectOffset: 0.01
   randomZRotation: 0
+  rayCastLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  triggerRaycastRange: 10
+  gameObjectsToDestroyOnCollision: []
+  particleSystemsToDestroyDelayed: []
 --- !u!114 &5632874957194037582
 MonoBehaviour:
   m_ObjectHideFlags: 0
