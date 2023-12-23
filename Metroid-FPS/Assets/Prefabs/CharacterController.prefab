@@ -5392,6 +5392,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraLookController: {fileID: 694470049}
+  magnitude: 0.8
+  speed: 7
 --- !u!1 &1062581338
 GameObject:
   m_ObjectHideFlags: 0
