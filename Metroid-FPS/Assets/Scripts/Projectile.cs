@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private bool ignoreCollision;
     [SerializeField] private float projectileSpeed = 1.0f;
     [SerializeField] private float destroyTimer = 4.0f;
     [SerializeField] private int damage = 10;
@@ -81,6 +82,9 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (ignoreCollision)
+            return;
+
         if (collision.gameObject.tag == "IgnoreWeaponCollision")
             return;
 
@@ -109,6 +113,9 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
+        if (ignoreCollision)
+            return;
+
         if (hasCollided)
             return;
 
