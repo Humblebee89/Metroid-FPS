@@ -129,7 +129,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _Transparancy: 0.4136456
-    - _Transparency: 0
+    - _Transparency: 0.3024553
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
@@ -140,7 +140,7 @@ Material:
     - _Inner_Color: {r: 0.5640963, g: 0, b: 23.96863, a: 1}
     - _Outer_Color: {r: 0, g: 1.1722642, b: 2.670157, a: 1}
     - _PlasmaBeamColor: {r: 7.027452, g: 0.63056445, b: 0, a: 1}
-    - _PowerBeamColor: {r: 191.74902, g: 54.211765, b: 0, a: 1}
+    - _PowerBeamColor: {r: 95.87451, g: 25.6, b: 3.5137255, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WaveBeamColor: {r: 0.4646715, g: 0.13056912, b: 5.536131, a: 1}
   m_BuildTextureStacks: []
