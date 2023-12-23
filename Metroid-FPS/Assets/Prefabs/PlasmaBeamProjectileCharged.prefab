@@ -5169,7 +5169,7 @@ MonoBehaviour:
   projectileSpeed: 0
   destroyTimer: 0.3
   damage: 100
-  hitEffectPrefab: {fileID: 2561897186148628345, guid: 18971f468ac6c434a8aa086861cb8171, type: 3}
+  hitEffectPrefab: {fileID: 2561897186148628345, guid: ac498c9e317811b44bad59335e797281, type: 3}
   hitEffectAlignWithProjectile: 0
   scorchMark: {fileID: 5865114931768370392, guid: 521051db25cb57d469e4cba867b81190, type: 3}
   hitEffectOffset: 0.01
