@@ -13,4 +13,5 @@ public static class Actions
     public static Action OnChargeCooldownEnd;
     public static Action OnGrounded;
     public static Action OnAirBorne;
+    public static Action OnDash;
 }

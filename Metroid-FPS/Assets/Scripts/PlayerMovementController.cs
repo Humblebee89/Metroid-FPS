@@ -76,6 +76,7 @@ public class PlayerMovementController : MonoBehaviour
         {
             StartCoroutine(PerformDash());
             StartCoroutine(CoolDownHelper.CoolDown(dashCooldown, value => canDash = value));
+            Actions.OnDash();
         }
     }
 
