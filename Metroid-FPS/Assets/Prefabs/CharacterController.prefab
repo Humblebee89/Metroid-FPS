@@ -20570,9 +20570,11 @@ MonoBehaviour:
   waveBeamProjectile: {fileID: 5302027088962376592, guid: 39f1bae8711dd6d4e977292f1cd88c7c, type: 3}
   chargedWaveBeamProjectile: {fileID: 7042478485343560404, guid: 9fadff928f845284fa9d8fb3aa2145e6, type: 3}
   waveBeamShotDelay: 0.6
+  iceBeamMuzzleFlash: {fileID: 7605648277742803881, guid: 632f168a782b266429fb73e2637813a7, type: 3}
   iceBeamProjectile: {fileID: 7042478485343560404, guid: 7d9cb92b0ce7356469d26e67c8c6e249, type: 3}
   chargedIceBeamProjectile: {fileID: 7042478485343560404, guid: 1b4b6f68a59ecd146bf4e441eab9f6bd, type: 3}
   iceBeamShotDelay: 1
+  plasmaBeamMuzzleFlash: {fileID: 7605648277742803881, guid: 23efb2bd00f767149958f1d8b90d1b20, type: 3}
   plasmaBeamProjectile: {fileID: 7042478485343560404, guid: 6da330f7a49adca41861bfb52a5981c4, type: 3}
   chargedPlasmaBeamProjectile: {fileID: 7042478485343560404, guid: 79f8f04192120b54185f6f6fb8280891, type: 3}
   plasmaBeamShotDelay: 0.4

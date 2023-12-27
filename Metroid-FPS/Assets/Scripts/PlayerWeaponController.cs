@@ -20,9 +20,11 @@ public class PlayerWeaponController : MonoBehaviour
     [SerializeField] private GameObject waveBeamProjectile;
     [SerializeField] private GameObject chargedWaveBeamProjectile;
     [SerializeField] private float waveBeamShotDelay;
+    [SerializeField] private GameObject iceBeamMuzzleFlash;
     [SerializeField] private GameObject iceBeamProjectile;
     [SerializeField] private GameObject chargedIceBeamProjectile;
     [SerializeField] private float iceBeamShotDelay;
+    [SerializeField] private GameObject plasmaBeamMuzzleFlash;
     [SerializeField] private GameObject plasmaBeamProjectile;
     [SerializeField] private GameObject chargedPlasmaBeamProjectile;
     [SerializeField] private float plasmaBeamShotDelay;
@@ -114,12 +116,12 @@ public class PlayerWeaponController : MonoBehaviour
                     break;
                 case ActiveBeam.Ice:
                     Instantiate(iceBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
-                    MuzzleFlash(powerBeamMuzzleFlash);
+                    MuzzleFlash(iceBeamMuzzleFlash);
                     StartCoroutine(ShotDelay(iceBeamShotDelay));
                     break;
                 case ActiveBeam.Plasma:
                     Instantiate(plasmaBeamProjectile, projectileSpawner.position, projectileSpawner.rotation);
-                    MuzzleFlash(powerBeamMuzzleFlash);
+                    MuzzleFlash(plasmaBeamMuzzleFlash);
                     StartCoroutine(ShotDelay(plasmaBeamShotDelay));
                     break;
             }
