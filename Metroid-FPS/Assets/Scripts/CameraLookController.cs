@@ -72,5 +72,6 @@ public class CameraLookController : MonoBehaviour
 
         playerCamera.localRotation = Quaternion.Euler(clampedRotationX, 0f, 0f);
         playerBody.MoveRotation(Quaternion.Euler(0f, modifiedInputX, 0f));
+        print(modifiedInputX);
     }
 }
