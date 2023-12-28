@@ -10,8 +10,6 @@ public class ArmCannonEffectsController : MonoBehaviour
     [SerializeField] private Material waveEnergyFieldMaterial;
     [SerializeField] private Material iceEnergyFieldMaterial;
     [SerializeField] private Material plasmaEnergyFieldMaterial;
-    //[SerializeField] private ParticleSystem powerBeamParticleSystem;
-    //[SerializeField] private float powerBeamEmissionMultiplier;
     [SerializeField] private ParticleSystem waveBeamParticleSystem;
     [SerializeField] private float waveBeamEmissionMultiplier;
     [SerializeField] private ParticleSystem iceBeamParticleSystem;
