@@ -16,6 +16,8 @@ At the moment, the controls only work with an Xbox One/Series Controller
 
 **RT** to shoot
 
+**RB** to fire missile
+
 **LT** to dash
 
 **A** to jump and double jump
