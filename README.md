@@ -4,7 +4,7 @@ A modern first person Metroid project based on this unused concept art from Metr
 
 ## Demo ##
 
-https://www.youtube.com/watch?v=piUu-Dplmtg&t=2s
+[Metroid Prime Alternate Arm Cannon Demo](https://www.youtube.com/watch?v=bWuROoIBlzc&t=4s)
 
 ## Controls ##
 
