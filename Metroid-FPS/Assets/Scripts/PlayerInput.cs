@@ -134,6 +134,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleFullScreen"",
+                    ""type"": ""Button"",
+                    ""id"": ""a33683ac-e253-47af-9137-2ea98b6ab926"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -370,8 +379,30 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""aa4a57ee-a715-4e21-b791-6ec73d502e20"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwapBeamPower"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""d2a84fab-136d-4886-9930-7f280838460d"",
                     ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwapBeamWave"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c1460b7-b64a-437e-b522-a1b6edc13396"",
+                    ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -392,12 +423,45 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""b3bf2746-7235-4b0c-baab-8788046d7fb7"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwapBeamIce"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""179e41c3-2765-466d-99e3-b2d9b6e76c9f"",
                     ""path"": ""<Gamepad>/dpad/left"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""SwapBeamPlasma"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1c38dc00-c2f0-4fa1-a987-223cb07cc6bd"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwapBeamPlasma"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0cc4f4ae-ff73-456d-820d-a4c4f2fb0752"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleFullScreen"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -432,6 +496,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Player_SwapBeamWave = m_Player.FindAction("SwapBeamWave", throwIfNotFound: true);
         m_Player_SwapBeamIce = m_Player.FindAction("SwapBeamIce", throwIfNotFound: true);
         m_Player_SwapBeamPlasma = m_Player.FindAction("SwapBeamPlasma", throwIfNotFound: true);
+        m_Player_ToggleFullScreen = m_Player.FindAction("ToggleFullScreen", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -503,6 +568,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_SwapBeamWave;
     private readonly InputAction m_Player_SwapBeamIce;
     private readonly InputAction m_Player_SwapBeamPlasma;
+    private readonly InputAction m_Player_ToggleFullScreen;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -519,6 +585,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @SwapBeamWave => m_Wrapper.m_Player_SwapBeamWave;
         public InputAction @SwapBeamIce => m_Wrapper.m_Player_SwapBeamIce;
         public InputAction @SwapBeamPlasma => m_Wrapper.m_Player_SwapBeamPlasma;
+        public InputAction @ToggleFullScreen => m_Wrapper.m_Player_ToggleFullScreen;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -564,6 +631,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @SwapBeamPlasma.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamPlasma;
                 @SwapBeamPlasma.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamPlasma;
                 @SwapBeamPlasma.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwapBeamPlasma;
+                @ToggleFullScreen.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleFullScreen;
+                @ToggleFullScreen.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleFullScreen;
+                @ToggleFullScreen.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleFullScreen;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -604,6 +674,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @SwapBeamPlasma.started += instance.OnSwapBeamPlasma;
                 @SwapBeamPlasma.performed += instance.OnSwapBeamPlasma;
                 @SwapBeamPlasma.canceled += instance.OnSwapBeamPlasma;
+                @ToggleFullScreen.started += instance.OnToggleFullScreen;
+                @ToggleFullScreen.performed += instance.OnToggleFullScreen;
+                @ToggleFullScreen.canceled += instance.OnToggleFullScreen;
             }
         }
     }
@@ -631,5 +704,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnSwapBeamWave(InputAction.CallbackContext context);
         void OnSwapBeamIce(InputAction.CallbackContext context);
         void OnSwapBeamPlasma(InputAction.CallbackContext context);
+        void OnToggleFullScreen(InputAction.CallbackContext context);
     }
 }

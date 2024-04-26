@@ -43,6 +43,7 @@ public class PlayerMovementController : MonoBehaviour
         playerInput.Player.Move.canceled += context => GetMoveInput(context.ReadValue<Vector2>());
         playerInput.Player.Jump.performed += context => Jump();
         playerInput.Player.Dash.performed += context => Dash();
+        playerInput.Player.ToggleFullScreen.performed += context => ToggleFullscreen();
 
         dynamicFriction = playerCollider.material.dynamicFriction;
         staticFriction = playerCollider.material.staticFriction;
@@ -147,5 +148,10 @@ public class PlayerMovementController : MonoBehaviour
         playerRigidbody.velocity = new Vector3(moveDirection.x * moveSpeed * Time.deltaTime, playerRigidbody.velocity.y, moveDirection.z * moveSpeed * Time.deltaTime);
         clampedVelocity = new Vector3(Mathf.Clamp(playerRigidbody.velocity.x, -maxVelocity, maxVelocity), playerRigidbody.velocity.y, Mathf.Clamp(playerRigidbody.velocity.z, -maxVelocity, maxVelocity));
         playerRigidbody.velocity = clampedVelocity;
+    }
+
+    private void ToggleFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
     }
 }
