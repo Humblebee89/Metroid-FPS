@@ -136,78 +136,12 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "WASD",
-                    "id": "cb5b94bf-2b7a-4780-987f-357c8d773a02",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "498ca12c-f0fd-4b9e-a186-554d249f92e5",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "ab9e89f5-c52d-451d-b883-00fa0078246c",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "770fd973-bb12-4ec4-8976-cbcc6e9251e0",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "3b52200d-1a6d-4405-8dec-808be7b12d99",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
                     "id": "c1f7a91b-d0fd-4a62-997e-7fb9b69bf235",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7a0ae2a0-a4cd-4bef-bc0a-b3b2f9ac4793",
-                    "path": "<Mouse>/delta",
-                    "interactions": "",
-                    "processors": "NormalizeVector2",
-                    "groups": "",
                     "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -225,33 +159,11 @@
                 },
                 {
                     "name": "",
-                    "id": "8ed81f48-9c8d-4cd1-893b-c3e07cb3af09",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "977b5c15-12e1-4395-9336-067876c4c8f5",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "58429650-226d-4a16-a841-04a4ff4310ee",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -269,33 +181,11 @@
                 },
                 {
                     "name": "",
-                    "id": "5de226b3-e464-4872-8c0d-56217b48525a",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "8e9c0cfd-cd84-4da2-b9f5-df5a7460c313",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "Hold(pressPoint=0.9)",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "ChargeStart",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2f37a3b7-2eea-41b7-8600-37e738b2553f",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "Hold(duration=0.2)",
-                    "processors": "",
-                    "groups": "",
                     "action": "ChargeStart",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -313,33 +203,11 @@
                 },
                 {
                     "name": "",
-                    "id": "4e960a7e-fd17-489f-becd-78aa6fff1f6b",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "Press(behavior=1)",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChargeEnd",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "64e3011d-d245-4459-bc83-228c8350f665",
                     "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "FireMissile",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a4b5399a-f81b-4692-af64-6eb1761a8922",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "FireMissile",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -357,33 +225,11 @@
                 },
                 {
                     "name": "",
-                    "id": "aa4a57ee-a715-4e21-b791-6ec73d502e20",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SwapBeamPower",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d2a84fab-136d-4886-9930-7f280838460d",
                     "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "SwapBeamWave",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "6c1460b7-b64a-437e-b522-a1b6edc13396",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "SwapBeamWave",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -394,18 +240,7 @@
                     "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "SwapBeamIce",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b3bf2746-7235-4b0c-baab-8788046d7fb7",
-                    "path": "<Keyboard>/3",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "SwapBeamIce",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -416,18 +251,7 @@
                     "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "SwapBeamPlasma",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1c38dc00-c2f0-4fa1-a987-223cb07cc6bd",
-                    "path": "<Keyboard>/4",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "SwapBeamPlasma",
                     "isComposite": false,
                     "isPartOfComposite": false
