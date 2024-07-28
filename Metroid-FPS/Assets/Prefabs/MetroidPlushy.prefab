@@ -115,6 +115,7 @@ MonoBehaviour:
   destroyObjectOnDeath: 1
   objectToDestroy: {fileID: 8768446770585383119}
   deathParticleEffect: {fileID: 1572366618425960737, guid: c2deceec26894234f9221f1187905639, type: 3}
+  hitEffectColorDecayRate: 0.04
   onDeath:
     m_PersistentCalls:
       m_Calls:
